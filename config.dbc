@@ -33,18 +33,8 @@ NS_ :
 
 BS_:
 
-BU_: microSDM_102 PDM30 MS6 IM_GCM IZZE_RL IZZE_FL IZZE_RR IZZE_FR IMU WL_IZZE_RIGHT WL_IZZE_LEFT IZZE_BRK_IR IM_PDM IM_Wheel S350
+BU_: MS6 IZZE_BRK_IR IM_GCM IZZE_RL IZZE_FL IZZE_RR IZZE_FR IMU WL_IZZE_RIGHT WL_IZZE_LEFT IM_PDM IM_Wheel S350
 
-
-BO_ 3221225472 VECTOR__INDEPENDENT_SIG_MSG: 0 Vector__XXX
- SG_ LT2_Lambda_2 : 0|16@1+ (0.001,0) [0|0] "L" Vector__XXX
- SG_ LT2_Row_Count : 0|8@1+ (1,0) [0|0] "" Vector__XXX
- SG_ LT2_Lambda_1 : 0|16@1+ (0.001,0) [0|0] "L" Vector__XXX
- SG_ LT2_Row_Count : 0|8@1+ (1,0) [0|0] "" Vector__XXX
- SG_ LT2_Lambda_2 : 0|16@1+ (0.001,0) [0|0] "L" Vector__XXX
- SG_ LT2_Row_Count : 0|8@1+ (1,0) [0|0] "" Vector__XXX
- SG_ LT2_Lambda_1 : 0|16@1+ (0.001,0) [0|0] "L" Vector__XXX
- SG_ LT2_Row_Count : 0|8@1+ (1,0) [0|0] "" Vector__XXX
 
 BO_ 1223 BRK_IR_TEMP_4: 8 IZZE_BRK_IR
  SG_ BRK_IR_Channel_16 : 55|16@0+ (0.1,-100) [0|65535] "C" Vector__XXX
@@ -314,31 +304,19 @@ BO_ 257 ECU_1: 8 MS6
 
 BO_ 259 ECU_3: 8 MS6
 
-BO_ 97 ECU_4: 8 MS6
+BO_ 261 ECU_5: 8 MS6
  SG_ pbrake_r : 48|16@1+ (0.005,0) [0|150] "bar" Vector__XXX
  SG_ pbrake_f : 32|16@1+ (0.005,0) [0|150] "bar" Vector__XXX
  SG_ dam_fr : 16|16@1+ (0.015,0) [-400|400] "mm" Vector__XXX
  SG_ dam_fl : 0|16@1+ (0.015,0) [-400|400] "mm" Vector__XXX
 
-BO_TX_BU_ 15 : IM_GCM,IM_PDM,IM_Wheel;
+BO_ 260 ECU_4: 8 MS6
+ SG_ Engine_Running : 8|8@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ Engine_Cranking : 0|8@1+ (1,0) [0|1] "" Vector__XXX
+
+BO_TX_BU_ 15 : IM_Wheel,IM_GCM,IM_PDM;
 
 
-CM_ BU_ microSDM_102 "Plex microSDM 102 Pro Display Unit (Wheel)";
-CM_ BU_ PDM30 "MoTeC PDM30 Power Distribution Module";
-CM_ BU_ MS6 "Bosch Motorsport MS6.2 ECU";
-CM_ BU_ IM_GCM "Illini Motorsports Gear Control Module";
-CM_ BU_ IZZE_RL "IZZE Strain Gauge - Rear Left";
-CM_ BU_ IZZE_FL "IZZE Strain Gauge - Front Left";
-CM_ BU_ IZZE_RR "IZZE Strain Gauge - Rear Right";
-CM_ BU_ IZZE_FR "IZZE Strain Gauge - Front Right";
-CM_ BU_ IMU "Bosch IMU";
-CM_ BU_ WL_IZZE_RIGHT "Wireless IZZE Strain Gauge - Right Drive Shaft";
-CM_ BU_ WL_IZZE_LEFT "Wireless IZZE Strain Gauge - Left Drive Shaft";
-CM_ BU_ IZZE_BRK_IR "IZZE Brake IR Temperature Sensor";
-CM_ BU_ IM_PDM "Illini Motorsports Power Distribution Model";
-CM_ BU_ IM_Wheel "Illini Motorsports Wheel";
-CM_ BU_ S350 "Kistler S350 Slip Angle Sensor";
-CM_ BO_ 3221225472 "This is a message for not used signals, created by Vector CANdb++ DBC OLE DB Provider.";
 CM_ BO_ 1223 "Brake IR channels 13-16";
 CM_ BO_ 1222 "Brake IR channels 9-12";
 CM_ BO_ 1221 "Brake IR channels 5-8";
@@ -389,11 +367,14 @@ CM_ SG_ 257 tint "intake air temperature";
 CM_ SG_ 257 toil "oil temperature";
 CM_ SG_ 257 tmot "engine temperature";
 CM_ BO_ 259 "Wheel Speeds";
-CM_ BO_ 97 "Front Damper Positions, Front Brake Pressure, Rear Brake Pressure";
-CM_ SG_ 97 pbrake_r "brake pressure rear";
-CM_ SG_ 97 pbrake_f "brake pressure front ";
-CM_ SG_ 97 dam_fr "damper position front right";
-CM_ SG_ 97 dam_fl "damper position front left";
+CM_ BO_ 261 "Front Damper Positions, Front Brake Pressure, Rear Brake Pressure";
+CM_ SG_ 261 pbrake_r "brake pressure rear";
+CM_ SG_ 261 pbrake_f "brake pressure front ";
+CM_ SG_ 261 dam_fr "damper position front right";
+CM_ SG_ 261 dam_fl "damper position front left";
+CM_ BO_ 260 "Engine Cranking, Engine Running";
+CM_ SG_ 260 Engine_Running "Returns true, if (nmot > 0)";
+CM_ SG_ 260 Engine_Cranking "Returns true, if (1 <= nmot <= 550)";
 VAL_ 2044 S350_FilterType 1 "FIR" 0 "MAVG" ;
 VAL_ 2044 S350_FilerON 1 "ON" 0 "OFF" ;
 

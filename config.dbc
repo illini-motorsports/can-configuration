@@ -285,32 +285,32 @@ BO_ 2042 S350_0: 8 S350
  SG_ S350_Vel : 23|16@0+ (0.036,0) [0|400] "km/h"  S350
  SG_ S350_Timestamp : 7|16@0+ (1,0) [0|65535] ""  S350
 
-BO_ 256 ECU_0: 8 MS6
+BO_ 16 ECU_0: 8 MS6
  SG_ ub : 55|16@0- (0.01,0) [0|25.5] "V" Vector__XXX
  SG_ lambda : 39|16@0- (0.001,0) [0|5] "" Vector__XXX
  SG_ ath : 23|16@0- (0.1,0) [0|110] "%" Vector__XXX
  SG_ nmot : 7|16@0- (1,0) [0|20000] "rpm" Vector__XXX
 
-BO_ 258 ECU_2: 8 MS6
+BO_ 18 ECU_2: 8 MS6
  SG_ pfuel : 55|16@0- (0.001,0) [0|10] "bar" Vector__XXX
  SG_ p22 : 39|16@0- (1,0) [0|5000] "mbar" Vector__XXX
  SG_ poil : 23|16@0- (0.001,0) [0|10] "bar" Vector__XXX
 
-BO_ 257 ECU_1: 8 MS6
+BO_ 17 ECU_1: 8 MS6
  SG_ tfuel : 55|16@0+ (0.1,0) [10|80] "°C" Vector__XXX
  SG_ tint : 39|16@0- (0.1,0) [10|60] "°C" Vector__XXX
  SG_ toil : 23|16@0- (0.1,0) [60|150] "°C" Vector__XXX
  SG_ tmot : 7|16@0- (0.1,0) [40|120] "°C" Vector__XXX
 
-BO_ 259 ECU_3: 8 MS6
+BO_ 19 ECU_3: 8 MS6
 
-BO_ 261 ECU_5: 8 MS6
+BO_ 21 ECU_5: 8 MS6
  SG_ pbrake_r : 48|16@1+ (0.005,0) [0|150] "bar" Vector__XXX
  SG_ pbrake_f : 32|16@1+ (0.005,0) [0|150] "bar" Vector__XXX
  SG_ dam_fr : 16|16@1+ (0.015,0) [-400|400] "mm" Vector__XXX
  SG_ dam_fl : 0|16@1+ (0.015,0) [-400|400] "mm" Vector__XXX
 
-BO_ 260 ECU_4: 8 MS6
+BO_ 20 ECU_4: 8 MS6
  SG_ Engine_Running : 8|8@1+ (1,0) [0|1] "" Vector__XXX
  SG_ Engine_Cranking : 0|8@1+ (1,0) [0|1] "" Vector__XXX
 
@@ -352,29 +352,29 @@ CM_ BO_ 1538 "Power rails";
 CM_ BO_ 2044 "Device status";
 CM_ BO_ 2043 "Velocity X, Velocity Y, Slip angle";
 CM_ BO_ 2042 "Timestamp, velocity, distance";
-CM_ BO_ 256 "RPM, Throttle Position, Lambda, VBAT";
-CM_ SG_ 256 ub "battery voltage";
-CM_ SG_ 256 lambda "Lambda actual value";
-CM_ SG_ 256 ath "throttle position";
-CM_ SG_ 256 nmot "engine speed";
-CM_ BO_ 258 "Ambient Pressure, Oil Pressure, Manifold Pressure, Fuel Pressure";
-CM_ SG_ 258 pfuel "fuel pressure";
-CM_ SG_ 258 p22 "intake manifold pressure downstream throttle";
-CM_ SG_ 258 poil "oil pressure";
-CM_ BO_ 257 "Coolant Temp, Oil Temp, Manifold Temp, Fuel Temp";
-CM_ SG_ 257 tfuel "fuel temperature";
-CM_ SG_ 257 tint "intake air temperature";
-CM_ SG_ 257 toil "oil temperature";
-CM_ SG_ 257 tmot "engine temperature";
-CM_ BO_ 259 "Wheel Speeds";
-CM_ BO_ 261 "Front Damper Positions, Front Brake Pressure, Rear Brake Pressure";
-CM_ SG_ 261 pbrake_r "brake pressure rear";
-CM_ SG_ 261 pbrake_f "brake pressure front ";
-CM_ SG_ 261 dam_fr "damper position front right";
-CM_ SG_ 261 dam_fl "damper position front left";
-CM_ BO_ 260 "Engine Cranking, Engine Running";
-CM_ SG_ 260 Engine_Running "Returns true, if (nmot > 0)";
-CM_ SG_ 260 Engine_Cranking "Returns true, if (1 <= nmot <= 550)";
+CM_ BO_ 16 "RPM, Throttle Position, Lambda, VBAT";
+CM_ SG_ 16 ub "battery voltage";
+CM_ SG_ 16 lambda "Lambda actual value";
+CM_ SG_ 16 ath "throttle position";
+CM_ SG_ 16 nmot "engine speed";
+CM_ BO_ 18 "Ambient Pressure, Oil Pressure, Manifold Pressure, Fuel Pressure";
+CM_ SG_ 18 pfuel "fuel pressure";
+CM_ SG_ 18 p22 "intake manifold pressure downstream throttle";
+CM_ SG_ 18 poil "oil pressure";
+CM_ BO_ 17 "Coolant Temp, Oil Temp, Manifold Temp, Fuel Temp";
+CM_ SG_ 17 tfuel "fuel temperature";
+CM_ SG_ 17 tint "intake air temperature";
+CM_ SG_ 17 toil "oil temperature";
+CM_ SG_ 17 tmot "engine temperature";
+CM_ BO_ 19 "Wheel Speeds";
+CM_ BO_ 21 "Front Damper Positions, Front Brake Pressure, Rear Brake Pressure";
+CM_ SG_ 21 pbrake_r "brake pressure rear";
+CM_ SG_ 21 pbrake_f "brake pressure front ";
+CM_ SG_ 21 dam_fr "damper position front right";
+CM_ SG_ 21 dam_fl "damper position front left";
+CM_ BO_ 20 "Engine Cranking, Engine Running";
+CM_ SG_ 20 Engine_Running "Returns true, if (nmot > 0)";
+CM_ SG_ 20 Engine_Cranking "Returns true, if (1 <= nmot <= 550)";
 VAL_ 2044 S350_FilterType 1 "FIR" 0 "MAVG" ;
 VAL_ 2044 S350_FilerON 1 "ON" 0 "OFF" ;
 

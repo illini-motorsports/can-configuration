@@ -33,28 +33,30 @@ NS_ :
 
 BS_:
 
-BU_: MS6 IZZE_BRK_IR IM_GCM IZZE_RL IZZE_FL IZZE_RR IZZE_FR IMU WL_IZZE_RIGHT WL_IZZE_LEFT IM_PDM IM_Wheel S350
+BU_: MS6_Logger_CAN_Bus_1
 
 
-BO_ 1223 BRK_IR_TEMP_4: 8 IZZE_BRK_IR
+BO_ 256 IM_GCM_MS6_Gear: 8 IM_GCM
+
+BO_ 1223 BRK_IR_TEMP_3: 8 IZZE_BRK_IR
  SG_ BRK_IR_Channel_16 : 55|16@0+ (0.1,-100) [0|65535] "C" Vector__XXX
  SG_ BRK_IR_Channel_15 : 39|16@0+ (0.1,-100) [0|65535] "C" Vector__XXX
  SG_ BRK_IR_Channel_14 : 23|16@0+ (0.1,-100) [0|65535] "C" Vector__XXX
  SG_ BRK_IR_Channel_13 : 7|16@0+ (0.1,-100) [0|65535] "C" Vector__XXX
 
-BO_ 1222 BRK_IR_TEMP_3: 8 IZZE_BRK_IR
+BO_ 1222 BRK_IR_TEMP_2: 8 IZZE_BRK_IR
  SG_ BRK_IR_Channel_9 : 55|16@0+ (0.1,-100) [0|65535] "C" Vector__XXX
  SG_ BRK_IR_Channel_12 : 39|16@0+ (0.1,-100) [0|65535] "C" Vector__XXX
  SG_ BRK_IR_Channel_11 : 23|16@0+ (0.1,-100) [0|65535] "C" Vector__XXX
  SG_ BRK_IR_Channel_10 : 7|16@0+ (0.1,-100) [0|65535] "C" Vector__XXX
 
-BO_ 1221 BRK_IR_TEMP_2: 8 IZZE_BRK_IR
+BO_ 1221 BRK_IR_TEMP_1: 8 IZZE_BRK_IR
  SG_ BRK_IR_Channel_8 : 55|16@0+ (0.1,-100) [0|65535] "C" Vector__XXX
  SG_ BRK_IR_Channel_7 : 39|16@0+ (0.1,-100) [0|65535] "C" Vector__XXX
  SG_ BRK_IR_Channel_6 : 23|16@0+ (0.1,-100) [0|65535] "C" Vector__XXX
  SG_ BRK_IR_Channel_5 : 7|16@0+ (0.1,-100) [0|65535] "C" Vector__XXX
 
-BO_ 1552 IM_GCM_MS6_Control: 8 IM_GCM
+BO_ 1552 IM_GCM_MS6_Shift: 8 IM_GCM
  SG_ GCM_Upshift_Bosch : 1|1@1+ (1,0) [0|0] "" Vector__XXX
  SG_ GCM_Downshift_Bosch : 0|1@1+ (1,0) [0|0] "" Vector__XXX
 
@@ -97,27 +99,11 @@ BO_ 1066 WL_IZZE_LEFT: 8 WL_IZZE_LEFT
  SG_ SG_Left_VBAT : 23|16@0- (0.001,0) [0|0] "V" Vector__XXX
  SG_ SG_Left_Out : 7|16@0- (1,0) [0|0] "uV" Vector__XXX
 
-BO_ 1220 BRK_IR_TEMP_1: 8 IZZE_BRK_IR
+BO_ 1220 BRK_IR_TEMP_0: 8 IZZE_BRK_IR
  SG_ BRK_IR_Channel_4 : 55|16@0+ (0.1,-100) [0|65535] "C" Vector__XXX
  SG_ BRK_IR_Channel_3 : 39|16@0+ (0.1,-100) [0|65535] "C" Vector__XXX
  SG_ BRK_IR_Channel_2 : 23|16@0+ (0.1,-100) [0|65535] "C" Vector__XXX
  SG_ BRK_IR_Channel_1 : 7|16@0+ (0.1,-100) [0|65535] "C" Vector__XXX
-
-BO_ 1547 IM_PDM_B: 4 IM_PDM
- SG_ PDM_STR_Overcurrent_Count : 24|8@1+ (1,0) [0|0] "" Vector__XXX
- SG_ PDM_BVBAT_Overcurrent_Count : 16|8@1+ (1,0) [0|0] "" Vector__XXX
- SG_ PDM_AUX_Overcurrent_Count : 8|8@1+ (1,0) [0|0] "" Vector__XXX
- SG_ PDM_ECU_Overcurrent_Count : 0|8@1+ (1,0) [0|0] "" Vector__XXX
-
-BO_ 1546 IM_PDM_A: 8 IM_PDM
- SG_ PDM_WTR_Overcurrent_Count : 56|8@1+ (1,0) [0|0] "" Vector__XXX
- SG_ PDM_FAN_Overcurrent_Count : 48|8@1+ (1,0) [0|0] "" Vector__XXX
- SG_ PDM_PDLD_Overcurrent_Count : 40|8@1+ (1,0) [0|0] "" Vector__XXX
- SG_ PDM_PDLU_Overcurrent_Count : 32|8@1+ (1,0) [0|0] "" Vector__XXX
- SG_ PDM_ABS_Overcurrent_Count : 24|8@1+ (1,0) [0|0] "" Vector__XXX
- SG_ PDM_INJ_Overcurrent_Count : 16|8@1+ (1,0) [0|0] "" Vector__XXX
- SG_ PDM_IGN_Overcurrent_Count : 8|8@1+ (1,0) [0|0] "" Vector__XXX
- SG_ PDM_FUEL_Overcurrent_Count : 0|8@1+ (1,0) [0|0] "" Vector__XXX
 
 BO_ 376 IMU_1: 8 IMU
  SG_ IMU_X_Accel : 32|16@1+ (0.0001274,-4.1746432) [0|0] "g" Vector__XXX
@@ -126,26 +112,6 @@ BO_ 376 IMU_1: 8 IMU
 BO_ 372 IMU_0: 8 IMU
  SG_ IMU_Y_Accel : 32|16@1+ (0.0001274,-4.1746432) [0|0] "g" Vector__XXX
  SG_ IMU_Yaw_Rate : 0|16@1+ (0.005,-163.84) [0|0] "deg/s" Vector__XXX
-
-BO_ 1025 IM_Wheel_1: 4 IM_Wheel
- SG_ WHL_Thumb_Rotary_2 : 28|4@1+ (1,0) [0|0] "" Vector__XXX
- SG_ WHL_Rotary_3 : 20|4@1+ (1,0) [0|0] "" Vector__XXX
- SG_ WHL_Thumb_Rotary_1 : 16|4@1+ (1,0) [0|0] "" Vector__XXX
- SG_ WHL_Rotary_1 : 12|4@1+ (1,0) [0|0] "" Vector__XXX
- SG_ WHL_Rotary_2 : 8|4@1+ (1,0) [0|0] "" Vector__XXX
- SG_ WHL_NightDay_SW : 7|1@1+ (1,0) [0|0] "" Vector__XXX
- SG_ WHL_Fuel_Override_SW : 6|1@1+ (1,0) [0|0] "" Vector__XXX
- SG_ WHL_Water_Override_SW : 5|1@1+ (1,0) [0|0] "" Vector__XXX
- SG_ WHL_Fan_Override_SW : 4|1@1+ (1,0) [0|0] "" Vector__XXX
- SG_ WHL_Neutral_Btn : 3|1@1+ (1,0) [0|0] "" Vector__XXX
- SG_ WHL_Auxiliary_Btn : 2|1@1+ (1,0) [0|0] "" Vector__XXX
- SG_ WHL_Acknowledge_Btn : 1|1@1+ (1,0) [0|0] "" Vector__XXX
- SG_ WHL_Radio_Btn : 0|1@1+ (1,0) [0|0] "" Vector__XXX
-
-BO_ 1024 IM_Wheel_0: 6 IM_Wheel
- SG_ WHL_IC_Temp : 32|16@1- (0.005,0) [0|0] "C" Vector__XXX
- SG_ WHL_PCB_Temp : 16|16@1- (0.005,0) [0|0] "C" Vector__XXX
- SG_ WHL_Uptime : 0|16@1+ (1,0) [0|0] "s" Vector__XXX
 
 BO_ 514 IM_GCM_2: 4 IM_GCM
  SG_ GCM_NeutralQueue : 24|8@1+ (1,0) [0|0] "" Vector__XXX
@@ -161,104 +127,14 @@ BO_ 513 IM_GCM_1: 6 IM_GCM
  SG_ GCM_Mode : 8|8@1+ (1,0) [0|0] "" Vector__XXX
  SG_ GCM_Gear : 0|8@1+ (1,0) [0|0] "" Vector__XXX
 
-BO_ 15 IM_ERR: 4 IM_Wheel
+BO_ 15 IM_ERR: 4 IM_GCM
  SG_ ERR_Code : 16|16@1+ (1,0) [0|0] "" Vector__XXX
  SG_ ERR_Origin_Node : 0|16@1+ (1,0) [0|0] "" Vector__XXX
-
-BO_ 1537 IM_PDM_1: 8 IM_PDM
- SG_ PDM_FuelPrime : 63|1@1+ (1,0) [0|0] "" Vector__XXX
- SG_ PDM_OverTemp : 62|1@1+ (1,0) [0|0] "" Vector__XXX
- SG_ PDM_STR_SW : 55|1@1+ (1,0) [0|0] "" Vector__XXX
- SG_ PDM_ON_SW : 54|1@1+ (1,0) [0|0] "" Vector__XXX
- SG_ PDM_ACT_UP_SW : 53|1@1+ (1,0) [0|0] "" Vector__XXX
- SG_ PDM_ACT_DN_SW : 52|1@1+ (1,0) [0|0] "" Vector__XXX
- SG_ PDM_KILL_SW : 51|1@1+ (1,0) [0|0] "" Vector__XXX
- SG_ PDM_ABS_SW : 50|1@1+ (1,0) [0|0] "" Vector__XXX
- SG_ PDM_AUX1_SW : 49|1@1+ (1,0) [0|0] "" Vector__XXX
- SG_ PDM_AUX2_SW : 48|1@1+ (1,0) [0|0] "" Vector__XXX
- SG_ PDM_Total_Current : 32|16@1+ (0.01,0) [0|0] "A" Vector__XXX
- SG_ PDM_FUEL_Peak : 31|1@1+ (1,0) [0|0] "" Vector__XXX
- SG_ PDM_IGN_Peak : 30|1@1+ (1,0) [0|0] "" Vector__XXX
- SG_ PDM_INJ_Peak : 29|1@1+ (1,0) [0|0] "" Vector__XXX
- SG_ PDM_ABS_Peak : 28|1@1+ (1,0) [0|0] "" Vector__XXX
- SG_ PDM_PDLU_Peak : 27|1@1+ (1,0) [0|0] "" Vector__XXX
- SG_ PDM_PDLD_Peak : 26|1@1+ (1,0) [0|0] "" Vector__XXX
- SG_ PDM_FAN_Peak : 25|1@1+ (1,0) [0|0] "" Vector__XXX
- SG_ PDM_WTR_Peak : 24|1@1+ (1,0) [0|0] "" Vector__XXX
- SG_ PDM_ECU_Peak : 23|1@1+ (1,0) [0|0] "" Vector__XXX
- SG_ PDM_AUX_Peak : 22|1@1+ (1,0) [0|0] "" Vector__XXX
- SG_ PDM_BVBAT_Peak : 21|1@1+ (1,0) [0|0] "" Vector__XXX
- SG_ PDM_STR_Peak : 20|1@1+ (1,0) [0|0] "" Vector__XXX
- SG_ PDM_FUEL_Enabled : 15|1@1+ (1,0) [0|0] "" Vector__XXX
- SG_ PDM_IGN_Enabled : 14|1@1+ (1,0) [0|0] "" Vector__XXX
- SG_ PDM_INJ_Enabled : 13|1@1+ (1,0) [0|0] "" Vector__XXX
- SG_ PDM_ABS_Enabled : 12|1@1+ (1,0) [0|0] "" Vector__XXX
- SG_ PDM_PDLU_Enabled : 11|1@1+ (1,0) [0|0] "" Vector__XXX
- SG_ PDM_PDLD_Enabled : 10|1@1+ (1,0) [0|0] "" Vector__XXX
- SG_ PDM_FAN_Enabled : 9|1@1+ (1,0) [0|0] "" Vector__XXX
- SG_ PDM_WTR_Enabled : 8|1@1+ (1,0) [0|0] "" Vector__XXX
- SG_ PDM_ECU_Enabled : 7|1@1+ (1,0) [0|0] "" Vector__XXX
- SG_ PDM_AUX_Enabled : 6|1@1+ (1,0) [0|0] "" Vector__XXX
- SG_ PDM_BVBAT_Enabled : 5|1@1+ (1,0) [0|0] "" Vector__XXX
- SG_ PDM_STR_Enabled : 4|1@1+ (1,0) [0|0] "" Vector__XXX
-
-BO_ 1545 IM_PDM_9: 8 IM_PDM
- SG_ PDM_ECU_Peak_Cutoff : 48|16@1+ (0.0025,0) [0|0] "A" Vector__XXX
- SG_ PDM_WTR_Peak_Cutoff : 32|16@1+ (0.0025,0) [0|0] "A" Vector__XXX
- SG_ PDM_FAN_Peak_Cutoff : 16|16@1+ (0.0025,0) [0|0] "A" Vector__XXX
- SG_ PDM_FUEL_Peak_Cutoff : 0|16@1+ (0.0025,0) [0|0] "A" Vector__XXX
-
-BO_ 1544 IM_PDM_8: 8 IM_PDM
- SG_ PDM_STR_Cutoff : 48|16@1+ (0.0025,0) [0|0] "A" Vector__XXX
- SG_ PDM_BVBAT_Cutoff : 32|16@1+ (0.0025,0) [0|0] "A" Vector__XXX
- SG_ PDM_AUX_Cutoff : 16|16@1+ (0.0025,0) [0|0] "A" Vector__XXX
- SG_ PDM_ECU_Cutoff : 0|16@1+ (0.0025,0) [0|0] "A" Vector__XXX
 
 BO_ 512 IM_GCM_0: 6 IM_GCM
  SG_ GCM_IC_Temp : 32|16@1- (0.005,0) [0|0] "C" Vector__XXX
  SG_ GCM_PCB_Temp : 16|16@1- (0.005,0) [0|0] "C" Vector__XXX
  SG_ GCM_Uptime : 0|16@1+ (1,0) [0|0] "s" Vector__XXX
-
-BO_ 1536 IM_PDM_0: 6 IM_PDM
- SG_ PDM_IC_Temp : 32|16@1- (0.005,0) [0|0] "C" Vector__XXX
- SG_ PDM_PCB_Temp : 16|16@1- (0.005,0) [0|0] "C" Vector__XXX
- SG_ PDM_Uptime : 0|16@1+ (1,0) [0|0] "s" Vector__XXX
-
-BO_ 1543 IM_PDM_7: 8 IM_PDM
- SG_ PDM_WTR_Cutoff : 48|16@1+ (0.0025,0) [0|0] "A" Vector__XXX
- SG_ PDM_FAN_Cutoff : 32|16@1+ (0.0025,0) [0|0] "A" Vector__XXX
- SG_ PDM_PDLD_Cutoff : 16|16@1+ (0.0025,0) [0|0] "A" Vector__XXX
- SG_ PDM_PDLU_Cutoff : 0|16@1+ (0.0025,0) [0|0] "A" Vector__XXX
-
-BO_ 1542 IM_PDM_6: 8 IM_PDM
- SG_ PDM_ABS_Cutoff : 48|16@1+ (0.0025,0) [0|0] "A" Vector__XXX
- SG_ PDM_INJ_Cutoff : 32|16@1+ (0.0025,0) [0|0] "A" Vector__XXX
- SG_ PDM_IGN_Cutoff : 16|16@1+ (0.0025,0) [0|0] "A" Vector__XXX
- SG_ PDM_FUEL_Cutoff : 0|16@1+ (0.0025,0) [0|0] "A" Vector__XXX
-
-BO_ 1541 IM_PDM_5: 8 IM_PDM
- SG_ PDM_STR_Current : 48|16@1+ (0.01,0) [0|0] "A" Vector__XXX
- SG_ PDM_BVBAT_Current : 32|16@1+ (0.001,0) [0|0] "A" Vector__XXX
- SG_ PDM_AUX_Current : 16|16@1+ (0.001,0) [0|0] "A" Vector__XXX
- SG_ PDM_ECU_Current : 0|16@1+ (0.001,0) [0|0] "A" Vector__XXX
-
-BO_ 1540 IM_PDM_4: 8 IM_PDM
- SG_ PDM_WTR_Current : 48|16@1+ (0.001,0) [0|0] "A" Vector__XXX
- SG_ PDM_FAN_Current : 32|16@1+ (0.001,0) [0|0] "A" Vector__XXX
- SG_ PDM_PDLD_Current : 16|16@1+ (0.001,0) [0|0] "A" Vector__XXX
- SG_ PDM_PDLU_Current : 0|16@1+ (0.001,0) [0|0] "A" Vector__XXX
-
-BO_ 1539 IM_PDM_3: 8 IM_PDM
- SG_ PDM_ABS_Current : 48|16@1+ (0.001,0) [0|0] "A" Vector__XXX
- SG_ PDM_INJ_Current : 32|16@1+ (0.001,0) [0|0] "A" Vector__XXX
- SG_ PDM_IGN_Current : 16|16@1+ (0.001,0) [0|0] "A" Vector__XXX
- SG_ PDM_FUEL_Current : 0|16@1+ (0.001,0) [0|0] "A" Vector__XXX
-
-BO_ 1538 IM_PDM_2: 8 IM_PDM
- SG_ PDM_3V3_Rail : 48|16@1+ (0.001,0) [0|0] "V" Vector__XXX
- SG_ PDM_5V_Rail : 32|16@1+ (0.001,0) [0|0] "V" Vector__XXX
- SG_ PDM_12V_Rail : 16|16@1+ (0.001,0) [0|0] "V" Vector__XXX
- SG_ PDM_VBAT_Rail : 0|16@1+ (0.001,0) [0|0] "V" Vector__XXX
 
 BO_ 2044 S350_2: 8 S350
  SG_ S350_FilterType : 56|1@0+ (1,0) [0|1] ""  S350
@@ -285,36 +161,30 @@ BO_ 2042 S350_0: 8 S350
  SG_ S350_Vel : 23|16@0+ (0.036,0) [0|400] "km/h"  S350
  SG_ S350_Timestamp : 7|16@0+ (1,0) [0|65535] ""  S350
 
-BO_ 16 ECU_0: 8 MS6
+BO_ 16 ECU0: 8 MS6_Logger_CAN_Bus_1
  SG_ ub : 55|16@0- (0.01,0) [0|25.5] "V" Vector__XXX
  SG_ lambda : 39|16@0- (0.001,0) [0|5] "" Vector__XXX
  SG_ ath : 23|16@0- (0.1,0) [0|110] "%" Vector__XXX
  SG_ nmot : 7|16@0- (1,0) [0|20000] "rpm" Vector__XXX
 
-BO_ 18 ECU_2: 8 MS6
+BO_ 18 ECU2: 8 MS6_Logger_CAN_Bus_1
  SG_ pfuel : 55|16@0- (0.001,0) [0|10] "bar" Vector__XXX
  SG_ p22 : 39|16@0- (1,0) [0|5000] "mbar" Vector__XXX
  SG_ poil : 23|16@0- (0.001,0) [0|10] "bar" Vector__XXX
 
-BO_ 17 ECU_1: 8 MS6
+BO_ 17 ECU1: 8 MS6_Logger_CAN_Bus_1
  SG_ tfuel : 55|16@0+ (0.1,0) [10|80] "°C" Vector__XXX
  SG_ tint : 39|16@0- (0.1,0) [10|60] "°C" Vector__XXX
  SG_ toil : 23|16@0- (0.1,0) [60|150] "°C" Vector__XXX
- SG_ tmot : 7|16@0- (0.1,0) [40|120] "°C" Vector__XXX
 
-BO_ 19 ECU_3: 8 MS6
-
-BO_ 21 ECU_5: 8 MS6
- SG_ pbrake_r : 48|16@1+ (0.005,0) [0|150] "bar" Vector__XXX
- SG_ pbrake_f : 32|16@1+ (0.005,0) [0|150] "bar" Vector__XXX
- SG_ dam_fr : 16|16@1+ (0.015,0) [-400|400] "mm" Vector__XXX
- SG_ dam_fl : 0|16@1+ (0.015,0) [-400|400] "mm" Vector__XXX
-
-BO_ 20 ECU_4: 8 MS6
+BO_ 32 ECU_PDM_Status: 8 MS6_Logger_CAN_Bus_1
+ SG_ gear : 40|8@1- (1,0) [-1|12] "" Vector__XXX
+ SG_ nmot : 24|16@1+ (1,0) [0|20000] "rpm" Vector__XXX
+ SG_ tmot : 16|8@1+ (1,0) [40|120] "°C" Vector__XXX
  SG_ Engine_Running : 8|8@1+ (1,0) [0|1] "" Vector__XXX
  SG_ Engine_Cranking : 0|8@1+ (1,0) [0|1] "" Vector__XXX
 
-BO_TX_BU_ 15 : IM_Wheel,IM_GCM,IM_PDM;
+
 
 
 CM_ BO_ 1223 "Brake IR channels 13-16";
@@ -329,26 +199,12 @@ CM_ BO_ 380 "Z accel";
 CM_ BO_ 1065 "Right wireless IZZE - Output, Battery, Temperature, RSSI";
 CM_ BO_ 1066 "Left wireless IZZE - Output, Battery, Temperature, RSSI";
 CM_ BO_ 1220 "Brake IR channels 1-4";
-CM_ BO_ 1547 "Overcurrent counts 2";
-CM_ BO_ 1546 "Overcurrent counts";
 CM_ BO_ 376 "Roll rate, X accel";
 CM_ BO_ 372 "Yaw rate, Y accel";
-CM_ BO_ 1025 "Input values";
-CM_ BO_ 1024 "Uptime, Temperatures";
 CM_ BO_ 514 "Paddles, Shift Queues";
 CM_ BO_ 513 "Gear, Gear Sensor Voltage, Mode, Shift force";
 CM_ BO_ 15 "Error flags for IM boards";
-CM_ BO_ 1537 "Load enabled statuses, Load peak currents, Total current, Switchbox inputs, Over temperature, Prime ";
-CM_ BO_ 1545 "Fuel peak cutoff, Fan peak cutoff, Water peak cutoff, ECU cutoff";
-CM_ BO_ 1544 "ECU cutoff, Auxilary cutoff, Backup cutoff, Starter cutoff";
 CM_ BO_ 512 "Uptime, Temperatures";
-CM_ BO_ 1536 "Uptime, Temperatures";
-CM_ BO_ 1543 "Actuator cutoff, Fan cutoff, Water cutoff";
-CM_ BO_ 1542 "Fuel cutoff, Ignition cutoff, Injection cutoff, ABS cutoff";
-CM_ BO_ 1541 "ECU current, Auxilary current, Backup current, Starter current";
-CM_ BO_ 1540 "Actuator current, Fan current, Water pump current";
-CM_ BO_ 1539 "Fuel Current, Ignition Current, Injection Current, ABS Current";
-CM_ BO_ 1538 "Power rails";
 CM_ BO_ 2044 "Device status";
 CM_ BO_ 2043 "Velocity X, Velocity Y, Slip angle";
 CM_ BO_ 2042 "Timestamp, velocity, distance";
@@ -365,16 +221,17 @@ CM_ BO_ 17 "Coolant Temp, Oil Temp, Manifold Temp, Fuel Temp";
 CM_ SG_ 17 tfuel "fuel temperature";
 CM_ SG_ 17 tint "intake air temperature";
 CM_ SG_ 17 toil "oil temperature";
-CM_ SG_ 17 tmot "engine temperature";
-CM_ BO_ 19 "Wheel Speeds";
-CM_ BO_ 21 "Front Damper Positions, Front Brake Pressure, Rear Brake Pressure";
-CM_ SG_ 21 pbrake_r "brake pressure rear";
-CM_ SG_ 21 pbrake_f "brake pressure front ";
-CM_ SG_ 21 dam_fr "damper position front right";
-CM_ SG_ 21 dam_fl "damper position front left";
-CM_ BO_ 20 "Engine Cranking, Engine Running";
-CM_ SG_ 20 Engine_Running "Returns true, if (nmot > 0)";
-CM_ SG_ 20 Engine_Cranking "Returns true, if (1 <= nmot <= 550)";
+CM_ BO_ 32 "Engine_Cranking, Engine_Running, tmot, nmot, gear";
+CM_ SG_ 32 gear "selected gear";
+CM_ SG_ 32 nmot "engine speed";
+CM_ SG_ 32 tmot "engine temperature";
+CM_ SG_ 32 Engine_Running "Returns true, if (nmot > 0)";
+CM_ SG_ 32 Engine_Cranking "Returns true, if (1 <= nmot <= 550)";
+
+
+
 VAL_ 2044 S350_FilterType 1 "FIR" 0 "MAVG" ;
 VAL_ 2044 S350_FilerON 1 "ON" 0 "OFF" ;
+
+
 

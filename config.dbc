@@ -33,24 +33,28 @@ NS_ :
 
 BS_:
 
-BU_: MS6_Logger_CAN_Bus_1
+BU_: MS6_Logger_CAN_Bus_1 IM_GCM IZZE_BRK_IR IZZE_RL IZZE_FL IZZE_RR IZZE_FR IMU WL_IZZE_RIGHT WL_IZZE_LEFT S350
 
+
+BO_ 1956 BRK_IR_TEMP_STATUS: 8 Vector__XXX
+ SG_ BRK_IR_Internal_Temperature : 7|16@0+ (0.1,-100) [0|65535] "C" Vector__XXX
 
 BO_ 256 IM_GCM_MS6_Gear: 8 IM_GCM
+ SG_ GCM_Gear_Bosch : 0|8@1+ (0.5,-1.5) [0|0] "" Vector__XXX
 
-BO_ 1223 BRK_IR_TEMP_3: 8 IZZE_BRK_IR
+BO_ 1955 BRK_IR_TEMP_3: 8 IZZE_BRK_IR
  SG_ BRK_IR_Channel_16 : 55|16@0+ (0.1,-100) [0|65535] "C" Vector__XXX
  SG_ BRK_IR_Channel_15 : 39|16@0+ (0.1,-100) [0|65535] "C" Vector__XXX
  SG_ BRK_IR_Channel_14 : 23|16@0+ (0.1,-100) [0|65535] "C" Vector__XXX
  SG_ BRK_IR_Channel_13 : 7|16@0+ (0.1,-100) [0|65535] "C" Vector__XXX
 
-BO_ 1222 BRK_IR_TEMP_2: 8 IZZE_BRK_IR
+BO_ 1954 BRK_IR_TEMP_2: 8 IZZE_BRK_IR
  SG_ BRK_IR_Channel_9 : 55|16@0+ (0.1,-100) [0|65535] "C" Vector__XXX
  SG_ BRK_IR_Channel_12 : 39|16@0+ (0.1,-100) [0|65535] "C" Vector__XXX
  SG_ BRK_IR_Channel_11 : 23|16@0+ (0.1,-100) [0|65535] "C" Vector__XXX
  SG_ BRK_IR_Channel_10 : 7|16@0+ (0.1,-100) [0|65535] "C" Vector__XXX
 
-BO_ 1221 BRK_IR_TEMP_1: 8 IZZE_BRK_IR
+BO_ 1953 BRK_IR_TEMP_1: 8 IZZE_BRK_IR
  SG_ BRK_IR_Channel_8 : 55|16@0+ (0.1,-100) [0|65535] "C" Vector__XXX
  SG_ BRK_IR_Channel_7 : 39|16@0+ (0.1,-100) [0|65535] "C" Vector__XXX
  SG_ BRK_IR_Channel_6 : 23|16@0+ (0.1,-100) [0|65535] "C" Vector__XXX
@@ -99,7 +103,7 @@ BO_ 1066 WL_IZZE_LEFT: 8 WL_IZZE_LEFT
  SG_ SG_Left_VBAT : 23|16@0- (0.001,0) [0|0] "V" Vector__XXX
  SG_ SG_Left_Out : 7|16@0- (1,0) [0|0] "uV" Vector__XXX
 
-BO_ 1220 BRK_IR_TEMP_0: 8 IZZE_BRK_IR
+BO_ 1952 BRK_IR_TEMP_0: 8 IZZE_BRK_IR
  SG_ BRK_IR_Channel_4 : 55|16@0+ (0.1,-100) [0|65535] "C" Vector__XXX
  SG_ BRK_IR_Channel_3 : 39|16@0+ (0.1,-100) [0|65535] "C" Vector__XXX
  SG_ BRK_IR_Channel_2 : 23|16@0+ (0.1,-100) [0|65535] "C" Vector__XXX
@@ -171,11 +175,13 @@ BO_ 18 ECU2: 8 MS6_Logger_CAN_Bus_1
  SG_ pfuel : 55|16@0- (0.001,0) [0|10] "bar" Vector__XXX
  SG_ p22 : 39|16@0- (1,0) [0|5000] "mbar" Vector__XXX
  SG_ poil : 23|16@0- (0.001,0) [0|10] "bar" Vector__XXX
+ SG_ pamb : 0|16@1+ (0.1,0) [0|2000] "mbar" Vector__XXX
 
 BO_ 17 ECU1: 8 MS6_Logger_CAN_Bus_1
  SG_ tfuel : 55|16@0+ (0.1,0) [10|80] "°C" Vector__XXX
  SG_ tint : 39|16@0- (0.1,0) [10|60] "°C" Vector__XXX
  SG_ toil : 23|16@0- (0.1,0) [60|150] "°C" Vector__XXX
+ SG_ tmot : 0|16@1- (0.1,0) [40|120] "°C" Vector__XXX
 
 BO_ 32 ECU_PDM_Status: 8 MS6_Logger_CAN_Bus_1
  SG_ gear : 40|8@1- (1,0) [-1|12] "" Vector__XXX
@@ -186,10 +192,10 @@ BO_ 32 ECU_PDM_Status: 8 MS6_Logger_CAN_Bus_1
 
 
 
-
-CM_ BO_ 1223 "Brake IR channels 13-16";
-CM_ BO_ 1222 "Brake IR channels 9-12";
-CM_ BO_ 1221 "Brake IR channels 5-8";
+CM_ BO_ 1956 "Brake IR channels 13-16";
+CM_ BO_ 1955 "Brake IR channels 13-16";
+CM_ BO_ 1954 "Brake IR channels 9-12";
+CM_ BO_ 1953 "Brake IR channels 5-8";
 CM_ BO_ 1552 "Upshift/downshift ignition cut triggers for the MS6";
 CM_ BO_ 1250 "Rear left IZZE - raw voltage, calibrated output, temperatures";
 CM_ BO_ 1255 "Front left IZZE - raw voltage, calibrated output, temperatures";
@@ -198,7 +204,7 @@ CM_ BO_ 1253 "Front right IZZE - raw voltage, calibrated output, temperatures";
 CM_ BO_ 380 "Z accel";
 CM_ BO_ 1065 "Right wireless IZZE - Output, Battery, Temperature, RSSI";
 CM_ BO_ 1066 "Left wireless IZZE - Output, Battery, Temperature, RSSI";
-CM_ BO_ 1220 "Brake IR channels 1-4";
+CM_ BO_ 1952 "Brake IR channels 1-4";
 CM_ BO_ 376 "Roll rate, X accel";
 CM_ BO_ 372 "Yaw rate, Y accel";
 CM_ BO_ 514 "Paddles, Shift Queues";
@@ -217,21 +223,18 @@ CM_ BO_ 18 "Ambient Pressure, Oil Pressure, Manifold Pressure, Fuel Pressure";
 CM_ SG_ 18 pfuel "fuel pressure";
 CM_ SG_ 18 p22 "intake manifold pressure downstream throttle";
 CM_ SG_ 18 poil "oil pressure";
+CM_ SG_ 18 pamb "ambient pressure";
 CM_ BO_ 17 "Coolant Temp, Oil Temp, Manifold Temp, Fuel Temp";
 CM_ SG_ 17 tfuel "fuel temperature";
 CM_ SG_ 17 tint "intake air temperature";
 CM_ SG_ 17 toil "oil temperature";
+CM_ SG_ 17 tmot "engine temperature";
 CM_ BO_ 32 "Engine_Cranking, Engine_Running, tmot, nmot, gear";
 CM_ SG_ 32 gear "selected gear";
 CM_ SG_ 32 nmot "engine speed";
 CM_ SG_ 32 tmot "engine temperature";
 CM_ SG_ 32 Engine_Running "Returns true, if (nmot > 0)";
 CM_ SG_ 32 Engine_Cranking "Returns true, if (1 <= nmot <= 550)";
-
-
-
 VAL_ 2044 S350_FilterType 1 "FIR" 0 "MAVG" ;
 VAL_ 2044 S350_FilerON 1 "ON" 0 "OFF" ;
-
-
 

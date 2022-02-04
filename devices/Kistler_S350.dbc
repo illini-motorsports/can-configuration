@@ -1,0 +1,72 @@
+VERSION ""
+
+
+NS_ : 
+	NS_DESC_
+	CM_
+	BA_DEF_
+	BA_
+	VAL_
+	CAT_DEF_
+	CAT_
+	FILTER
+	BA_DEF_DEF_
+	EV_DATA_
+	ENVVAR_DATA_
+	SGTYPE_
+	SGTYPE_VAL_
+	BA_DEF_SGTYPE_
+	BA_SGTYPE_
+	SIG_TYPE_REF_
+	VAL_TABLE_
+	SIG_GROUP_
+	SIG_VALTYPE_
+	SIGTYPE_VALTYPE_
+	BO_TX_BU_
+	BA_DEF_REL_
+	BA_REL_
+	BA_DEF_DEF_REL_
+	BU_SG_REL_
+	BU_EV_REL_
+	BU_BO_REL_
+	SG_MUL_VAL_
+
+BS_:
+
+BU_: Kistler_S350
+
+
+BO_ 2044 Kistler_S350_C: 8 Kistler_S350
+ SG_ Kistler_S350_FilterType : 56|1@0+ (1,0) [0|1] "" Vector__XXX
+ SG_ Kistler_S350_FilterSetting : 63|7@0+ (1,0) [0|127] "" Vector__XXX
+ SG_ Kistler_S350_StSt : 48|1@0+ (1,0) [0|1] "" Vector__XXX
+ SG_ Kistler_S350_FilerON : 49|1@0+ (1,0) [0|1] "" Vector__XXX
+ SG_ Kistler_S350_SensorOK : 50|1@0+ (1,0) [0|1] "" Vector__XXX
+ SG_ Kistler_S350_TempOK : 51|1@0+ (1,0) [0|1] "" Vector__XXX
+ SG_ Kistler_S350_OpticOK : 52|1@0+ (1,0) [0|1] "" Vector__XXX
+ SG_ Kistler_S350_CurrHigh : 53|1@0+ (1,0) [0|1] "" Vector__XXX
+ SG_ Kistler_S350_CurrOK : 54|1@0+ (1,0) [0|1] "" Vector__XXX
+ SG_ Kistler_S350_PowerOK : 55|1@0+ (1,0) [0|1] "" Vector__XXX
+ SG_ Kistler_S350_CurrLED : 47|8@0+ (0.01,0) [0|2.55] "A" Vector__XXX
+ SG_ Kistler_S350_TempSens : 39|8@0- (1,0) [-128|127] "°C" Vector__XXX
+ SG_ Kistler_S350_SerialNo : 7|32@0+ (1,0) [0|4294970000] "" Vector__XXX
+
+BO_ 2043 Kistler_S350_B: 6 Kistler_S350
+ SG_ Kistler_S350_Angle : 39|16@0- (0.01,0) [-45|45] "°" Vector__XXX
+ SG_ Kistler_S350_VelY : 23|16@0- (0.036,0) [-100|100] "km/h" Vector__XXX
+ SG_ Kistler_S350_VelX : 7|16@0+ (0.036,0) [0|400] "km/h" Vector__XXX
+
+BO_ 2042 Kistler_S350_A: 8 Kistler_S350
+ SG_ Kistler_S350_Dist : 39|32@0+ (0.001,0) [0|4294970] "m" Vector__XXX
+ SG_ Kistler_S350_Vel : 23|16@0+ (0.036,0) [0|400] "km/h" Vector__XXX
+ SG_ Kistler_S350_Timestamp : 7|16@0+ (1,0) [0|65535] "" Vector__XXX
+
+
+
+CM_ BO_ 2044 "Device status";
+CM_ BO_ 2043 "Velocity X, Velocity Y, Slip angle";
+CM_ BO_ 2042 "Timestamp, velocity, distance";
+BA_DEF_  "BusType" STRING ;
+BA_DEF_DEF_  "BusType" "";
+BA_ "BusType" "CAN";
+

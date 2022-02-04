@@ -1,0 +1,192 @@
+VERSION ""
+
+
+NS_ : 
+	NS_DESC_
+	CM_
+	BA_DEF_
+	BA_
+	VAL_
+	CAT_DEF_
+	CAT_
+	FILTER
+	BA_DEF_DEF_
+	EV_DATA_
+	ENVVAR_DATA_
+	SGTYPE_
+	SGTYPE_VAL_
+	BA_DEF_SGTYPE_
+	BA_SGTYPE_
+	SIG_TYPE_REF_
+	VAL_TABLE_
+	SIG_GROUP_
+	SIG_VALTYPE_
+	SIGTYPE_VALTYPE_
+	BO_TX_BU_
+	BA_DEF_REL_
+	BA_REL_
+	BA_DEF_DEF_REL_
+	BU_SG_REL_
+	BU_EV_REL_
+	BU_BO_REL_
+	SG_MUL_VAL_
+
+BS_:
+
+BU_: GCM IZZE_BRK_IR IZZE_SG_4E2 IZZE_SG_4E7 IZZE_SG_4E4 IZZE_SG_4E5 IMU IZZE_WLSG_429 IZZE_WLSG_42A Kistler_S350
+
+
+BO_ 1956 Brake_IR_7A_Status: 8 Vector__XXX
+ SG_ BRK_IR_Internal_Temperature : 7|16@0+ (0.1,-100) [0|65535] "C" Vector__XXX
+
+BO_ 256 GCM_MS6_Gear: 8 GCM
+ SG_ GCM_Gear_MS6 : 0|8@1+ (0.5,-1.5) [0|0] "" Vector__XXX
+
+BO_ 1955 Brake_IR_7A_Ch13to16: 8 IZZE_BRK_IR
+ SG_ BRK_IR_Channel_16 : 55|16@0+ (0.1,-100) [0|65535] "C" Vector__XXX
+ SG_ BRK_IR_Channel_15 : 39|16@0+ (0.1,-100) [0|65535] "C" Vector__XXX
+ SG_ BRK_IR_Channel_14 : 23|16@0+ (0.1,-100) [0|65535] "C" Vector__XXX
+ SG_ BRK_IR_Channel_13 : 7|16@0+ (0.1,-100) [0|65535] "C" Vector__XXX
+
+BO_ 1954 Brake_IR_7A_Ch9to12: 8 IZZE_BRK_IR
+ SG_ BRK_IR_Channel_9 : 55|16@0+ (0.1,-100) [0|65535] "C" Vector__XXX
+ SG_ BRK_IR_Channel_12 : 39|16@0+ (0.1,-100) [0|65535] "C" Vector__XXX
+ SG_ BRK_IR_Channel_11 : 23|16@0+ (0.1,-100) [0|65535] "C" Vector__XXX
+ SG_ BRK_IR_Channel_10 : 7|16@0+ (0.1,-100) [0|65535] "C" Vector__XXX
+
+BO_ 1953 Brake_IR_7A_Ch5to8: 8 IZZE_BRK_IR
+ SG_ BRK_IR_Channel_8 : 55|16@0+ (0.1,-100) [0|65535] "C" Vector__XXX
+ SG_ BRK_IR_Channel_7 : 39|16@0+ (0.1,-100) [0|65535] "C" Vector__XXX
+ SG_ BRK_IR_Channel_6 : 23|16@0+ (0.1,-100) [0|65535] "C" Vector__XXX
+ SG_ BRK_IR_Channel_5 : 7|16@0+ (0.1,-100) [0|65535] "C" Vector__XXX
+
+BO_ 1552 GCM_MS6_Shift: 8 GCM
+ SG_ GCM_Upshift_Bosch : 1|1@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ GCM_Downshift_Bosch : 0|1@1+ (1,0) [0|0] "" Vector__XXX
+
+BO_ 1250 IZZE_SG_4E2: 8 IZZE_SG_4E2
+ SG_ IZZE_SG_4E2_External_Temperature : 55|16@0- (0.1,0) [0|0] "C" Vector__XXX
+ SG_ IZZE_SG_4E2_Internal_Temperature : 39|16@0- (0.1,0) [0|0] "C" Vector__XXX
+ SG_ IZZE_SG_4E2_Calibrated_Output : 23|16@0- (0.1,0) [0|0] "F" Vector__XXX
+ SG_ IZZE_SG_4E2_Differential_Voltage : 7|16@0- (1,0) [0|0] "µV" Vector__XXX
+
+BO_ 1255 IZZE_SG_4E7: 8 IZZE_SG_4E7
+ SG_ IZZE_SG_4E7_External_Temperature : 55|16@0- (0.1,0) [0|0] "C" Vector__XXX
+ SG_ IZZE_SG_4E7_Internal_Temperature : 39|16@0- (0.1,0) [0|0] "C" Vector__XXX
+ SG_ IZZE_SG_4E7_Calibrated_Output : 23|16@0- (0.1,0) [0|0] "F" Vector__XXX
+ SG_ IZZE_SG_4E7_Differential_Voltage : 7|16@0- (1,0) [0|0] "µV" Vector__XXX
+
+BO_ 1252 IZZE_SG_4E4: 8 IZZE_SG_4E4
+ SG_ IZZE_SG_4E4_External_Temperature : 55|16@0- (0.1,0) [0|0] "C" Vector__XXX
+ SG_ IZZE_SG_4E4_Internal_Temperature : 39|16@0- (0.1,0) [0|0] "C" Vector__XXX
+ SG_ IZZE_SG_4E4_Calibrated_Output : 23|16@0- (0.1,0) [0|0] "F" Vector__XXX
+ SG_ IZZE_SG_4E4_Differential_Voltage : 7|16@0- (1,0) [0|0] "µV" Vector__XXX
+
+BO_ 1253 IZZE_SG_4E5: 8 IZZE_SG_4E5
+ SG_ IZZE_SG_4E5_External_Temperature : 55|16@0- (0.1,0) [0|0] "C" Vector__XXX
+ SG_ IZZE_SG_4E5_Internal_Temperature : 39|16@0- (0.1,0) [0|0] "C" Vector__XXX
+ SG_ IZZE_SG_4E5_Calibrated_Output : 23|16@0- (0.1,0) [0|0] "F" Vector__XXX
+ SG_ IZZE_SG_4E5_Differential_Voltage : 7|16@0- (1,0) [0|0] "µV" Vector__XXX
+
+BO_ 380 IMU_Z: 8 IMU
+ SG_ IMU_Z_Accel : 32|16@1+ (0.0001274,-4.1746432) [0|0] "g" Vector__XXX
+
+BO_ 1065 IZZE_WLSG_429: 8 IZZE_WLSG_429
+ SG_ SG_Right_RSSI : 55|16@0- (1,0) [0|0] "dBm" Vector__XXX
+ SG_ SG_Right_Temp : 39|16@0- (0.1,0) [0|0] "C" Vector__XXX
+ SG_ SG_Right_VBAT : 23|16@0- (0.001,0) [0|0] "V" Vector__XXX
+ SG_ SG_Right_Out : 7|16@0- (-1,0) [0|0] "uV" Vector__XXX
+
+BO_ 1066 IZZE_WLSG_42A: 8 IZZE_WLSG_42A
+ SG_ SG_Left_RSSI : 55|16@0- (1,0) [0|0] "dBm" Vector__XXX
+ SG_ SG_Left_Temp : 39|16@0- (0.1,0) [0|0] "C" Vector__XXX
+ SG_ SG_Left_VBAT : 23|16@0- (0.001,0) [0|0] "V" Vector__XXX
+ SG_ SG_Left_Out : 7|16@0- (1,0) [0|0] "uV" Vector__XXX
+
+BO_ 1952 Brake_IR_7A_Ch1to4: 8 IZZE_BRK_IR
+ SG_ BRK_IR_Channel_4 : 55|16@0+ (0.1,-100) [0|65535] "C" Vector__XXX
+ SG_ BRK_IR_Channel_3 : 39|16@0+ (0.1,-100) [0|65535] "C" Vector__XXX
+ SG_ BRK_IR_Channel_2 : 23|16@0+ (0.1,-100) [0|65535] "C" Vector__XXX
+ SG_ BRK_IR_Channel_1 : 7|16@0+ (0.1,-100) [0|65535] "C" Vector__XXX
+
+BO_ 376 IMU_X_Roll: 8 IMU
+ SG_ IMU_X_Accel : 32|16@1+ (0.0001274,-4.1746432) [0|0] "g" Vector__XXX
+ SG_ IMU_Roll_Rate : 0|16@1+ (0.005,-163.84) [0|0] "deg/s/s" Vector__XXX
+
+BO_ 372 IMU_Y_Yaw: 8 IMU
+ SG_ IMU_Y_Accel : 32|16@1+ (0.0001274,-4.1746432) [0|0] "g" Vector__XXX
+ SG_ IMU_Yaw_Rate : 0|16@1+ (0.005,-163.84) [0|0] "deg/s" Vector__XXX
+
+BO_ 514 GCM_2: 4 GCM
+ SG_ GCM_NeutralQueue : 24|8@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ GCM_DownshiftQueue : 16|8@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ GCM_UpshiftQueue : 8|8@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ GCM_Switch_Neutral : 2|1@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ GCM_Switch_Down : 1|1@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ GCM_Switch_Up : 0|1@1+ (1,0) [0|0] "" Vector__XXX
+
+BO_ 513 GCM_1: 6 GCM
+ SG_ GCM_Shift_Force : 32|16@1- (0.01,0) [0|0] "N" Vector__XXX
+ SG_ GCM_Gear_Sensor_Voltage : 16|16@1+ (0.0001,0) [0|0] "V" Vector__XXX
+ SG_ GCM_Mode : 8|8@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ GCM_Gear : 0|8@1+ (1,0) [0|0] "" Vector__XXX
+
+BO_ 15 GCM_ERR: 4 GCM
+ SG_ ERR_Code : 16|16@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ ERR_Origin_Node : 0|16@1+ (1,0) [0|0] "" Vector__XXX
+
+BO_ 512 GCM_0: 6 GCM
+ SG_ GCM_IC_Temp : 32|16@1- (0.005,0) [0|0] "C" Vector__XXX
+ SG_ GCM_PCB_Temp : 16|16@1- (0.005,0) [0|0] "C" Vector__XXX
+ SG_ GCM_Uptime : 0|16@1+ (1,0) [0|0] "s" Vector__XXX
+
+BO_ 2044 Kistler_S350_C: 8 Kistler_S350
+ SG_ Kistler_S350_FilterType : 56|1@0+ (1,0) [0|1] "" Vector__XXX
+ SG_ Kistler_S350_FilterSetting : 63|7@0+ (1,0) [0|127] "" Vector__XXX
+ SG_ Kistler_S350_StSt : 48|1@0+ (1,0) [0|1] "" Vector__XXX
+ SG_ Kistler_S350_FilerON : 49|1@0+ (1,0) [0|1] "" Vector__XXX
+ SG_ Kistler_S350_SensorOK : 50|1@0+ (1,0) [0|1] "" Vector__XXX
+ SG_ Kistler_S350_TempOK : 51|1@0+ (1,0) [0|1] "" Vector__XXX
+ SG_ Kistler_S350_OpticOK : 52|1@0+ (1,0) [0|1] "" Vector__XXX
+ SG_ Kistler_S350_CurrHigh : 53|1@0+ (1,0) [0|1] "" Vector__XXX
+ SG_ Kistler_S350_CurrOK : 54|1@0+ (1,0) [0|1] "" Vector__XXX
+ SG_ Kistler_S350_PowerOK : 55|1@0+ (1,0) [0|1] "" Vector__XXX
+ SG_ Kistler_S350_CurrLED : 47|8@0+ (0.01,0) [0|2.55] "A" Vector__XXX
+ SG_ Kistler_S350_TempSens : 39|8@0- (1,0) [-128|127] "°C" Vector__XXX
+ SG_ Kistler_S350_SerialNo : 7|32@0+ (1,0) [0|4294970000] "" Vector__XXX
+
+BO_ 2043 Kistler_S350_B: 6 Kistler_S350
+ SG_ Kistler_S350_Angle : 39|16@0- (0.01,0) [-45|45] "°" Vector__XXX
+ SG_ Kistler_S350_VelY : 23|16@0- (0.036,0) [-100|100] "km/h" Vector__XXX
+ SG_ Kistler_S350_VelX : 7|16@0+ (0.036,0) [0|400] "km/h" Vector__XXX
+
+BO_ 2042 Kistler_S350_A: 8 Kistler_S350
+ SG_ Kistler_S350_Dist : 39|32@0+ (0.001,0) [0|4294970] "m" Vector__XXX
+ SG_ Kistler_S350_Vel : 23|16@0+ (0.036,0) [0|400] "km/h" Vector__XXX
+ SG_ Kistler_S350_Timestamp : 7|16@0+ (1,0) [0|65535] "" Vector__XXX
+
+
+
+CM_ BO_ 1956 "Brake IR channels 13-16";
+CM_ BO_ 1955 "Brake IR channels 13-16";
+CM_ BO_ 1954 "Brake IR channels 9-12";
+CM_ BO_ 1953 "Brake IR channels 5-8";
+CM_ BO_ 1552 "Upshift/downshift ignition cut triggers for the MS6";
+CM_ BO_ 1250 "Rear left IZZE - raw voltage, calibrated output, temperatures";
+CM_ BO_ 1255 "Front left IZZE - raw voltage, calibrated output, temperatures";
+CM_ BO_ 1252 "Rear right IZZE - raw voltage, calibrated output, temperatures";
+CM_ BO_ 1253 "Front right IZZE - raw voltage, calibrated output, temperatures";
+CM_ BO_ 380 "Z accel";
+CM_ BO_ 1065 "Right wireless IZZE - Output, Battery, Temperature, RSSI";
+CM_ BO_ 1066 "Left wireless IZZE - Output, Battery, Temperature, RSSI";
+CM_ BO_ 1952 "Brake IR channels 1-4";
+CM_ BO_ 376 "Roll rate, X accel";
+CM_ BO_ 372 "Yaw rate, Y accel";
+CM_ BO_ 514 "Paddles, Shift Queues";
+CM_ BO_ 513 "Gear, Gear Sensor Voltage, Mode, Shift force";
+CM_ BO_ 15 "Error flags for IM boards";
+CM_ BO_ 512 "Uptime, Temperatures";
+CM_ BO_ 2044 "Device status";
+CM_ BO_ 2043 "Velocity X, Velocity Y, Slip angle";
+CM_ BO_ 2042 "Timestamp, velocity, distance";
+

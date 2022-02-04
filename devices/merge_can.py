@@ -14,12 +14,13 @@ pip install cantools
 in your shell.
 """
 
+import cantools, glob
+
 # Modify these variables to contain the input files you want to merge,
 # and the final output file.
-INPUT_FILES = ["./output.dbc", "../ecu.dbc"]
-OUTPUT_FILE = "output2.dbc"
+INPUT_FILES = glob.glob("*.dbc")#["./output.dbc", "../ecu.dbc"]
+OUTPUT_FILE = "config.dbc"
 
-import cantools
 
 # Sanity checks
 if len(INPUT_FILES) <= 1 or len(OUTPUT_FILE) < 4:

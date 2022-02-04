@@ -1,0 +1,51 @@
+VERSION ""
+
+
+NS_ : 
+	NS_DESC_
+	CM_
+	BA_DEF_
+	BA_
+	VAL_
+	CAT_DEF_
+	CAT_
+	FILTER
+	BA_DEF_DEF_
+	EV_DATA_
+	ENVVAR_DATA_
+	SGTYPE_
+	SGTYPE_VAL_
+	BA_DEF_SGTYPE_
+	BA_SGTYPE_
+	SIG_TYPE_REF_
+	VAL_TABLE_
+	SIG_GROUP_
+	SIG_VALTYPE_
+	SIGTYPE_VALTYPE_
+	BO_TX_BU_
+	BA_DEF_REL_
+	BA_REL_
+	BA_DEF_DEF_REL_
+	BU_SG_REL_
+	BU_EV_REL_
+	BU_BO_REL_
+	SG_MUL_VAL_
+
+BS_:
+
+BU_: IZZE_SG_4E7
+
+
+BO_ 1255 IZZE_SG_4E7: 8 IZZE_SG_4E7
+ SG_ IZZE_SG_4E7_External_Temperature : 55|16@0- (0.1,0) [0|0] "C" Vector__XXX
+ SG_ IZZE_SG_4E7_Internal_Temperature : 39|16@0- (0.1,0) [0|0] "C" Vector__XXX
+ SG_ IZZE_SG_4E7_Calibrated_Output : 23|16@0- (0.1,0) [0|0] "F" Vector__XXX
+ SG_ IZZE_SG_4E7_Differential_Voltage : 7|16@0- (1,0) [0|0] "µV" Vector__XXX
+
+
+
+CM_ BO_ 1255 "Front left IZZE - raw voltage, calibrated output, temperatures";
+BA_DEF_  "BusType" STRING ;
+BA_DEF_DEF_  "BusType" "";
+BA_ "BusType" "CAN";
+

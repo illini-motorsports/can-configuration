@@ -33,7 +33,7 @@ NS_ :
 
 BS_:
 
-BU_: Kistler_S350 MS6_Logger_CAN_Bus_1 MS6_Logger_CAN_Bus_2 GCM IMU IZZE_Brake_IR_7A IZZE_SG_4E2 IZZE_SG_4E4 IZZE_SG_4E5 IZZE_SG_4E7 IZZE_WL_SG_429 IZZE_WL_SG_42A
+BU_: Kistler_S350
 
 
 BO_ 16 ECU_General: 8 MS6_Logger_CAN_Bus_1
@@ -203,6 +203,7 @@ BO_ 2042 Kistler_S350_A: 8 Kistler_S350
 
 
 
+
 CM_ BO_ 16 "RPM, Throttle Position, Lambda, VBAT";
 CM_ SG_ 16 ub "battery voltage";
 CM_ SG_ 16 lambda "Lambda actual value";
@@ -259,4 +260,7 @@ BA_DEF_ BO_  "GenMsgCycleTime" INT 0 65535;
 BA_DEF_DEF_  "BusType" "";
 BA_DEF_DEF_  "GenMsgCycleTime" 0;
 BA_ "BusType" "CAN";
+
+
+
 

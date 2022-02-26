@@ -18,8 +18,8 @@ import cantools, glob
 
 # Modify these variables to contain the input files you want to merge,
 # and the final output file.
-INPUT_FILES = glob.glob("*.dbc")#["./output.dbc", "../ecu.dbc"]
-OUTPUT_FILE = "config.dbc"
+INPUT_FILES = glob.glob("*.dbc")
+OUTPUT_FILE = "..\config.dbc"
 
 
 # Sanity checks

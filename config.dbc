@@ -33,7 +33,7 @@ NS_ :
 
 BS_:
 
-BU_: PDM
+BU_: PLEX
 
 
 BO_ 768 ECU_General: 8 MS6_Logger_CAN_Bus_1
@@ -124,6 +124,15 @@ BO_ 1024 PDM_Status: 3 PDM
  SG_ PDM_Fan_Active : 8|8@1- (1,0) [0|0] "" Vector__XXX
  SG_ PDM_Total_Current : 0|8@1- (1,0) [0|127] "" Vector__XXX
 
+BO_ 1259 GPS_Status: 8 PLEX
+ SG_ GPS_PREC : 32|16@1- (0.1,0) [0|0] "m" Vector__XXX
+ SG_ GPS_FIX : 16|16@1- (1,0) [0|0] "" Vector__XXX
+ SG_ GPS_SATs : 0|16@1- (1,0) [0|0] "" Vector__XXX
+
+BO_ 1258 GPS_Position: 8 PLEX
+ SG_ GPS_Long : 32|32@1- (1e-07,0) [0|0] "deg" Vector__XXX
+ SG_ GPS_Lat : 0|32@1- (1e-07,0) [0|0] "deg" Vector__XXX
+
 
 
 
@@ -170,9 +179,7 @@ CM_ BO_ 512 "Uptime, Temperatures";
 CM_ BO_ 380 "Z accel";
 CM_ BO_ 376 "Roll rate, X accel";
 CM_ BO_ 372 "Yaw rate, Y accel";
-BA_DEF_  "BusType" STRING ;
 BA_DEF_ BO_  "GenMsgCycleTime" INT 0 65535;
-BA_DEF_DEF_  "BusType" "";
 BA_DEF_DEF_  "GenMsgCycleTime" 0;
 
 

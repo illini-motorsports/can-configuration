@@ -28,23 +28,24 @@ BS_:
 BU_: MS6_Logger_CAN_Bus_1
 
 
-BO_ 16 ECU_General: 8 MS6_Logger_CAN_Bus_1
+BO_ 768 ECU_General: 8 MS6_Logger_CAN_Bus_1
  SG_ ub : 55|16@0- (0.01,0) [0|25.5] "V" Vector__XXX
  SG_ nmot : 7|16@0- (1,0) [0|20000] "rpm" Vector__XXX
  SG_ ath : 23|16@0- (0.1,0) [0|110] "%" Vector__XXX
  SG_ lambda : 39|16@0- (0.001,0) [0|5] "" Vector__XXX
 
-BO_ 18 ECU_Pressures: 8 MS6_Logger_CAN_Bus_1
+BO_ 770 ECU_Pressures: 8 MS6_Logger_CAN_Bus_1
  SG_ poil : 23|16@0- (0.001,0) [0|10] "bar" Vector__XXX
  SG_ p22 : 39|16@0- (1,0) [0|5000] "mbar" Vector__XXX
  SG_ pfuel : 55|16@0- (0.001,0) [0|10] "bar" Vector__XXX
  SG_ pamb : 0|16@1+ (0.1,0) [0|2000] "mbar" Vector__XXX
 
-BO_ 17 ECU_Temps: 8 MS6_Logger_CAN_Bus_1
- SG_ toil : 23|16@0- (0.1,0) [60|150] "°C" Vector__XXX
- SG_ tint : 39|16@0- (0.1,0) [10|60] "°C" Vector__XXX
- SG_ tfuel : 55|16@0+ (0.1,0) [10|80] "°C" Vector__XXX
- SG_ tmot : 0|16@1- (0.1,0) [40|120] "°C" Vector__XXX
+BO_ 769 ECU_Temps: 8 MS6_Logger_CAN_Bus_1
+ SG_ toil : 15|8@0+ (1,0) [60|150] "°C" Vector__XXX
+ SG_ tint : 23|8@0+ (1,0) [10|60] "°C" Vector__XXX
+ SG_ tfuel : 31|8@0+ (1,0) [10|80] "°C" Vector__XXX
+ SG_ tmot : 0|8@1+ (1,0) [40|120] "°C" Vector__XXX
+ SG_ texh : 32|16@1+ (1,0) [0|1250] "°C" Vector__XXX
 
 BO_ 32 ECU_PDM_Status: 8 MS6_Logger_CAN_Bus_1
  SG_ Engine_Cranking : 0|8@1+ (1,0) [0|1] "" Vector__XXX
@@ -52,42 +53,53 @@ BO_ 32 ECU_PDM_Status: 8 MS6_Logger_CAN_Bus_1
  SG_ tmot : 16|8@1+ (1,0) [40|120] "°C" Vector__XXX
  SG_ nmot : 24|16@1+ (1,0) [0|20000] "rpm" Vector__XXX
  SG_ gear : 40|8@1- (1,0) [-1|12] "" Vector__XXX
- SG_ B_err_thrpot_b : 48|8@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ pbrake_f : 48|8@1+ (1,0) [0|150] "bar" Vector__XXX
+ SG_ pbrake_r : 56|8@1+ (1,0) [0|150] "bar" Vector__XXX
 
-BO_ 1791 ECU_Shifting: 8 MS6_Logger_CAN_Bus_1
+BO_ 938 ECU_Shifting: 8 MS6_Logger_CAN_Bus_1
  SG_ vwheel_fl : 0|8@1+ (1,0) [0|400] "km/h" Vector__XXX
  SG_ vwheel_fr : 8|8@1+ (1,0) [0|400] "km/h" Vector__XXX
  SG_ vwheel_rl : 16|8@1+ (1,0) [0|400] "km/h" Vector__XXX
  SG_ vwheel_rr : 24|8@1+ (1,0) [0|400] "km/h" Vector__XXX
- SG_ Launch_Control_Auto_Upshifting : 32|8@1+ (1,0) [0|255] "" Vector__XXX
- SG_ speed : 40|8@1+ (1,0) [0|400] "km/h" Vector__XXX
+ SG_ speed : 32|8@1+ (1,0) [0|400] "km/h" Vector__XXX
+ SG_ gear : 40|8@1- (1,0) [-1|12] "" Vector__XXX
 
-CM_ BO_ 16 "RPM, Throttle Position, Lambda, VBAT";
-CM_ SG_ 16 ub "battery voltage";
-CM_ SG_ 16 nmot "engine speed";
-CM_ SG_ 16 ath "throttle position";
-CM_ SG_ 16 lambda "Lambda actual value";
-CM_ BO_ 18 "Ambient Pressure, Oil Pressure, Manifold Pressure, Fuel Pressure";
-CM_ SG_ 18 poil "oil pressure";
-CM_ SG_ 18 p22 "intake manifold pressure downstream throttle";
-CM_ SG_ 18 pfuel "fuel pressure";
-CM_ SG_ 18 pamb "ambient pressure";
-CM_ BO_ 17 "Coolant Temp, Oil Temp, Manifold Temp, Fuel Temp";
-CM_ SG_ 17 toil "oil temperature";
-CM_ SG_ 17 tint "intake air temperature";
-CM_ SG_ 17 tfuel "fuel temperature";
-CM_ SG_ 17 tmot "engine temperature";
-CM_ BO_ 32 "Engine_Cranking, Engine_Running, tmot, nmot, gear";
+BO_ 1023 ECU_Error: 8 MS6_Logger_CAN_Bus_1
+ SG_ E_pbrake_r : 0|3@1+ (1,0) [0|255] "" Vector__XXX
+ SG_ E_pbrake_f : 3|3@1+ (1,0) [0|255] "" Vector__XXX
+
+CM_ BO_ 768 "RPM, Throttle Position, Lambda, Battery Voltage";
+CM_ SG_ 768 ub "battery voltage";
+CM_ SG_ 768 nmot "engine speed";
+CM_ SG_ 768 ath "throttle position";
+CM_ SG_ 768 lambda "Lambda actual value";
+CM_ BO_ 770 "Ambient Pressure, Oil Pressure, Manifold Pressure, Fuel Pressure";
+CM_ SG_ 770 poil "oil pressure";
+CM_ SG_ 770 p22 "intake manifold pressure downstream throttle";
+CM_ SG_ 770 pfuel "fuel pressure";
+CM_ SG_ 770 pamb "ambient pressure";
+CM_ BO_ 769 "Coolant Temp, Oil Temp, Manifold Temp, Fuel Temp, Exhaust Temp";
+CM_ SG_ 769 toil "oil temperature";
+CM_ SG_ 769 tint "intake air temperature";
+CM_ SG_ 769 tfuel "fuel temperature";
+CM_ SG_ 769 tmot "engine temperature";
+CM_ SG_ 769 texh "exhaust gas temperature";
+CM_ BO_ 32 "Engine_Cranking, Engine_Running, tmot, nmot, gear, pbrake_f, pbrake_r";
 CM_ SG_ 32 Engine_Cranking "Returns true, if (1 <= nmot <= 1000)";
 CM_ SG_ 32 Engine_Running "Returns true, if (nmot > 0)";
 CM_ SG_ 32 tmot "engine temperature";
 CM_ SG_ 32 nmot "engine speed";
 CM_ SG_ 32 gear "selected gear";
-CM_ SG_ 32 B_err_thrpot_b "condition error of throttle position signal b,min,max,plausibility";
-CM_ BO_ 1791 "GCM Speed + LC/AU Control";
-CM_ SG_ 1791 vwheel_fl "wheel speed front left";
-CM_ SG_ 1791 vwheel_fr "wheel speed front right";
-CM_ SG_ 1791 vwheel_rl "wheel speed rear left";
-CM_ SG_ 1791 vwheel_rr "wheel speed rear right";
-CM_ SG_ 1791 speed "car speed";
+CM_ SG_ 32 pbrake_f "brake pressure front ";
+CM_ SG_ 32 pbrake_r "brake pressure rear";
+CM_ BO_ 938 "FL/FR/RL/RR Wheel Speed, Ground Speed, Gear";
+CM_ SG_ 938 vwheel_fl "wheel speed front left";
+CM_ SG_ 938 vwheel_fr "wheel speed front right";
+CM_ SG_ 938 vwheel_rl "wheel speed rear left";
+CM_ SG_ 938 vwheel_rr "wheel speed rear right";
+CM_ SG_ 938 speed "car speed";
+CM_ SG_ 938 gear "selected gear";
+CM_ BO_ 1023 "Critical error codes";
+CM_ SG_ 1023 E_pbrake_r "error state brake pressure rear";
+CM_ SG_ 1023 E_pbrake_f "error state brake pressure front";
 

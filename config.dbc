@@ -33,42 +33,48 @@ NS_ :
 
 BS_:
 
-BU_: Kistler_S350
+BU_: PDM
 
 
-BO_ 16 ECU_General: 8 MS6_Logger_CAN_Bus_1
+BO_ 768 ECU_General: 8 MS6_Logger_CAN_Bus_1
  SG_ ub : 55|16@0- (0.01,0) [0|25.5] "V" Vector__XXX
  SG_ lambda : 39|16@0- (0.001,0) [0|5] "" Vector__XXX
  SG_ ath : 23|16@0- (0.1,0) [0|110] "%" Vector__XXX
  SG_ nmot : 7|16@0- (1,0) [0|20000] "rpm" Vector__XXX
 
-BO_ 18 ECU_Pressures: 8 MS6_Logger_CAN_Bus_1
+BO_ 770 ECU_Pressures: 8 MS6_Logger_CAN_Bus_1
  SG_ pfuel : 55|16@0- (0.001,0) [0|10] "bar" Vector__XXX
  SG_ p22 : 39|16@0- (1,0) [0|5000] "mbar" Vector__XXX
  SG_ poil : 23|16@0- (0.001,0) [0|10] "bar" Vector__XXX
  SG_ pamb : 0|16@1+ (0.1,0) [0|2000] "mbar" Vector__XXX
 
-BO_ 17 ECU_Temps: 8 MS6_Logger_CAN_Bus_1
- SG_ tfuel : 55|16@0+ (0.1,0) [10|80] "°C" Vector__XXX
- SG_ tint : 39|16@0- (0.1,0) [10|60] "°C" Vector__XXX
- SG_ toil : 23|16@0- (0.1,0) [60|150] "°C" Vector__XXX
- SG_ tmot : 0|16@1- (0.1,0) [40|120] "°C" Vector__XXX
+BO_ 769 ECU_Temps: 8 MS6_Logger_CAN_Bus_1
+ SG_ texh : 32|16@1+ (1,0) [0|1250] "°C" Vector__XXX
+ SG_ tfuel : 31|8@0+ (1,0) [10|80] "°C" Vector__XXX
+ SG_ tint : 23|8@0+ (1,0) [10|60] "°C" Vector__XXX
+ SG_ toil : 15|8@0+ (1,0) [60|150] "°C" Vector__XXX
+ SG_ tmot : 0|8@1+ (1,0) [40|120] "°C" Vector__XXX
 
 BO_ 32 ECU_PDM_Status: 8 MS6_Logger_CAN_Bus_1
- SG_ B_err_thrpot_b : 48|8@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ pbrake_r : 56|8@1+ (1,0) [0|150] "bar" Vector__XXX
+ SG_ pbrake_f : 48|8@1+ (1,0) [0|150] "bar" Vector__XXX
  SG_ gear : 40|8@1- (1,0) [-1|12] "" Vector__XXX
  SG_ nmot : 24|16@1+ (1,0) [0|20000] "rpm" Vector__XXX
  SG_ tmot : 16|8@1+ (1,0) [40|120] "°C" Vector__XXX
  SG_ Engine_Running : 8|8@1+ (1,0) [0|1] "" Vector__XXX
  SG_ Engine_Cranking : 0|8@1+ (1,0) [0|1] "" Vector__XXX
 
-BO_ 1791 ECU_Shifting: 8 MS6_Logger_CAN_Bus_1
- SG_ speed : 40|8@1+ (1,0) [0|400] "km/h" Vector__XXX
- SG_ Launch_Control_Auto_Upshifting : 32|8@1+ (1,0) [0|255] "" Vector__XXX
+BO_ 938 ECU_Shifting: 8 MS6_Logger_CAN_Bus_1
+ SG_ gear : 40|8@1- (1,0) [-1|12] "" Vector__XXX
+ SG_ speed : 32|8@1+ (1,0) [0|400] "km/h" Vector__XXX
  SG_ vwheel_rr : 24|8@1+ (1,0) [0|400] "km/h" Vector__XXX
  SG_ vwheel_rl : 16|8@1+ (1,0) [0|400] "km/h" Vector__XXX
  SG_ vwheel_fr : 8|8@1+ (1,0) [0|400] "km/h" Vector__XXX
  SG_ vwheel_fl : 0|8@1+ (1,0) [0|400] "km/h" Vector__XXX
+
+BO_ 1023 ECU_Error: 8 MS6_Logger_CAN_Bus_1
+ SG_ E_pbrake_f : 3|3@1+ (1,0) [0|255] "" Vector__XXX
+ SG_ E_pbrake_r : 0|3@1+ (1,0) [0|255] "" Vector__XXX
 
 BO_ 1967 IZZE_Brake_IR_Programming: 8 MS6_Logger_CAN_Bus_2
 
@@ -113,125 +119,48 @@ BO_ 372 IMU_Y_Yaw: 8 IMU
  SG_ IMU_Y_Accel : 32|16@1+ (0.0001274,-4.1746432) [0|0] "g" Vector__XXX
  SG_ IMU_Yaw_Rate : 0|16@1+ (0.005,-163.84) [0|0] "deg/s" Vector__XXX
 
-BO_ 1956 IZZE_Brake_IR_7A_Status: 8 IZZE_Brake_IR_7A
- SG_ IZZE_Brake_IR_7A_Internal_Temp : 7|16@0+ (0.1,-100) [0|65535] "C" Vector__XXX
-
-BO_ 1955 IZZE_Brake_IR_7A_Ch13to16: 8 IZZE_Brake_IR_7A
- SG_ IZZE_Brake_IR_7A_Channel_16 : 55|16@0+ (0.1,-100) [0|65535] "C" Vector__XXX
- SG_ IZZE_Brake_IR_7A_Channel_15 : 39|16@0+ (0.1,-100) [0|65535] "C" Vector__XXX
- SG_ IZZE_Brake_IR_7A_Channel_14 : 23|16@0+ (0.1,-100) [0|65535] "C" Vector__XXX
- SG_ IZZE_Brake_IR_7A_Channel_13 : 7|16@0+ (0.1,-100) [0|65535] "C" Vector__XXX
-
-BO_ 1954 IZZE_Brake_IR_7A_Ch9to12: 8 IZZE_Brake_IR_7A
- SG_ IZZE_Brake_IR_7A_Channel_9 : 55|16@0+ (0.1,-100) [0|65535] "C" Vector__XXX
- SG_ IZZE_Brake_IR_7A_Channel_12 : 39|16@0+ (0.1,-100) [0|65535] "C" Vector__XXX
- SG_ IZZE_Brake_IR_7A_Channel_11 : 23|16@0+ (0.1,-100) [0|65535] "C" Vector__XXX
- SG_ IZZE_Brake_IR_7A_Channel_10 : 7|16@0+ (0.1,-100) [0|65535] "C" Vector__XXX
-
-BO_ 1953 IZZE_Brake_IR_7A_Ch5to8: 8 IZZE_Brake_IR_7A
- SG_ IZZE_Brake_IR_7A_Channel_8 : 55|16@0+ (0.1,-100) [0|65535] "C" Vector__XXX
- SG_ IZZE_Brake_IR_7A_Channel_7 : 39|16@0+ (0.1,-100) [0|65535] "C" Vector__XXX
- SG_ IZZE_Brake_IR_7A_Channel_6 : 23|16@0+ (0.1,-100) [0|65535] "C" Vector__XXX
- SG_ IZZE_Brake_IR_7A_Channel_5 : 7|16@0+ (0.1,-100) [0|65535] "C" Vector__XXX
-
-BO_ 1952 IZZE_Brake_IR_7A_Ch1to4: 8 IZZE_Brake_IR_7A
- SG_ IZZE_Brake_IR_7A_Channel_4 : 55|16@0+ (0.1,-100) [0|65535] "C" Vector__XXX
- SG_ IZZE_Brake_IR_7A_Channel_3 : 39|16@0+ (0.1,-100) [0|65535] "C" Vector__XXX
- SG_ IZZE_Brake_IR_7A_Channel_2 : 23|16@0+ (0.1,-100) [0|65535] "C" Vector__XXX
- SG_ IZZE_Brake_IR_7A_Channel_1 : 7|16@0+ (0.1,-100) [0|65535] "C" Vector__XXX
-
-BO_ 1250 IZZE_SG_4E2: 8 IZZE_SG_4E2
- SG_ IZZE_SG_4E2_External_Temperature : 55|16@0- (0.1,0) [0|0] "C" Vector__XXX
- SG_ IZZE_SG_4E2_Internal_Temperature : 39|16@0- (0.1,0) [0|0] "C" Vector__XXX
- SG_ IZZE_SG_4E2_Calibrated_Output : 23|16@0- (0.1,0) [0|0] "F" Vector__XXX
- SG_ IZZE_SG_4E2_Differential_Voltage : 7|16@0- (1,0) [0|0] "µV" Vector__XXX
-
-BO_ 1252 IZZE_SG_4E4: 8 IZZE_SG_4E4
- SG_ IZZE_SG_4E4_External_Temperature : 55|16@0- (0.1,0) [0|0] "C" Vector__XXX
- SG_ IZZE_SG_4E4_Internal_Temperature : 39|16@0- (0.1,0) [0|0] "C" Vector__XXX
- SG_ IZZE_SG_4E4_Calibrated_Output : 23|16@0- (0.1,0) [0|0] "F" Vector__XXX
- SG_ IZZE_SG_4E4_Differential_Voltage : 7|16@0- (1,0) [0|0] "µV" Vector__XXX
-
-BO_ 1253 IZZE_SG_4E5: 8 IZZE_SG_4E5
- SG_ IZZE_SG_4E5_External_Temperature : 55|16@0- (0.1,0) [0|0] "C" Vector__XXX
- SG_ IZZE_SG_4E5_Internal_Temperature : 39|16@0- (0.1,0) [0|0] "C" Vector__XXX
- SG_ IZZE_SG_4E5_Calibrated_Output : 23|16@0- (0.1,0) [0|0] "F" Vector__XXX
- SG_ IZZE_SG_4E5_Differential_Voltage : 7|16@0- (1,0) [0|0] "µV" Vector__XXX
-
-BO_ 1255 IZZE_SG_4E7: 8 IZZE_SG_4E7
- SG_ IZZE_SG_4E7_External_Temperature : 55|16@0- (0.1,0) [0|0] "C" Vector__XXX
- SG_ IZZE_SG_4E7_Internal_Temperature : 39|16@0- (0.1,0) [0|0] "C" Vector__XXX
- SG_ IZZE_SG_4E7_Calibrated_Output : 23|16@0- (0.1,0) [0|0] "F" Vector__XXX
- SG_ IZZE_SG_4E7_Differential_Voltage : 7|16@0- (1,0) [0|0] "µV" Vector__XXX
-
-BO_ 1065 IZZE_WLSG_429: 8 IZZE_WL_SG_429
- SG_ IZZE_WLSG_429_RSSI : 55|16@0- (1,0) [0|0] "dBm" Vector__XXX
- SG_ IZZE_WLSG_429_Temp : 39|16@0- (0.1,0) [0|0] "C" Vector__XXX
- SG_ IZZE_WLSG_429_VBAT : 23|16@0- (0.001,0) [0|0] "V" Vector__XXX
- SG_ IZZE_WLSG_429_Out : 7|16@0- (-1,0) [0|0] "uV" Vector__XXX
-
-BO_ 1066 IZZE_WLSG_42A: 8 IZZE_WL_SG_42A
- SG_ IZZE_WLSG_42A_RSSI : 55|16@0- (1,0) [0|0] "dBm" Vector__XXX
- SG_ IZZE_WLSG_42A_Temp : 39|16@0- (0.1,0) [0|0] "C" Vector__XXX
- SG_ IZZE_WLSG_42A_VBAT : 23|16@0- (0.001,0) [0|0] "V" Vector__XXX
- SG_ IZZE_WLSG_42A_Out : 7|16@0- (1,0) [0|0] "uV" Vector__XXX
-
-BO_ 2044 Kistler_S350_C: 8 Kistler_S350
- SG_ Kistler_S350_FilterType : 56|1@0+ (1,0) [0|1] "" Vector__XXX
- SG_ Kistler_S350_FilterSetting : 63|7@0+ (1,0) [0|127] "" Vector__XXX
- SG_ Kistler_S350_StSt : 48|1@0+ (1,0) [0|1] "" Vector__XXX
- SG_ Kistler_S350_FilerON : 49|1@0+ (1,0) [0|1] "" Vector__XXX
- SG_ Kistler_S350_SensorOK : 50|1@0+ (1,0) [0|1] "" Vector__XXX
- SG_ Kistler_S350_TempOK : 51|1@0+ (1,0) [0|1] "" Vector__XXX
- SG_ Kistler_S350_OpticOK : 52|1@0+ (1,0) [0|1] "" Vector__XXX
- SG_ Kistler_S350_CurrHigh : 53|1@0+ (1,0) [0|1] "" Vector__XXX
- SG_ Kistler_S350_CurrOK : 54|1@0+ (1,0) [0|1] "" Vector__XXX
- SG_ Kistler_S350_PowerOK : 55|1@0+ (1,0) [0|1] "" Vector__XXX
- SG_ Kistler_S350_CurrLED : 47|8@0+ (0.01,0) [0|2.55] "A" Vector__XXX
- SG_ Kistler_S350_TempSens : 39|8@0- (1,0) [-128|127] "°C" Vector__XXX
- SG_ Kistler_S350_SerialNo : 7|32@0+ (1,0) [0|4294970000] "" Vector__XXX
-
-BO_ 2043 Kistler_S350_B: 6 Kistler_S350
- SG_ Kistler_S350_Angle : 39|16@0- (0.01,0) [-45|45] "°" Vector__XXX
- SG_ Kistler_S350_VelY : 23|16@0- (0.036,0) [-100|100] "km/h" Vector__XXX
- SG_ Kistler_S350_VelX : 7|16@0+ (0.036,0) [0|400] "km/h" Vector__XXX
-
-BO_ 2042 Kistler_S350_A: 8 Kistler_S350
- SG_ Kistler_S350_Dist : 39|32@0+ (0.001,0) [0|4294970] "m" Vector__XXX
- SG_ Kistler_S350_Vel : 23|16@0+ (0.036,0) [0|400] "km/h" Vector__XXX
- SG_ Kistler_S350_Timestamp : 7|16@0+ (1,0) [0|65535] "" Vector__XXX
+BO_ 1024 PDM_Status: 3 PDM
+ SG_ PDM_Water_Pump_Active : 16|8@1- (1,0) [0|0] "" Vector__XXX
+ SG_ PDM_Fan_Active : 8|8@1- (1,0) [0|0] "" Vector__XXX
+ SG_ PDM_Total_Current : 0|8@1- (1,0) [0|127] "" Vector__XXX
 
 
 
 
-CM_ BO_ 16 "RPM, Throttle Position, Lambda, VBAT";
-CM_ SG_ 16 ub "battery voltage";
-CM_ SG_ 16 lambda "Lambda actual value";
-CM_ SG_ 16 ath "throttle position";
-CM_ SG_ 16 nmot "engine speed";
-CM_ BO_ 18 "Ambient Pressure, Oil Pressure, Manifold Pressure, Fuel Pressure";
-CM_ SG_ 18 pfuel "fuel pressure";
-CM_ SG_ 18 p22 "intake manifold pressure downstream throttle";
-CM_ SG_ 18 poil "oil pressure";
-CM_ SG_ 18 pamb "ambient pressure";
-CM_ BO_ 17 "Coolant Temp, Oil Temp, Manifold Temp, Fuel Temp";
-CM_ SG_ 17 tfuel "fuel temperature";
-CM_ SG_ 17 tint "intake air temperature";
-CM_ SG_ 17 toil "oil temperature";
-CM_ SG_ 17 tmot "engine temperature";
-CM_ BO_ 32 "Engine_Cranking, Engine_Running, tmot, nmot, gear";
-CM_ SG_ 32 B_err_thrpot_b "condition error of throttle position signal b,min,max,plausibility";
+CM_ BO_ 768 "RPM, Throttle Position, Lambda, Battery Voltage";
+CM_ SG_ 768 ub "battery voltage";
+CM_ SG_ 768 lambda "Lambda actual value";
+CM_ SG_ 768 ath "throttle position";
+CM_ SG_ 768 nmot "engine speed";
+CM_ BO_ 770 "Ambient Pressure, Oil Pressure, Manifold Pressure, Fuel Pressure";
+CM_ SG_ 770 pfuel "fuel pressure";
+CM_ SG_ 770 p22 "intake manifold pressure downstream throttle";
+CM_ SG_ 770 poil "oil pressure";
+CM_ SG_ 770 pamb "ambient pressure";
+CM_ BO_ 769 "Coolant Temp, Oil Temp, Manifold Temp, Fuel Temp, Exhaust Temp";
+CM_ SG_ 769 texh "exhaust gas temperature";
+CM_ SG_ 769 tfuel "fuel temperature";
+CM_ SG_ 769 tint "intake air temperature";
+CM_ SG_ 769 toil "oil temperature";
+CM_ SG_ 769 tmot "engine temperature";
+CM_ BO_ 32 "Engine_Cranking, Engine_Running, tmot, nmot, gear, pbrake_f, pbrake_r";
+CM_ SG_ 32 pbrake_r "brake pressure rear";
+CM_ SG_ 32 pbrake_f "brake pressure front ";
 CM_ SG_ 32 gear "selected gear";
 CM_ SG_ 32 nmot "engine speed";
 CM_ SG_ 32 tmot "engine temperature";
 CM_ SG_ 32 Engine_Running "Returns true, if (nmot > 0)";
 CM_ SG_ 32 Engine_Cranking "Returns true, if (1 <= nmot <= 1000)";
-CM_ BO_ 1791 "GCM Speed + LC/AU Control";
-CM_ SG_ 1791 speed "car speed";
-CM_ SG_ 1791 vwheel_rr "wheel speed rear right";
-CM_ SG_ 1791 vwheel_rl "wheel speed rear left";
-CM_ SG_ 1791 vwheel_fr "wheel speed front right";
-CM_ SG_ 1791 vwheel_fl "wheel speed front left";
+CM_ BO_ 938 "FL/FR/RL/RR Wheel Speed, Ground Speed, Gear";
+CM_ SG_ 938 gear "selected gear";
+CM_ SG_ 938 speed "car speed";
+CM_ SG_ 938 vwheel_rr "wheel speed rear right";
+CM_ SG_ 938 vwheel_rl "wheel speed rear left";
+CM_ SG_ 938 vwheel_fr "wheel speed front right";
+CM_ SG_ 938 vwheel_fl "wheel speed front left";
+CM_ BO_ 1023 "Critical error codes";
+CM_ SG_ 1023 E_pbrake_f "error state brake pressure front";
+CM_ SG_ 1023 E_pbrake_r "error state brake pressure rear";
 CM_ BO_ 1967 "Programming message template for IZZE Brake IR sensor";
 CM_ BO_ 1552 "Upshift/downshift ignition cut triggers for the MS6";
 CM_ BO_ 514 "Paddles, Shift Queues";
@@ -241,25 +170,11 @@ CM_ BO_ 512 "Uptime, Temperatures";
 CM_ BO_ 380 "Z accel";
 CM_ BO_ 376 "Roll rate, X accel";
 CM_ BO_ 372 "Yaw rate, Y accel";
-CM_ BO_ 1956 "Brake IR channels 13-16";
-CM_ BO_ 1955 "Brake IR channels 13-16";
-CM_ BO_ 1954 "Brake IR channels 9-12";
-CM_ BO_ 1953 "Brake IR channels 5-8";
-CM_ BO_ 1952 "Brake IR channels 1-4";
-CM_ BO_ 1250 "Rear left IZZE - raw voltage, calibrated output, temperatures";
-CM_ BO_ 1252 "Rear right IZZE - raw voltage, calibrated output, temperatures";
-CM_ BO_ 1253 "Front right IZZE - raw voltage, calibrated output, temperatures";
-CM_ BO_ 1255 "Front left IZZE - raw voltage, calibrated output, temperatures";
-CM_ BO_ 1065 "Right wireless IZZE - Output, Battery, Temperature, RSSI";
-CM_ BO_ 1066 "Left wireless IZZE - Output, Battery, Temperature, RSSI";
-CM_ BO_ 2044 "Device status";
-CM_ BO_ 2043 "Velocity X, Velocity Y, Slip angle";
-CM_ BO_ 2042 "Timestamp, velocity, distance";
 BA_DEF_  "BusType" STRING ;
 BA_DEF_ BO_  "GenMsgCycleTime" INT 0 65535;
 BA_DEF_DEF_  "BusType" "";
 BA_DEF_DEF_  "GenMsgCycleTime" 0;
-BA_ "BusType" "CAN";
+
 
 
 

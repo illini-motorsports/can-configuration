@@ -36,14 +36,9 @@ BS_:
 BU_: PLEX
 
 
-BO_ 1259 GPS_Status: 8 PLEX
- SG_ GPS_SATs : 0|16@1- (1,0) [0|0] "" Vector__XXX
- SG_ GPS_FIX : 16|16@1- (1,0) [0|0] "" Vector__XXX
- SG_ GPS_PREC : 32|16@1- (0.1,0) [0|0] "m" Vector__XXX
-
-BO_ 1258 GPS_Position: 8 PLEX
- SG_ GPS_Lat : 0|32@1- (1E-007,0) [0|0] "deg" Vector__XXX
- SG_ GPS_Long : 32|32@1- (1E-007,0) [0|0] "deg" Vector__XXX
+BO_ 1680 SDM_GPS: 8 PLEX
+ SG_ GPS_Lat : 7|32@0- (1E-007,0) [0|0] "deg" Vector__XXX
+ SG_ GPS_Long : 39|32@0- (1E-007,0) [0|0] "deg" Vector__XXX
 
 
 

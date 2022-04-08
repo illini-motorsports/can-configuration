@@ -14,11 +14,12 @@ pip install cantools
 in your shell.
 """
 
-import cantools, glob
+import cantools, glob, os
 
 # Modify these variables to contain the input files you want to merge,
 # and the final output file.
-INPUT_FILES = ["./ECU_1.dbc", "./ECU_2.dbc", "./GCM.dbc", "./IMU.dbc", "./PDM.dbc", "./SDM_550.dbc"]
+INPUT_FILES = ["./ECU_1.dbc", "./ECU_2.dbc", "./GCM.dbc", "./IMU.dbc", "./PDM.dbc", "./SDM_550.dbc", "./SDM_102.dbc"]
+INPUT_FILES += ["./IZZE_Brake_IR_4D.dbc"]
 OUTPUT_FILE = "..\config.dbc"
 
 
@@ -33,6 +34,10 @@ dbc = cantools.database.load_file(INPUT_FILES[0])
 # Add each of the remaining files to our dbc
 for i in range(1, len(INPUT_FILES)):
     dbc.add_dbc_file(INPUT_FILES[i])
+
+# Delete .ini files
+for f in glob.glob("*.ini"):
+    os.remove(f)
 
 # Write the output
 cantools.database.dump_file(dbc, OUTPUT_FILE)

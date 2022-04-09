@@ -77,11 +77,11 @@ BO_ 1023 ECU_Error: 8 MS6_Logger_CAN_Bus_1
  SG_ E_pbrake_r : 0|3@1+ (1,0) [0|255] "" Vector__XXX
 
 BO_ 1568 ECU_Sw_Rot_01_SDM102: 8 MS6_Logger_CAN_Bus_1
- SG_ SDM102_ECU_Map : 40|8@1+ (0.051,0) [0|0] "" Vector__XXX
- SG_ SDM102_Tract_Ctrl : 8|8@1+ (0.051,0) [0|0] "" Vector__XXX
+ SG_ SDM102_Tract_Ctrl : 40|8@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ SDM102_ECU_Map : 8|8@1+ (1,0) [0|0] "" Vector__XXX
 
 BO_ 1576 ECU_Sw_Bin_01_SDM102: 8 MS6_Logger_CAN_Bus_1
- SG_ B_launchsw_can_pre : 3|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ SDM102_Launch_Ctrl_Boolean_C : 3|1@1+ (1,0) [0|1] "" Vector__XXX
 
 BO_ 1967 IZZE_Brake_IR_Programming: 8 MS6_Logger_CAN_Bus_2
 
@@ -207,9 +207,9 @@ CM_ SG_ 938 vwheel_fl "wheel speed front left";
 CM_ BO_ 1023 "Critical error codes";
 CM_ SG_ 1023 E_pbrake_f "error state brake pressure front";
 CM_ SG_ 1023 E_pbrake_r "error state brake pressure rear";
-CM_ BO_ 1568 "Traction Control + ECU Mapl from SDM 102 Knobs";
+CM_ BO_ 1568 "Traction Control + ECU Map from SDM 102 Knobs";
 CM_ BO_ 1576 "Launch Control from SDM 102 Knob";
-CM_ SG_ 1576 B_launchsw_can_pre "Returns true, if (200 <= SDM102_Launch_Ctrl <= 5000)";
+CM_ SG_ 1576 SDM102_Launch_Ctrl_Boolean_C "Returns true, if (SDM102_Launch_Ctrl_On_C or SDM102_Launch_Ctrl_Autoupshifting_On_C)";
 CM_ BO_ 1967 "Programming message template for IZZE Brake IR sensor";
 CM_ BO_ 1552 "Upshift/downshift ignition cut triggers for the MS6";
 CM_ BO_ 514 "Paddles, Shift Queues";

@@ -75,6 +75,11 @@ BO_ 1568 ECU_Sw_Rot_01_SDM102: 8 MS6_Logger_CAN_Bus_1
 BO_ 1576 ECU_Sw_Bin_01_SDM102: 8 MS6_Logger_CAN_Bus_1
  SG_ SDM102_Launch_Ctrl_Boolean_C : 3|1@1+ (1,0) [0|1] "" Vector__XXX
 
+BO_ 1022 ECU_Switches: 8 MS6_Logger_CAN_Bus_1
+ SG_ mappos : 0|8@1+ (1,0) [0|15] "" Vector__XXX
+ SG_ tcstage : 8|8@1+ (1,0) [0|12] "" Vector__XXX
+ SG_ B_launchsw : 16|8@1+ (1,0) [0|1] "" Vector__XXX
+
 CM_ BO_ 768 "RPM, Throttle Position, Lambda, Battery Voltage";
 CM_ SG_ 768 ub "battery voltage";
 CM_ SG_ 768 nmot "engine speed";
@@ -112,4 +117,8 @@ CM_ SG_ 1023 E_pbrake_f "error state brake pressure front";
 CM_ BO_ 1568 "Traction Control + ECU Map from SDM 102 Knobs";
 CM_ BO_ 1576 "Launch Control from SDM 102 Knob";
 CM_ SG_ 1576 SDM102_Launch_Ctrl_Boolean_C "Returns true, if (SDM102_Launch_Ctrl_On_C or SDM102_Launch_Ctrl_Autoupshifting_On_C)";
+CM_ BO_ 1022 "mappos, tcstage, B_launchsw";
+CM_ SG_ 1022 mappos "position of map switch";
+CM_ SG_ 1022 tcstage "traction control stage";
+CM_ SG_ 1022 B_launchsw "condition launch control switch active";
 

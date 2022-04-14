@@ -19,7 +19,7 @@ import cantools, glob, os
 # Modify these variables to contain the input files you want to merge,
 # and the final output file.
 INPUT_FILES = ["./ECU_1.dbc", "./ECU_2.dbc", "./GCM.dbc", "./IMU.dbc", "./PDM.dbc", "./SDM_550.dbc", "./SDM_102.dbc"]
-INPUT_FILES += ["./IZZE_Brake_IR_4D.dbc"]
+INPUT_FILES += ["./IZZE_Brake_IR_4CE.dbc", "./IZZE_Brake_IR_4D3.dbc"]
 OUTPUT_FILE = "..\config.dbc"
 
 

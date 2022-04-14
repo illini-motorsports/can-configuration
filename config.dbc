@@ -33,7 +33,7 @@ NS_ :
 
 BS_:
 
-BU_: IZZE_Brake_IR_4D
+BU_: IZZE_Brake_IR_4D3
 
 
 BO_ 768 ECU_General: 8 MS6_Logger_CAN_Bus_1
@@ -82,6 +82,11 @@ BO_ 1568 ECU_Sw_Rot_01_SDM102: 8 MS6_Logger_CAN_Bus_1
 
 BO_ 1576 ECU_Sw_Bin_01_SDM102: 8 MS6_Logger_CAN_Bus_1
  SG_ SDM102_Launch_Ctrl_Boolean_C : 3|1@1+ (1,0) [0|1] "" Vector__XXX
+
+BO_ 1022 ECU_Switches: 8 MS6_Logger_CAN_Bus_1
+ SG_ B_launchsw : 16|8@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ tcstage : 8|8@1+ (1,0) [0|12] "" Vector__XXX
+ SG_ mappos : 0|8@1+ (1,0) [0|15] "" Vector__XXX
 
 BO_ 1967 IZZE_Brake_IR_Programming: 8 MS6_Logger_CAN_Bus_2
 
@@ -143,32 +148,59 @@ BO_ 1710 SDM102: 6 SDM102
  SG_ SDM102_Launch_Ctrl : 16|16@1- (1,0) [0|0] "" Vector__XXX
  SG_ SDM102_ECU_Map : 0|16@1- (1,0) [0|0] "" Vector__XXX
 
-BO_ 1239 IZZE_Brake_IR_4D_Status: 8 IZZE_Brake_IR_4D
- SG_ IZZE_Brake_IR_4D_Internal_Temp : 7|16@0+ (0.1,-100) [0|65535] "C" Vector__XXX
+BO_ 1234 IZZE_Brake_IR_4CE_Status: 8 IZZE_Brake_IR_4CE
+ SG_ IZZE_Brake_IR_4CE_Internal_Temp : 7|16@0+ (0.1,-100) [0|65535] "C" Vector__XXX
 
-BO_ 1238 IZZE_Brake_IR_4D_Ch13to16: 8 IZZE_Brake_IR_4D
- SG_ IZZE_Brake_IR_4D_Channel_16 : 55|16@0+ (0.1,-100) [0|65535] "C" Vector__XXX
- SG_ IZZE_Brake_IR_4D_Channel_15 : 39|16@0+ (0.1,-100) [0|65535] "C" Vector__XXX
- SG_ IZZE_Brake_IR_4D_Channel_14 : 23|16@0+ (0.1,-100) [0|65535] "C" Vector__XXX
- SG_ IZZE_Brake_IR_4D_Channel_13 : 7|16@0+ (0.1,-100) [0|65535] "C" Vector__XXX
+BO_ 1233 IZZE_Brake_IR_4CE_Ch13to16: 8 IZZE_Brake_IR_4CE
+ SG_ IZZE_Brake_IR_4CE_Channel_16 : 55|16@0+ (0.1,-100) [0|65535] "C" Vector__XXX
+ SG_ IZZE_Brake_IR_4CE_Channel_15 : 39|16@0+ (0.1,-100) [0|65535] "C" Vector__XXX
+ SG_ IZZE_Brake_IR_4CE_Channel_14 : 23|16@0+ (0.1,-100) [0|65535] "C" Vector__XXX
+ SG_ IZZE_Brake_IR_4CE_Channel_13 : 7|16@0+ (0.1,-100) [0|65535] "C" Vector__XXX
 
-BO_ 1237 IZZE_Brake_IR_4D_Ch9to12: 8 IZZE_Brake_IR_4D
- SG_ IZZE_Brake_IR_4D_Channel_9 : 55|16@0+ (0.1,-100) [0|65535] "C" Vector__XXX
- SG_ IZZE_Brake_IR_4D_Channel_12 : 39|16@0+ (0.1,-100) [0|65535] "C" Vector__XXX
- SG_ IZZE_Brake_IR_4D_Channel_11 : 23|16@0+ (0.1,-100) [0|65535] "C" Vector__XXX
- SG_ IZZE_Brake_IR_4D_Channel_10 : 7|16@0+ (0.1,-100) [0|65535] "C" Vector__XXX
+BO_ 1232 IZZE_Brake_IR_4CE_Ch9to12: 8 IZZE_Brake_IR_4CE
+ SG_ IZZE_Brake_IR_4CE_Channel_9 : 55|16@0+ (0.1,-100) [0|65535] "C" Vector__XXX
+ SG_ IZZE_Brake_IR_4CE_Channel_12 : 39|16@0+ (0.1,-100) [0|65535] "C" Vector__XXX
+ SG_ IZZE_Brake_IR_4CE_Channel_11 : 23|16@0+ (0.1,-100) [0|65535] "C" Vector__XXX
+ SG_ IZZE_Brake_IR_4CE_Channel_10 : 7|16@0+ (0.1,-100) [0|65535] "C" Vector__XXX
 
-BO_ 1236 IZZE_Brake_IR_4D_Ch5to8: 8 IZZE_Brake_IR_4D
- SG_ IZZE_Brake_IR_4D_Channel_8 : 55|16@0+ (0.1,-100) [0|65535] "C" Vector__XXX
- SG_ IZZE_Brake_IR_4D_Channel_7 : 39|16@0+ (0.1,-100) [0|65535] "C" Vector__XXX
- SG_ IZZE_Brake_IR_4D_Channel_6 : 23|16@0+ (0.1,-100) [0|65535] "C" Vector__XXX
- SG_ IZZE_Brake_IR_4D_Channel_5 : 7|16@0+ (0.1,-100) [0|65535] "C" Vector__XXX
+BO_ 1231 IZZE_Brake_IR_4CE_Ch5to8: 8 IZZE_Brake_IR_4CE
+ SG_ IZZE_Brake_IR_4CE_Channel_8 : 55|16@0+ (0.1,-100) [0|65535] "C" Vector__XXX
+ SG_ IZZE_Brake_IR_4CE_Channel_7 : 39|16@0+ (0.1,-100) [0|65535] "C" Vector__XXX
+ SG_ IZZE_Brake_IR_4CE_Channel_6 : 23|16@0+ (0.1,-100) [0|65535] "C" Vector__XXX
+ SG_ IZZE_Brake_IR_4CE_Channel_5 : 7|16@0+ (0.1,-100) [0|65535] "C" Vector__XXX
 
-BO_ 1235 IZZE_Brake_IR_4D_Ch1to4: 8 IZZE_Brake_IR_4D
- SG_ IZZE_Brake_IR_4D_Channel_4 : 55|16@0+ (0.1,-100) [0|65535] "C" Vector__XXX
- SG_ IZZE_Brake_IR_4D_Channel_3 : 39|16@0+ (0.1,-100) [0|65535] "C" Vector__XXX
- SG_ IZZE_Brake_IR_4D_Channel_2 : 23|16@0+ (0.1,-100) [0|65535] "C" Vector__XXX
- SG_ IZZE_Brake_IR_4D_Channel_1 : 7|16@0+ (0.1,-100) [0|65535] "C" Vector__XXX
+BO_ 1230 IZZE_Brake_IR_4CE_Ch1to4: 8 IZZE_Brake_IR_4CE
+ SG_ IZZE_Brake_IR_4CE_Channel_4 : 55|16@0+ (0.1,-100) [0|65535] "C" Vector__XXX
+ SG_ IZZE_Brake_IR_4CE_Channel_3 : 39|16@0+ (0.1,-100) [0|65535] "C" Vector__XXX
+ SG_ IZZE_Brake_IR_4CE_Channel_2 : 23|16@0+ (0.1,-100) [0|65535] "C" Vector__XXX
+ SG_ IZZE_Brake_IR_4CE_Channel_1 : 7|16@0+ (0.1,-100) [0|65535] "C" Vector__XXX
+
+BO_ 1239 IZZE_Brake_IR_4D3_Status: 8 IZZE_Brake_IR_4D3
+ SG_ IZZE_Brake_IR_4D3_Internal_Temp : 7|16@0+ (0.1,-100) [0|65535] "C" Vector__XXX
+
+BO_ 1238 IZZE_Brake_IR_4D3_Ch13to16: 8 IZZE_Brake_IR_4D3
+ SG_ IZZE_Brake_IR_4D3_Channel_16 : 55|16@0+ (0.1,-100) [0|65535] "C" Vector__XXX
+ SG_ IZZE_Brake_IR_4D3_Channel_15 : 39|16@0+ (0.1,-100) [0|65535] "C" Vector__XXX
+ SG_ IZZE_Brake_IR_4D3_Channel_14 : 23|16@0+ (0.1,-100) [0|65535] "C" Vector__XXX
+ SG_ IZZE_Brake_IR_4D3_Channel_13 : 7|16@0+ (0.1,-100) [0|65535] "C" Vector__XXX
+
+BO_ 1237 IZZE_Brake_IR_4D3_Ch9to12: 8 IZZE_Brake_IR_4D3
+ SG_ IZZE_Brake_IR_4D3_Channel_9 : 55|16@0+ (0.1,-100) [0|65535] "C" Vector__XXX
+ SG_ IZZE_Brake_IR_4D3_Channel_12 : 39|16@0+ (0.1,-100) [0|65535] "C" Vector__XXX
+ SG_ IZZE_Brake_IR_4D3_Channel_11 : 23|16@0+ (0.1,-100) [0|65535] "C" Vector__XXX
+ SG_ IZZE_Brake_IR_4D3_Channel_10 : 7|16@0+ (0.1,-100) [0|65535] "C" Vector__XXX
+
+BO_ 1236 IZZE_Brake_IR_4D3_Ch5to8: 8 IZZE_Brake_IR_4D3
+ SG_ IZZE_Brake_IR_4D3_Channel_8 : 55|16@0+ (0.1,-100) [0|65535] "C" Vector__XXX
+ SG_ IZZE_Brake_IR_4D3_Channel_7 : 39|16@0+ (0.1,-100) [0|65535] "C" Vector__XXX
+ SG_ IZZE_Brake_IR_4D3_Channel_6 : 23|16@0+ (0.1,-100) [0|65535] "C" Vector__XXX
+ SG_ IZZE_Brake_IR_4D3_Channel_5 : 7|16@0+ (0.1,-100) [0|65535] "C" Vector__XXX
+
+BO_ 1235 IZZE_Brake_IR_4D3_Ch1to4: 8 IZZE_Brake_IR_4D3
+ SG_ IZZE_Brake_IR_4D3_Channel_4 : 55|16@0+ (0.1,-100) [0|65535] "C" Vector__XXX
+ SG_ IZZE_Brake_IR_4D3_Channel_3 : 39|16@0+ (0.1,-100) [0|65535] "C" Vector__XXX
+ SG_ IZZE_Brake_IR_4D3_Channel_2 : 23|16@0+ (0.1,-100) [0|65535] "C" Vector__XXX
+ SG_ IZZE_Brake_IR_4D3_Channel_1 : 7|16@0+ (0.1,-100) [0|65535] "C" Vector__XXX
 
 
 
@@ -210,6 +242,10 @@ CM_ SG_ 1023 E_pbrake_r "error state brake pressure rear";
 CM_ BO_ 1568 "Traction Control + ECU Map from SDM 102 Knobs";
 CM_ BO_ 1576 "Launch Control from SDM 102 Knob";
 CM_ SG_ 1576 SDM102_Launch_Ctrl_Boolean_C "Returns true, if (SDM102_Launch_Ctrl_On_C or SDM102_Launch_Ctrl_Autoupshifting_On_C)";
+CM_ BO_ 1022 "mappos, tcstage, B_launchsw";
+CM_ SG_ 1022 B_launchsw "condition launch control switch active";
+CM_ SG_ 1022 tcstage "traction control stage";
+CM_ SG_ 1022 mappos "position of map switch";
 CM_ BO_ 1967 "Programming message template for IZZE Brake IR sensor";
 CM_ BO_ 1552 "Upshift/downshift ignition cut triggers for the MS6";
 CM_ BO_ 514 "Paddles, Shift Queues";
@@ -219,6 +255,11 @@ CM_ BO_ 512 "Uptime, Temperatures";
 CM_ BO_ 380 "Z accel";
 CM_ BO_ 376 "Roll rate, X accel";
 CM_ BO_ 372 "Yaw rate, Y accel";
+CM_ BO_ 1234 "Brake IR channels 13-16";
+CM_ BO_ 1233 "Brake IR channels 13-16";
+CM_ BO_ 1232 "Brake IR channels 9-12";
+CM_ BO_ 1231 "Brake IR channels 5-8";
+CM_ BO_ 1230 "Brake IR channels 1-4";
 CM_ BO_ 1239 "Brake IR channels 13-16";
 CM_ BO_ 1238 "Brake IR channels 13-16";
 CM_ BO_ 1237 "Brake IR channels 9-12";

@@ -36,6 +36,11 @@ BS_:
 BU_: GCM
 
 
+BO_ 517 New_Message_7: 5 Vector__XXX
+ SG_ Temp_AU : 32|8@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ Temp_RPM : 16|16@1- (1,0) [0|0] "" Vector__XXX
+ SG_ Temp_Speed : 0|16@1+ (1,0) [0|0] "" Vector__XXX
+
 BO_ 256 GCM_MS6_Gear: 8 GCM
  SG_ GCM_Gear_MS6 : 0|8@1+ (0.5,-1.5) [0|0] "" Vector__XXX
 

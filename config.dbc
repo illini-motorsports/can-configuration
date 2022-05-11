@@ -33,7 +33,7 @@ NS_ :
 
 BS_:
 
-BU_: IZZE_Brake_IR_4D3
+BU_: Kistler_S350
 
 
 BO_ 768 ECU_General: 8 MS6_Logger_CAN_Bus_1
@@ -143,10 +143,13 @@ BO_ 1680 SDM550_GPS_LatLong: 8 PLEX
  SG_ GPS_Long : 39|32@0- (1e-07,0) [0|0] "deg" Vector__XXX
  SG_ GPS_Lat : 7|32@0- (1e-07,0) [0|0] "deg" Vector__XXX
 
-BO_ 1710 SDM102: 6 SDM102
- SG_ SDM102_Tract_Ctrl : 32|16@1- (1,0) [0|0] "" Vector__XXX
- SG_ SDM102_Launch_Ctrl : 16|16@1- (1,0) [0|0] "" Vector__XXX
- SG_ SDM102_ECU_Map : 0|16@1- (1,0) [0|0] "" Vector__XXX
+BO_ 5 SDM550_LapTrigger: 2 PLEX
+ SG_ Lap_Trigger : 0|16@1- (1,0) [0|0] "" Vector__XXX
+
+BO_ 1710 MSG_1: 6 PLEX
+ SG_ Tract_Ctrl : 32|16@1- (1,0) [0|0] "" Vector__XXX
+ SG_ Launch_Ctrl : 16|16@1- (1,0) [0|0] "" Vector__XXX
+ SG_ ECU_Map : 0|16@1- (1,0) [0|0] "" Vector__XXX
 
 BO_ 1234 IZZE_Brake_IR_4CE_Status: 8 IZZE_Brake_IR_4CE
  SG_ IZZE_Brake_IR_4CE_Internal_Temp : 7|16@0+ (0.1,-100) [0|65535] "C" Vector__XXX
@@ -201,6 +204,73 @@ BO_ 1235 IZZE_Brake_IR_4D3_Ch1to4: 8 IZZE_Brake_IR_4D3
  SG_ IZZE_Brake_IR_4D3_Channel_3 : 39|16@0+ (0.1,-100) [0|65535] "C" Vector__XXX
  SG_ IZZE_Brake_IR_4D3_Channel_2 : 23|16@0+ (0.1,-100) [0|65535] "C" Vector__XXX
  SG_ IZZE_Brake_IR_4D3_Channel_1 : 7|16@0+ (0.1,-100) [0|65535] "C" Vector__XXX
+
+BO_ 1250 IZZE_SG_4E2: 8 IZZE_SG_4E2
+ SG_ IZZE_SG_4E2_External_Temperature : 55|16@0- (0.1,0) [0|0] "C" Vector__XXX
+ SG_ IZZE_SG_4E2_Internal_Temperature : 39|16@0- (0.1,0) [0|0] "C" Vector__XXX
+ SG_ IZZE_SG_4E2_Calibrated_Output : 23|16@0- (0.1,0) [0|0] "F" Vector__XXX
+ SG_ IZZE_SG_4E2_Differential_Voltage : 7|16@0- (1,0) [0|0] "µV" Vector__XXX
+
+BO_ 1252 IZZE_SG_4E4: 8 IZZE_SG_4E4
+ SG_ IZZE_SG_4E4_External_Temperature : 55|16@0- (0.1,0) [0|0] "C" Vector__XXX
+ SG_ IZZE_SG_4E4_Internal_Temperature : 39|16@0- (0.1,0) [0|0] "C" Vector__XXX
+ SG_ IZZE_SG_4E4_Calibrated_Output : 23|16@0- (0.1,0) [0|0] "F" Vector__XXX
+ SG_ IZZE_SG_4E4_Differential_Voltage : 7|16@0- (1,0) [0|0] "µV" Vector__XXX
+
+BO_ 1253 IZZE_SG_4E5: 8 IZZE_SG_4E5
+ SG_ IZZE_SG_4E5_External_Temperature : 55|16@0- (0.1,0) [0|0] "C" Vector__XXX
+ SG_ IZZE_SG_4E5_Internal_Temperature : 39|16@0- (0.1,0) [0|0] "C" Vector__XXX
+ SG_ IZZE_SG_4E5_Calibrated_Output : 23|16@0- (0.1,0) [0|0] "F" Vector__XXX
+ SG_ IZZE_SG_4E5_Differential_Voltage : 7|16@0- (1,0) [0|0] "µV" Vector__XXX
+
+BO_ 1254 IZZE_SG_4E6: 8 IZZE_SG_4E6
+ SG_ IZZE_SG_4E6_External_Temperature : 55|16@0- (0.1,0) [0|0] "C" Vector__XXX
+ SG_ IZZE_SG_4E6_Internal_Temperature : 39|16@0- (0.1,0) [0|0] "C" Vector__XXX
+ SG_ IZZE_SG_4E6_Calibrated_Output : 23|16@0- (0.1,0) [0|0] "F" Vector__XXX
+ SG_ IZZE_SG_4E6_Differential_Voltage : 7|16@0- (1,0) [0|0] "ï¿½V" Vector__XXX
+
+BO_ 1255 IZZE_SG_4E7: 8 IZZE_SG_4E7
+ SG_ IZZE_SG_4E7_External_Temperature : 55|16@0- (0.1,0) [0|0] "C" Vector__XXX
+ SG_ IZZE_SG_4E7_Internal_Temperature : 39|16@0- (0.1,0) [0|0] "C" Vector__XXX
+ SG_ IZZE_SG_4E7_Calibrated_Output : 23|16@0- (0.1,0) [0|0] "F" Vector__XXX
+ SG_ IZZE_SG_4E7_Differential_Voltage : 7|16@0- (1,0) [0|0] "µV" Vector__XXX
+
+BO_ 1065 IZZE_WLSG_429: 8 IZZE_WL_SG_429
+ SG_ IZZE_WLSG_429_RSSI : 55|16@0- (1,0) [0|0] "dBm" Vector__XXX
+ SG_ IZZE_WLSG_429_Temp : 39|16@0- (0.1,0) [0|0] "C" Vector__XXX
+ SG_ IZZE_WLSG_429_VBAT : 23|16@0- (0.001,0) [0|0] "V" Vector__XXX
+ SG_ IZZE_WLSG_429_Out : 7|16@0- (-1,0) [0|0] "uV" Vector__XXX
+
+BO_ 1066 IZZE_WLSG_42A: 8 IZZE_WL_SG_42A
+ SG_ IZZE_WLSG_42A_RSSI : 55|16@0- (1,0) [0|0] "dBm" Vector__XXX
+ SG_ IZZE_WLSG_42A_Temp : 39|16@0- (0.1,0) [0|0] "C" Vector__XXX
+ SG_ IZZE_WLSG_42A_VBAT : 23|16@0- (0.001,0) [0|0] "V" Vector__XXX
+ SG_ IZZE_WLSG_42A_Out : 7|16@0- (1,0) [0|0] "uV" Vector__XXX
+
+BO_ 2044 Kistler_S350_C: 8 Kistler_S350
+ SG_ Kistler_S350_FilterType : 56|1@0+ (1,0) [0|1] "" Vector__XXX
+ SG_ Kistler_S350_FilterSetting : 63|7@0+ (1,0) [0|127] "" Vector__XXX
+ SG_ Kistler_S350_StSt : 48|1@0+ (1,0) [0|1] "" Vector__XXX
+ SG_ Kistler_S350_FilerON : 49|1@0+ (1,0) [0|1] "" Vector__XXX
+ SG_ Kistler_S350_SensorOK : 50|1@0+ (1,0) [0|1] "" Vector__XXX
+ SG_ Kistler_S350_TempOK : 51|1@0+ (1,0) [0|1] "" Vector__XXX
+ SG_ Kistler_S350_OpticOK : 52|1@0+ (1,0) [0|1] "" Vector__XXX
+ SG_ Kistler_S350_CurrHigh : 53|1@0+ (1,0) [0|1] "" Vector__XXX
+ SG_ Kistler_S350_CurrOK : 54|1@0+ (1,0) [0|1] "" Vector__XXX
+ SG_ Kistler_S350_PowerOK : 55|1@0+ (1,0) [0|1] "" Vector__XXX
+ SG_ Kistler_S350_CurrLED : 47|8@0+ (0.01,0) [0|2.55] "A" Vector__XXX
+ SG_ Kistler_S350_TempSens : 39|8@0- (1,0) [-128|127] "°C" Vector__XXX
+ SG_ Kistler_S350_SerialNo : 7|32@0+ (1,0) [0|4294970000] "" Vector__XXX
+
+BO_ 2043 Kistler_S350_B: 6 Kistler_S350
+ SG_ Kistler_S350_Angle : 39|16@0- (0.01,0) [-45|45] "°" Vector__XXX
+ SG_ Kistler_S350_VelY : 23|16@0- (0.036,0) [-100|100] "km/h" Vector__XXX
+ SG_ Kistler_S350_VelX : 7|16@0+ (0.036,0) [0|400] "km/h" Vector__XXX
+
+BO_ 2042 Kistler_S350_A: 8 Kistler_S350
+ SG_ Kistler_S350_Dist : 39|32@0+ (0.001,0) [0|4294970] "m" Vector__XXX
+ SG_ Kistler_S350_Vel : 23|16@0+ (0.036,0) [0|400] "km/h" Vector__XXX
+ SG_ Kistler_S350_Timestamp : 7|16@0+ (1,0) [0|65535] "" Vector__XXX
 
 
 
@@ -265,6 +335,16 @@ CM_ BO_ 1238 "Brake IR channels 13-16";
 CM_ BO_ 1237 "Brake IR channels 9-12";
 CM_ BO_ 1236 "Brake IR channels 5-8";
 CM_ BO_ 1235 "Brake IR channels 1-4";
+CM_ BO_ 1250 "Rear left IZZE - raw voltage, calibrated output, temperatures";
+CM_ BO_ 1252 "Rear right IZZE - raw voltage, calibrated output, temperatures";
+CM_ BO_ 1253 "Front right IZZE - raw voltage, calibrated output, temperatures";
+CM_ BO_ 1254 "Front right IZZE - raw voltage, calibrated output, temperatures";
+CM_ BO_ 1255 "Front left IZZE - raw voltage, calibrated output, temperatures";
+CM_ BO_ 1065 "Right wireless IZZE - Output, Battery, Temperature, RSSI";
+CM_ BO_ 1066 "Left wireless IZZE - Output, Battery, Temperature, RSSI";
+CM_ BO_ 2044 "Device status";
+CM_ BO_ 2043 "Velocity X, Velocity Y, Slip angle";
+CM_ BO_ 2042 "Timestamp, velocity, distance";
 BA_DEF_  "BusType" STRING ;
 BA_DEF_ BO_  "GenMsgCycleTime" INT 0 65535;
 BA_DEF_DEF_  "BusType" "";

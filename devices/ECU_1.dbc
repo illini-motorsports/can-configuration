@@ -80,6 +80,19 @@ BO_ 1022 ECU_Switches: 8 MS6_Logger_CAN_Bus_1
  SG_ tcstage : 8|8@1+ (1,0) [0|12] "" Vector__XXX
  SG_ B_launchsw : 16|8@1+ (1,0) [0|1] "" Vector__XXX
 
+BO_ 1690 Lap_Times: 8 MS6_Logger_CAN_Bus_1
+ SG_ Laptrigger_laptimeold_dls : 0|32@1+ (0.01,0) [0|500] "s" Vector__XXX
+ SG_ Laptrigger_laptime_dls : 32|32@1+ (0.01,0) [0|500] "s" Vector__XXX
+
+BO_ 1691 Lap_Times_2: 8 MS6_Logger_CAN_Bus_1
+ SG_ Laptrigger_lapdiff_dls : 0|16@1- (0.01,0) [-20|20] "s" Vector__XXX
+ SG_ Laptrigger_lapdiffb_dls : 16|16@1- (0.01,0) [-20|20] "s" Vector__XXX
+ SG_ Laptrigger_laptimebest_dls : 32|32@1+ (0.01,0) [0|500] "s" Vector__XXX
+
+BO_ 1692 CAN_Message: 8 MS6_Logger_CAN_Bus_1
+ SG_ lapctr : 0|8@1+ (1,0) [0|255] "" Vector__XXX
+ SG_ outctr : 8|8@1+ (1,0) [0|255] "" Vector__XXX
+
 CM_ BO_ 768 "RPM, Throttle Position, Lambda, Battery Voltage";
 CM_ SG_ 768 ub "battery voltage";
 CM_ SG_ 768 nmot "engine speed";
@@ -121,4 +134,12 @@ CM_ BO_ 1022 "mappos, tcstage, B_launchsw";
 CM_ SG_ 1022 mappos "position of map switch";
 CM_ SG_ 1022 tcstage "traction control stage";
 CM_ SG_ 1022 B_launchsw "condition launch control switch active";
+CM_ SG_ 1690 Laptrigger_laptimeold_dls "previous lap time";
+CM_ SG_ 1690 Laptrigger_laptime_dls "running lap time";
+CM_ SG_ 1691 Laptrigger_lapdiff_dls "lapdiff to last";
+CM_ SG_ 1691 Laptrigger_lapdiffb_dls "lapdiff to best";
+CM_ SG_ 1691 Laptrigger_laptimebest_dls "best lap time";
+CM_ BO_ 1692 "Lap Count";
+CM_ SG_ 1692 lapctr "lap counter";
+CM_ SG_ 1692 outctr "current outing";
 

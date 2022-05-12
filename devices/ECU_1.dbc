@@ -56,14 +56,10 @@ BO_ 32 ECU_Power_Control: 8 MS6_Logger_CAN_Bus_1
  SG_ pbrake_f : 48|8@1+ (1,0) [0|150] "bar" Vector__XXX
  SG_ pbrake_r : 56|8@1+ (1,0) [0|150] "bar" Vector__XXX
 
-BO_ 938 ECU_Gear_Control: 8 MS6_Logger_CAN_Bus_1
- SG_ vwheel_fl : 0|8@1+ (1,0) [0|400] "km/h" Vector__XXX
- SG_ vwheel_fr : 8|8@1+ (1,0) [0|400] "km/h" Vector__XXX
- SG_ vwheel_rl : 16|8@1+ (1,0) [0|400] "km/h" Vector__XXX
- SG_ vwheel_rr : 24|8@1+ (1,0) [0|400] "km/h" Vector__XXX
- SG_ speed : 32|8@1+ (1,0) [0|400] "km/h" Vector__XXX
- SG_ nmot : 40|16@1- (1,0) [0|20000] "rpm" Vector__XXX
- SG_ SDM102_Autoupshiting_On : 56|8@1+ (1,0) [0|1] "" Vector__XXX
+BO_ 1019 ECU_Gear_Control: 8 MS6_Logger_CAN_Bus_1
+ SG_ nmot : 16|16@1- (1,0) [0|20000] "rpm" Vector__XXX
+ SG_ SDM102_Autoupshiting_On : 32|8@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ speed : 0|16@1+ (0.01,0) [0|400] "km/h" Vector__XXX
 
 BO_ 1568 ECU_INT_Sw_Rot_01_SDM102: 8 MS6_Logger_CAN_Bus_1
  SG_ SDM102_ECU_Map : 8|8@1+ (1,0) [0|0] "" Vector__XXX
@@ -91,6 +87,13 @@ BO_ 1692 ECU_Lap_Times_3: 8 MS6_Logger_CAN_Bus_1
  SG_ lapctr : 0|8@1+ (1,0) [0|255] "" Vector__XXX
  SG_ outctr : 8|8@1+ (1,0) [0|255] "" Vector__XXX
 
+BO_ 938 ECU_Wheel_Speeds: 8 MS6_Logger_CAN_Bus_1
+ SG_ vwheel_fl : 0|8@1+ (1,0) [0|400] "km/h" Vector__XXX
+ SG_ vwheel_fr : 8|8@1+ (1,0) [0|400] "km/h" Vector__XXX
+ SG_ vwheel_rl : 16|8@1+ (1,0) [0|400] "km/h" Vector__XXX
+ SG_ vwheel_rr : 24|8@1+ (1,0) [0|400] "km/h" Vector__XXX
+ SG_ speed : 32|8@1+ (1,0) [0|400] "km/h" Vector__XXX
+
 CM_ BO_ 768 "RPM, Throttle Position, Lambda, Battery Voltage";
 CM_ SG_ 768 ub "battery voltage";
 CM_ SG_ 768 nmot "engine speed";
@@ -115,14 +118,10 @@ CM_ SG_ 32 nmot "engine speed";
 CM_ SG_ 32 gear "selected gear";
 CM_ SG_ 32 pbrake_f "brake pressure front ";
 CM_ SG_ 32 pbrake_r "brake pressure rear";
-CM_ BO_ 938 "Wheel Speeds, RPM, Auto-upshifting Enable";
-CM_ SG_ 938 vwheel_fl "wheel speed front left";
-CM_ SG_ 938 vwheel_fr "wheel speed front right";
-CM_ SG_ 938 vwheel_rl "wheel speed rear left";
-CM_ SG_ 938 vwheel_rr "wheel speed rear right";
-CM_ SG_ 938 speed "car speed";
-CM_ SG_ 938 nmot "engine speed";
-CM_ SG_ 938 SDM102_Autoupshiting_On "Returns true, if (SDM102_Launch_Ctrl_And_Autoupshifting_Pre or SDM102_Autoupshifting_Only_Pre_1 or SDM102_Autoupshifting_Only_Pre_2)";
+CM_ BO_ 1019 "Ground Speed, RPM, Auto-upshifting Enable";
+CM_ SG_ 1019 nmot "engine speed";
+CM_ SG_ 1019 SDM102_Autoupshiting_On "Returns true, if (SDM102_Launch_Ctrl_And_Autoupshifting_Pre or SDM102_Autoupshifting_Only_Pre_1 or SDM102_Autoupshifting_Only_Pre_2)";
+CM_ SG_ 1019 speed "car speed";
 CM_ BO_ 1568 "Traction Control + ECU Map from SDM 102 Knobs (Internal Redirect)";
 CM_ BO_ 1576 "Launch Control from SDM 102 Knob (Internal Redirect)";
 CM_ SG_ 1576 SDM102_Launch_Ctrl_On "Returns true, if (SDM102_Launch_Ctrl_Only_Pre or SDM102_Launch_Ctrl_And_Autoupshifting_Pre)";
@@ -141,4 +140,10 @@ CM_ SG_ 1691 Laptrigger_laptimebest_dls "best lap time";
 CM_ BO_ 1692 "Lap Counter, Out Counter";
 CM_ SG_ 1692 lapctr "lap counter";
 CM_ SG_ 1692 outctr "current outing";
+CM_ BO_ 938 "FL/FR/RL/RR Wheel Speeds, Ground Speed";
+CM_ SG_ 938 vwheel_fl "wheel speed front left";
+CM_ SG_ 938 vwheel_fr "wheel speed front right";
+CM_ SG_ 938 vwheel_rl "wheel speed rear left";
+CM_ SG_ 938 vwheel_rr "wheel speed rear right";
+CM_ SG_ 938 speed "car speed";
 

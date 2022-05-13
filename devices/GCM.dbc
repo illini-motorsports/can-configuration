@@ -36,19 +36,22 @@ BS_:
 BU_: GCM
 
 
-BO_ 517 New_Message_7: 5 Vector__XXX
- SG_ Temp_AU : 32|8@1+ (1,0) [0|0] "" Vector__XXX
- SG_ Temp_RPM : 16|16@1- (1,0) [0|0] "" Vector__XXX
+BO_ 3221225472 VECTOR__INDEPENDENT_SIG_MSG: 0 Vector__XXX
+ SG_ Temp_AU : 0|8@1+ (1,0) [0|0] "" Vector__XXX
  SG_ Temp_Speed : 0|16@1+ (1,0) [0|0] "" Vector__XXX
-
-BO_ 256 GCM_MS6_Gear: 8 GCM
  SG_ GCM_Gear_MS6 : 0|8@1+ (0.5,-1.5) [0|0] "" Vector__XXX
 
-BO_ 1552 GCM_MS6_Shift: 8 GCM
+BO_ 515 GCM_Autoupshifting: 8 Vector__XXX
+ SG_ GCM_Target_Speed : 40|8@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ GCM_Speed : 32|8@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ GCM_Target_RPM : 16|16@1- (1,0) [0|0] "" Vector__XXX
+ SG_ GCM_RPM : 0|16@1- (1,0) [0|0] "" Vector__XXX
+
+BO_ 1552 GCM_MS6_Gearcut: 8 GCM
  SG_ GCM_Upshift_Bosch : 1|1@1+ (1,0) [0|0] "" Vector__XXX
  SG_ GCM_Downshift_Bosch : 0|1@1+ (1,0) [0|0] "" Vector__XXX
 
-BO_ 514 GCM_2: 4 GCM
+BO_ 514 GCM_Queue: 4 GCM
  SG_ GCM_NeutralQueue : 24|8@1+ (1,0) [0|0] "" Vector__XXX
  SG_ GCM_DownshiftQueue : 16|8@1+ (1,0) [0|0] "" Vector__XXX
  SG_ GCM_UpshiftQueue : 8|8@1+ (1,0) [0|0] "" Vector__XXX
@@ -56,23 +59,25 @@ BO_ 514 GCM_2: 4 GCM
  SG_ GCM_Switch_Down : 1|1@1+ (1,0) [0|0] "" Vector__XXX
  SG_ GCM_Switch_Up : 0|1@1+ (1,0) [0|0] "" Vector__XXX
 
-BO_ 513 GCM_1: 6 GCM
+BO_ 513 GCM_Gear: 6 GCM
  SG_ GCM_Shift_Force : 32|16@1- (0.01,0) [0|0] "N" Vector__XXX
  SG_ GCM_Gear_Sensor_Voltage : 16|16@1+ (0.0001,0) [0|0] "V" Vector__XXX
  SG_ GCM_Mode : 8|8@1+ (1,0) [0|0] "" Vector__XXX
  SG_ GCM_Gear : 0|8@1+ (1,0) [0|0] "" Vector__XXX
 
-BO_ 15 GCM_ERR: 4 GCM
+BO_ 15 GCM_Error: 4 GCM
  SG_ GCM_ERR_Code : 16|16@1+ (1,0) [0|0] "" Vector__XXX
  SG_ GCM_ERR_Origin_Node : 0|16@1+ (1,0) [0|0] "" Vector__XXX
 
-BO_ 512 GCM_0: 6 GCM
+BO_ 512 GCM_Temps: 6 GCM
  SG_ GCM_IC_Temp : 32|16@1- (0.005,0) [0|0] "C" Vector__XXX
  SG_ GCM_PCB_Temp : 16|16@1- (0.005,0) [0|0] "C" Vector__XXX
  SG_ GCM_Uptime : 0|16@1+ (1,0) [0|0] "s" Vector__XXX
 
 
 
+CM_ BO_ 3221225472 "This is a message for not used signals, created by Vector CANdb++ DBC OLE DB Provider.";
+CM_ BO_ 515 "Paddles, Shift Queues";
 CM_ BO_ 1552 "Upshift/downshift ignition cut triggers for the MS6";
 CM_ BO_ 514 "Paddles, Shift Queues";
 CM_ BO_ 513 "Gear, Gear Sensor Voltage, Mode, Shift force";

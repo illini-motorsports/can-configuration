@@ -94,6 +94,12 @@ BO_ 938 ECU_Wheel_Speeds: 8 MS6_Logger_CAN_Bus_1
  SG_ vwheel_rr : 24|8@1+ (1,0) [0|400] "km/h" Vector__XXX
  SG_ speed : 32|8@1+ (1,0) [0|400] "km/h" Vector__XXX
 
+BO_ 592 ECU_Autoupshifting_Targets_1: 8 MS6_Logger_CAN_Bus_1
+
+BO_ 594 ECU_Autoupshifting_Targets_3: 8 MS6_Logger_CAN_Bus_1
+
+BO_ 593 ECU_Autoupshifting_Targets_2: 8 MS6_Logger_CAN_Bus_1
+
 CM_ BO_ 768 "RPM, Throttle Position, Lambda, Battery Voltage";
 CM_ SG_ 768 ub "battery voltage";
 CM_ SG_ 768 nmot "engine speed";
@@ -146,4 +152,7 @@ CM_ SG_ 938 vwheel_fr "wheel speed front right";
 CM_ SG_ 938 vwheel_rl "wheel speed rear left";
 CM_ SG_ 938 vwheel_rr "wheel speed rear right";
 CM_ SG_ 938 speed "car speed";
+CM_ BO_ 592 "Target RPMs from 1 to 4";
+CM_ BO_ 594 "Target RPM + speed for 5";
+CM_ BO_ 593 "Target speeds from 1 to 4";
 

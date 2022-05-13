@@ -36,12 +36,14 @@ BS_:
 BU_: PDM
 
 
-BO_ 1024 PDM_Status: 5 PDM
- SG_ PDM_Actuator_Up_Current : 32|8@1- (1,0) [0|127] "" Vector__XXX
- SG_ PDM_Actuator_Down_Current : 24|8@1- (1,0) [0|127] "" Vector__XXX
- SG_ PDM_Water_Pump_Active : 16|8@1- (1,0) [0|0] "" Vector__XXX
- SG_ PDM_Fan_Active : 8|8@1- (1,0) [0|0] "" Vector__XXX
- SG_ PDM_Total_Current : 0|8@1- (1,0) [0|127] "" Vector__XXX
+BO_ 1024 PDM_Status: 7 PDM
+ SG_ PDM_SW_Shift_Up : 48|8@1+ (1,0) [0|255] "" Vector__XXX
+ SG_ PDM_Actuator_Down_Current : 24|8@1+ (1,0) [0|255] "" Vector__XXX
+ SG_ PDM_Actuator_Up_Current : 32|8@1+ (1,0) [0|255] "" Vector__XXX
+ SG_ PDM_SW_Shift_Down : 40|8@1+ (1,0) [0|255] "" Vector__XXX
+ SG_ PDM_Water_Pump_Active : 16|8@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ PDM_Fan_Active : 8|8@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ PDM_Total_Current : 0|8@1+ (1,0) [0|255] "" Vector__XXX
 
 
 

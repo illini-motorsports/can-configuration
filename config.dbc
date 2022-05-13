@@ -102,21 +102,25 @@ BO_ 938 ECU_Wheel_Speeds: 8 MS6_Logger_CAN_Bus_1
  SG_ vwheel_fr : 8|8@1+ (1,0) [0|400] "km/h" Vector__XXX
  SG_ vwheel_fl : 0|8@1+ (1,0) [0|400] "km/h" Vector__XXX
 
+BO_ 592 ECU_Autoupshifting_Targets_1: 8 MS6_Logger_CAN_Bus_1
+
+BO_ 594 ECU_Autoupshifting_Targets_3: 8 MS6_Logger_CAN_Bus_1
+
+BO_ 593 ECU_Autoupshifting_Targets_2: 8 MS6_Logger_CAN_Bus_1
+
 BO_ 1967 IZZE_Brake_IR_Programming: 8 MS6_Logger_CAN_Bus_2
 
-BO_ 517 New_Message_7: 5 Vector__XXX
- SG_ Temp_AU : 32|8@1+ (1,0) [0|0] "" Vector__XXX
- SG_ Temp_RPM : 16|16@1- (1,0) [0|0] "" Vector__XXX
- SG_ Temp_Speed : 0|16@1+ (1,0) [0|0] "" Vector__XXX
+BO_ 515 GCM_Autoupshifting: 8 Vector__XXX
+ SG_ GCM_Target_Speed : 40|8@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ GCM_Speed : 32|8@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ GCM_Target_RPM : 16|16@1- (1,0) [0|0] "" Vector__XXX
+ SG_ GCM_RPM : 0|16@1- (1,0) [0|0] "" Vector__XXX
 
-BO_ 256 GCM_MS6_Gear: 8 GCM
- SG_ GCM_Gear_MS6 : 0|8@1+ (0.5,-1.5) [0|0] "" Vector__XXX
-
-BO_ 1552 GCM_MS6_Shift: 8 GCM
+BO_ 1552 GCM_MS6_Gearcut: 8 GCM
  SG_ GCM_Upshift_Bosch : 1|1@1+ (1,0) [0|0] "" Vector__XXX
  SG_ GCM_Downshift_Bosch : 0|1@1+ (1,0) [0|0] "" Vector__XXX
 
-BO_ 514 GCM_2: 4 GCM
+BO_ 514 GCM_Queue: 4 GCM
  SG_ GCM_NeutralQueue : 24|8@1+ (1,0) [0|0] "" Vector__XXX
  SG_ GCM_DownshiftQueue : 16|8@1+ (1,0) [0|0] "" Vector__XXX
  SG_ GCM_UpshiftQueue : 8|8@1+ (1,0) [0|0] "" Vector__XXX
@@ -124,17 +128,17 @@ BO_ 514 GCM_2: 4 GCM
  SG_ GCM_Switch_Down : 1|1@1+ (1,0) [0|0] "" Vector__XXX
  SG_ GCM_Switch_Up : 0|1@1+ (1,0) [0|0] "" Vector__XXX
 
-BO_ 513 GCM_1: 6 GCM
+BO_ 513 GCM_Gear: 6 GCM
  SG_ GCM_Shift_Force : 32|16@1- (0.01,0) [0|0] "N" Vector__XXX
  SG_ GCM_Gear_Sensor_Voltage : 16|16@1+ (0.0001,0) [0|0] "V" Vector__XXX
  SG_ GCM_Mode : 8|8@1+ (1,0) [0|0] "" Vector__XXX
  SG_ GCM_Gear : 0|8@1+ (1,0) [0|0] "" Vector__XXX
 
-BO_ 15 GCM_ERR: 4 GCM
+BO_ 15 GCM_Error: 4 GCM
  SG_ GCM_ERR_Code : 16|16@1+ (1,0) [0|0] "" Vector__XXX
  SG_ GCM_ERR_Origin_Node : 0|16@1+ (1,0) [0|0] "" Vector__XXX
 
-BO_ 512 GCM_0: 6 GCM
+BO_ 512 GCM_Temps: 6 GCM
  SG_ GCM_IC_Temp : 32|16@1- (0.005,0) [0|0] "C" Vector__XXX
  SG_ GCM_PCB_Temp : 16|16@1- (0.005,0) [0|0] "C" Vector__XXX
  SG_ GCM_Uptime : 0|16@1+ (1,0) [0|0] "s" Vector__XXX
@@ -150,12 +154,14 @@ BO_ 372 IMU_Y_Yaw: 8 IMU
  SG_ IMU_Y_Accel : 32|16@1+ (0.0001274,-4.1746432) [0|0] "g" Vector__XXX
  SG_ IMU_Yaw_Rate : 0|16@1+ (0.005,-163.84) [0|0] "deg/s" Vector__XXX
 
-BO_ 1024 PDM_Status: 5 PDM
- SG_ PDM_Actuator_Up_Current : 32|8@1- (1,0) [0|127] "" Vector__XXX
- SG_ PDM_Actuator_Down_Current : 24|8@1- (1,0) [0|127] "" Vector__XXX
- SG_ PDM_Water_Pump_Active : 16|8@1- (1,0) [0|0] "" Vector__XXX
- SG_ PDM_Fan_Active : 8|8@1- (1,0) [0|0] "" Vector__XXX
- SG_ PDM_Total_Current : 0|8@1- (1,0) [0|127] "" Vector__XXX
+BO_ 1024 PDM_Status: 7 PDM
+ SG_ PDM_SW_Shift_Up : 48|8@1+ (1,0) [0|255] "" Vector__XXX
+ SG_ PDM_SW_Shift_Down : 40|8@1+ (1,0) [0|255] "" Vector__XXX
+ SG_ PDM_Actuator_Up_Current : 32|8@1+ (1,0) [0|255] "" Vector__XXX
+ SG_ PDM_Actuator_Down_Current : 24|8@1+ (1,0) [0|255] "" Vector__XXX
+ SG_ PDM_Water_Pump_Active : 16|8@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ PDM_Fan_Active : 8|8@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ PDM_Total_Current : 0|8@1+ (1,0) [0|255] "" Vector__XXX
 
 BO_ 1681 SDM550_GPS_Heading: 4 PLEX
  SG_ GPS_Heading : 7|32@0- (0.01,0) [0|0] "deg" Vector__XXX
@@ -349,7 +355,11 @@ CM_ SG_ 938 vwheel_rr "wheel speed rear right";
 CM_ SG_ 938 vwheel_rl "wheel speed rear left";
 CM_ SG_ 938 vwheel_fr "wheel speed front right";
 CM_ SG_ 938 vwheel_fl "wheel speed front left";
+CM_ BO_ 592 "Target RPMs from 1 to 4";
+CM_ BO_ 594 "Target RPM + speed for 5";
+CM_ BO_ 593 "Target speeds from 1 to 4";
 CM_ BO_ 1967 "Programming message template for IZZE Brake IR sensor";
+CM_ BO_ 515 "Paddles, Shift Queues";
 CM_ BO_ 1552 "Upshift/downshift ignition cut triggers for the MS6";
 CM_ BO_ 514 "Paddles, Shift Queues";
 CM_ BO_ 513 "Gear, Gear Sensor Voltage, Mode, Shift force";

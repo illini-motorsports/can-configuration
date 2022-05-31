@@ -36,10 +36,26 @@ BS_:
 BU_: PDM
 
 
-BO_ 1024 PDM_Status: 7 PDM
+BO_ 3221225472 VECTOR__INDEPENDENT_SIG_MSG: 0 Vector__XXX
+ SG_ PDM_Injection_Current : 0|8@1+ (1,0) [0|255] "" Vector__XXX
+
+BO_ 1026 PDM_Status_3: 8 Vector__XXX
+ SG_ PDM_Water_Pump_Current : 16|8@1+ (1,0) [0|255] "" Vector__XXX
+ SG_ PDM_Starter_Current : 8|8@1+ (1,0) [0|255] "" Vector__XXX
+ SG_ PDM_Ignition_Current : 0|8@1+ (1,0) [0|255] "" Vector__XXX
+
+BO_ 1025 PDM_Status_2: 8 Vector__XXX
+ SG_ PDM_Ignition_Current : 56|8@1+ (1,0) [0|255] "" Vector__XXX
+ SG_ PDM_Fuel_Pump_Current : 48|8@1+ (1,0) [0|255] "" Vector__XXX
+ SG_ PDM_Fan_Current : 40|8@1+ (1,0) [0|255] "" Vector__XXX
+ SG_ PDM_ECU_Current : 32|8@1+ (1,0) [0|255] "" Vector__XXX
+ SG_ PDM_Actuator_Up_Current : 24|8@1+ (1,0) [0|255] "" Vector__XXX
+ SG_ PDM_Actuator_Down_Current : 16|8@1+ (1,0) [0|255] "" Vector__XXX
+ SG_ PDM_F_BSPD_Enable : 8|8@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ PDM_F_BSPD_Error : 0|8@1+ (1,0) [0|0] "" Vector__XXX
+
+BO_ 1024 PDM_Status_1: 8 PDM
  SG_ PDM_SW_Shift_Up : 48|8@1+ (1,0) [0|255] "" Vector__XXX
- SG_ PDM_Actuator_Down_Current : 24|8@1+ (1,0) [0|255] "" Vector__XXX
- SG_ PDM_Actuator_Up_Current : 32|8@1+ (1,0) [0|255] "" Vector__XXX
  SG_ PDM_SW_Shift_Down : 40|8@1+ (1,0) [0|255] "" Vector__XXX
  SG_ PDM_Water_Pump_Active : 16|8@1+ (1,0) [0|0] "" Vector__XXX
  SG_ PDM_Fan_Active : 8|8@1+ (1,0) [0|0] "" Vector__XXX
@@ -47,6 +63,7 @@ BO_ 1024 PDM_Status: 7 PDM
 
 
 
+CM_ BO_ 3221225472 "This is a message for not used signals, created by Vector CANdb++ DBC OLE DB Provider.";
 BA_DEF_  "BusType" STRING ;
 BA_DEF_DEF_  "BusType" "";
 

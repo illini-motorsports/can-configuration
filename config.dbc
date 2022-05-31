@@ -65,7 +65,7 @@ BO_ 32 ECU_Power_Control: 8 MS6_Logger_CAN_Bus_1
  SG_ Engine_Cranking : 0|8@1+ (1,0) [0|1] "" Vector__XXX
 
 BO_ 1019 ECU_Gear_Control: 8 MS6_Logger_CAN_Bus_1
- SG_ SDM102_Autoupshiting_On : 32|8@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ SDM102_Autoupshifting_On : 32|8@1+ (1,0) [0|1] "" Vector__XXX
  SG_ nmot : 16|16@1- (1,0) [0|20000] "rpm" Vector__XXX
  SG_ speed : 0|16@1+ (0.01,0) [0|400] "km/h" Vector__XXX
 
@@ -77,7 +77,7 @@ BO_ 1576 ECU_INT_Sw_Bin_01_SDM102: 8 MS6_Logger_CAN_Bus_1
  SG_ SDM102_Launch_Ctrl_On : 3|1@1+ (1,0) [0|1] "" Vector__XXX
 
 BO_ 1022 ECU_Switches: 8 MS6_Logger_CAN_Bus_1
- SG_ SDM102_Autoupshiting_On : 24|8@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ GCM_Autoupshifting_On : 24|8@1+ (1,0) [0|1] "" Vector__XXX
  SG_ B_launch : 16|8@1+ (1,0) [0|1] "" Vector__XXX
  SG_ tcstage : 8|8@1+ (1,0) [0|12] "" Vector__XXX
  SG_ mappos : 0|8@1+ (1,0) [0|15] "" Vector__XXX
@@ -111,14 +111,14 @@ BO_ 593 ECU_Autoupshifting_Targets_2: 8 MS6_Logger_CAN_Bus_1
 BO_ 1967 IZZE_Brake_IR_Programming: 8 MS6_Logger_CAN_Bus_2
 
 BO_ 515 GCM_Autoupshifting: 8 Vector__XXX
- SG_ GCM_Target_Speed : 40|8@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ GCM_AU_Target_Speed : 40|8@1+ (1,0) [0|0] "" Vector__XXX
  SG_ GCM_Speed : 32|8@1+ (1,0) [0|0] "" Vector__XXX
- SG_ GCM_Target_RPM : 16|16@1- (1,0) [0|0] "" Vector__XXX
+ SG_ GCM_AU_Target_RPM : 16|16@1- (1,0) [0|0] "" Vector__XXX
  SG_ GCM_RPM : 0|16@1- (1,0) [0|0] "" Vector__XXX
 
 BO_ 1552 GCM_MS6_Gearcut: 8 GCM
- SG_ GCM_Upshift_Bosch : 1|1@1+ (1,0) [0|0] "" Vector__XXX
- SG_ GCM_Downshift_Bosch : 0|1@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ GCM_Upshift_MS6 : 1|1@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ GCM_Downshift_MS6 : 0|1@1+ (1,0) [0|0] "" Vector__XXX
 
 BO_ 514 GCM_Queue: 4 GCM
  SG_ GCM_NeutralQueue : 24|8@1+ (1,0) [0|0] "" Vector__XXX
@@ -154,24 +154,37 @@ BO_ 372 IMU_Y_Yaw: 8 IMU
  SG_ IMU_Y_Accel : 32|16@1+ (0.0001274,-4.1746432) [0|0] "g" Vector__XXX
  SG_ IMU_Yaw_Rate : 0|16@1+ (0.005,-163.84) [0|0] "deg/s" Vector__XXX
 
-BO_ 1024 PDM_Status: 7 PDM
+BO_ 1026 PDM_Status_3: 8 Vector__XXX
+ SG_ PDM_Water_Pump_Current : 16|8@1+ (1,0) [0|255] "" Vector__XXX
+ SG_ PDM_Starter_Current : 8|8@1+ (1,0) [0|255] "" Vector__XXX
+ SG_ PDM_Ignition_Current : 0|8@1+ (1,0) [0|255] "" Vector__XXX
+
+BO_ 1025 PDM_Status_2: 8 Vector__XXX
+ SG_ PDM_Ignition_Current : 56|8@1+ (1,0) [0|255] "" Vector__XXX
+ SG_ PDM_Fuel_Pump_Current : 48|8@1+ (1,0) [0|255] "" Vector__XXX
+ SG_ PDM_Fan_Current : 40|8@1+ (1,0) [0|255] "" Vector__XXX
+ SG_ PDM_ECU_Current : 32|8@1+ (1,0) [0|255] "" Vector__XXX
+ SG_ PDM_Actuator_Up_Current : 24|8@1+ (1,0) [0|255] "" Vector__XXX
+ SG_ PDM_Actuator_Down_Current : 16|8@1+ (1,0) [0|255] "" Vector__XXX
+ SG_ PDM_F_BSPD_Enable : 8|8@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ PDM_F_BSPD_Error : 0|8@1+ (1,0) [0|0] "" Vector__XXX
+
+BO_ 1024 PDM_Status_1: 8 PDM
  SG_ PDM_SW_Shift_Up : 48|8@1+ (1,0) [0|255] "" Vector__XXX
  SG_ PDM_SW_Shift_Down : 40|8@1+ (1,0) [0|255] "" Vector__XXX
- SG_ PDM_Actuator_Up_Current : 32|8@1+ (1,0) [0|255] "" Vector__XXX
- SG_ PDM_Actuator_Down_Current : 24|8@1+ (1,0) [0|255] "" Vector__XXX
  SG_ PDM_Water_Pump_Active : 16|8@1+ (1,0) [0|0] "" Vector__XXX
  SG_ PDM_Fan_Active : 8|8@1+ (1,0) [0|0] "" Vector__XXX
  SG_ PDM_Total_Current : 0|8@1+ (1,0) [0|255] "" Vector__XXX
 
 BO_ 1681 SDM550_GPS_Heading: 4 PLEX
- SG_ GPS_Heading : 7|32@0- (0.01,0) [0|0] "deg" Vector__XXX
+ SG_ SDM550_GPS_Heading : 7|32@0- (0.01,0) [0|0] "deg" Vector__XXX
 
 BO_ 1680 SDM550_GPS_LatLong: 8 PLEX
- SG_ GPS_Long : 39|32@0- (1e-07,0) [0|0] "deg" Vector__XXX
- SG_ GPS_Lat : 7|32@0- (1e-07,0) [0|0] "deg" Vector__XXX
+ SG_ SDM550_GPS_Long : 39|32@0- (1e-07,0) [0|0] "deg" Vector__XXX
+ SG_ SDM550_GPS_Lat : 7|32@0- (1e-07,0) [0|0] "deg" Vector__XXX
 
 BO_ 5 SDM550_LapTrigger: 2 PLEX
- SG_ Lap_Trigger : 0|16@1- (1,0) [0|0] "" Vector__XXX
+ SG_ SDM550_Lap_Trigger : 0|16@1- (1,0) [0|0] "" Vector__XXX
 
 BO_ 1710 SDM102_Knobs: 8 PLEX
  SG_ SDM102_Page_Control : 48|16@1- (1,0) [0|0] "" Vector__XXX
@@ -328,14 +341,14 @@ CM_ SG_ 32 tmot "engine temperature";
 CM_ SG_ 32 Engine_Running "Returns true, if (nmot > 0)";
 CM_ SG_ 32 Engine_Cranking "Returns true, if (1 <= nmot <= 1000)";
 CM_ BO_ 1019 "Ground Speed, RPM, Auto-upshifting Enable";
-CM_ SG_ 1019 SDM102_Autoupshiting_On "Returns true, if (SDM102_Launch_Ctrl_And_Autoupshifting_Pre or SDM102_Autoupshifting_Only_Pre_1 or SDM102_Autoupshifting_Only_Pre_2)";
+CM_ SG_ 1019 SDM102_Autoupshifting_On "Returns true, if (SDM102_Launch_Ctrl_And_Autoupshifting_Pre or SDM102_Autoupshifting_Only_Pre_1 or SDM102_Autoupshifting_Only_Pre_2)";
 CM_ SG_ 1019 nmot "engine speed";
 CM_ SG_ 1019 speed "car speed";
 CM_ BO_ 1568 "Traction Control + ECU Map from SDM 102 Knobs (Internal Redirect)";
 CM_ BO_ 1576 "Launch Control from SDM 102 Knob (Internal Redirect)";
 CM_ SG_ 1576 SDM102_Launch_Ctrl_On "Returns true, if (SDM102_Launch_Ctrl_Only_Pre or SDM102_Launch_Ctrl_And_Autoupshifting_Pre)";
 CM_ BO_ 1022 "Map Position, TC Stage, Launch Control, Auto-upshifting";
-CM_ SG_ 1022 SDM102_Autoupshiting_On "Returns true, if (SDM102_Launch_Ctrl_And_Autoupshifting_Pre or SDM102_Autoupshifting_Only_Pre_1 or SDM102_Autoupshifting_Only_Pre_2)";
+CM_ SG_ 1022 GCM_Autoupshifting_On "Returns true, if (GCM_Mode == 1)";
 CM_ SG_ 1022 B_launch "condition launch control active";
 CM_ SG_ 1022 tcstage "traction control stage";
 CM_ SG_ 1022 mappos "position of map switch";

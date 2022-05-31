@@ -1,7 +1,7 @@
 VERSION ""
 
 
-NS_ :
+NS_ : 
 	NS_DESC_
 	CM_
 	BA_DEF_
@@ -37,11 +37,15 @@ BU_: PLEX
 
 
 BO_ 1681 SDM550_GPS_Heading: 4 PLEX
- SG_ GPS_Heading : 7|32@0- (0.01,0) [0|0] "deg" Vector__XXX
+ SG_ SDM550_GPS_Heading : 7|32@0- (0.01,0) [0|0] "deg" Vector__XXX
 
 BO_ 1680 SDM550_GPS_LatLong: 8 PLEX
- SG_ GPS_Lat : 7|32@0- (1E-07,0) [0|0] "deg" Vector__XXX
- SG_ GPS_Long : 39|32@0- (1E-07,0) [0|0] "deg" Vector__XXX
+ SG_ SDM550_GPS_Lat : 7|32@0- (1E-007,0) [0|0] "deg" Vector__XXX
+ SG_ SDM550_GPS_Long : 39|32@0- (1E-007,0) [0|0] "deg" Vector__XXX
 
 BO_ 5 SDM550_LapTrigger: 2 PLEX
- SG_ Lap_Trigger : 0|16@1- (1,0) [0|0] "" Vector__XXX
+ SG_ SDM550_Lap_Trigger : 0|16@1- (1,0) [0|0] "" Vector__XXX
+
+
+
+

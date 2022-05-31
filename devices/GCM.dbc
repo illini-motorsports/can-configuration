@@ -42,14 +42,14 @@ BO_ 3221225472 VECTOR__INDEPENDENT_SIG_MSG: 0 Vector__XXX
  SG_ GCM_Gear_MS6 : 0|8@1+ (0.5,-1.5) [0|0] "" Vector__XXX
 
 BO_ 515 GCM_Autoupshifting: 8 Vector__XXX
- SG_ GCM_Target_Speed : 40|8@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ GCM_AU_Target_Speed : 40|8@1+ (1,0) [0|0] "" Vector__XXX
  SG_ GCM_Speed : 32|8@1+ (1,0) [0|0] "" Vector__XXX
- SG_ GCM_Target_RPM : 16|16@1- (1,0) [0|0] "" Vector__XXX
+ SG_ GCM_AU_Target_RPM : 16|16@1- (1,0) [0|0] "" Vector__XXX
  SG_ GCM_RPM : 0|16@1- (1,0) [0|0] "" Vector__XXX
 
 BO_ 1552 GCM_MS6_Gearcut: 8 GCM
- SG_ GCM_Upshift_Bosch : 1|1@1+ (1,0) [0|0] "" Vector__XXX
- SG_ GCM_Downshift_Bosch : 0|1@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ GCM_Upshift_MS6 : 1|1@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ GCM_Downshift_MS6 : 0|1@1+ (1,0) [0|0] "" Vector__XXX
 
 BO_ 514 GCM_Queue: 4 GCM
  SG_ GCM_NeutralQueue : 24|8@1+ (1,0) [0|0] "" Vector__XXX

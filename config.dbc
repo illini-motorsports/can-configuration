@@ -189,7 +189,7 @@ BO_ 5 SDM550_LapTrigger: 2 PLEX
 BO_ 1710 SDM102_Knobs: 8 PLEX
  SG_ SDM102_Page_Control : 48|16@1- (1,0) [0|0] "" Vector__XXX
  SG_ SDM102_Tract_Ctrl : 32|16@1- (1,0) [0|0] "" Vector__XXX
- SG_ SDM102_Launch_Ctrl : 16|16@1- (1,0) [0|0] "" Vector__XXX
+ SG_ SDM102_Launch_Ctrl_AU : 16|16@1- (1,0) [0|0] "" Vector__XXX
  SG_ SDM102_ECU_Map : 0|16@1- (1,0) [0|0] "" Vector__XXX
 
 BO_ 1234 IZZE_Brake_IR_4CE_Status: 8 IZZE_Brake_IR_4CE

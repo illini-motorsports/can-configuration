@@ -1,7 +1,7 @@
 VERSION ""
 
 
-NS_ :
+NS_ : 
 	NS_DESC_
 	CM_
 	BA_DEF_
@@ -35,8 +35,13 @@ BS_:
 
 BU_: PLEX
 
+
 BO_ 1710 SDM102_Knobs: 8 PLEX
  SG_ SDM102_ECU_Map : 0|16@1- (1,0) [0|0] "" Vector__XXX
- SG_ SDM102_Launch_Ctrl : 16|16@1- (1,0) [0|0] "" Vector__XXX
+ SG_ SDM102_Launch_Ctrl_AU : 16|16@1- (1,0) [0|0] "" Vector__XXX
  SG_ SDM102_Tract_Ctrl : 32|16@1- (1,0) [0|0] "" Vector__XXX
  SG_ SDM102_Page_Control : 48|16@1- (1,0) [0|0] "" Vector__XXX
+
+
+
+

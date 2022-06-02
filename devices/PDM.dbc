@@ -40,8 +40,9 @@ BO_ 3221225472 VECTOR__INDEPENDENT_SIG_MSG: 0 Vector__XXX
  SG_ PDM_Injection_Current : 0|8@1+ (1,0) [0|255] "" Vector__XXX
 
 BO_ 1026 PDM_Status_3: 8 Vector__XXX
+ SG_ PDM_Extra_Current : 24|8@1+ (1,0) [0|255] "" Vector__XXX
  SG_ PDM_Water_Pump_Current : 16|8@1+ (1,0) [0|255] "" Vector__XXX
- SG_ PDM_Starter_Current : 8|8@1+ (1,0) [0|255] "" Vector__XXX
+ SG_ PDM_CAN_Current : 8|8@1+ (1,0) [0|255] "" Vector__XXX
  SG_ PDM_Ignition_Current : 0|8@1+ (1,0) [0|255] "" Vector__XXX
 
 BO_ 1025 PDM_Status_2: 8 Vector__XXX

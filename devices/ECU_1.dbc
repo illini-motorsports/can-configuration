@@ -59,7 +59,6 @@ BO_ 32 ECU_Power_Control: 8 MS6_Logger_CAN_Bus_1
 BO_ 1019 ECU_Gear_Control: 8 MS6_Logger_CAN_Bus_1
  SG_ nmot : 16|16@1- (1,0) [0|20000] "rpm" Vector__XXX
  SG_ speed : 0|16@1+ (0.01,0) [0|400] "km/h" Vector__XXX
- SG_ SDM102_Autoupshifting_On : 32|8@1+ (1,0) [0|1] "" Vector__XXX
 
 BO_ 1568 ECU_INT_Sw_Rot_01_SDM102: 8 MS6_Logger_CAN_Bus_1
  SG_ SDM102_ECU_Map : 8|8@1+ (1,0) [0|0] "" Vector__XXX
@@ -72,7 +71,7 @@ BO_ 1022 ECU_Switches: 8 MS6_Logger_CAN_Bus_1
  SG_ mappos : 0|8@1+ (1,0) [0|15] "" Vector__XXX
  SG_ tcstage : 8|8@1+ (1,0) [0|12] "" Vector__XXX
  SG_ B_launch : 16|8@1+ (1,0) [0|1] "" Vector__XXX
- SG_ GCM_Autoupshifting_On : 24|8@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ GCM_Autoupshifting_Enabled : 24|8@1+ (1,0) [0|1] "" Vector__XXX
 
 BO_ 1690 ECU_Lap_Times: 8 MS6_Logger_CAN_Bus_1
  SG_ Laptrigger_laptimeold_dls : 0|32@1+ (0.01,0) [0|500] "s" Vector__XXX
@@ -100,6 +99,9 @@ BO_ 594 ECU_Autoupshifting_Targets_3: 8 MS6_Logger_CAN_Bus_1
 
 BO_ 593 ECU_Autoupshifting_Targets_2: 8 MS6_Logger_CAN_Bus_1
 
+BO_ 1020 ECU_Gear_Control_2: 8 MS6_Logger_CAN_Bus_1
+ SG_ SDM102_Autoupshifting_On : 0|8@1+ (1,0) [0|1] "" Vector__XXX
+
 CM_ BO_ 768 "RPM, Throttle Position, Lambda, Battery Voltage";
 CM_ SG_ 768 ub "battery voltage";
 CM_ SG_ 768 nmot "engine speed";
@@ -124,10 +126,9 @@ CM_ SG_ 32 nmot "engine speed";
 CM_ SG_ 32 gear "selected gear";
 CM_ SG_ 32 pbrake_f "brake pressure front ";
 CM_ SG_ 32 pbrake_r "brake pressure rear";
-CM_ BO_ 1019 "Ground Speed, RPM, Auto-upshifting Enable";
+CM_ BO_ 1019 "Ground Speed, RPM";
 CM_ SG_ 1019 nmot "engine speed";
 CM_ SG_ 1019 speed "car speed";
-CM_ SG_ 1019 SDM102_Autoupshifting_On "Returns true, if (SDM102_Launch_Ctrl_And_Autoupshifting_Pre or SDM102_Autoupshifting_Only_Pre_1 or SDM102_Autoupshifting_Only_Pre_2)";
 CM_ BO_ 1568 "Traction Control + ECU Map from SDM 102 Knobs (Internal Redirect)";
 CM_ BO_ 1576 "Launch Control from SDM 102 Knob (Internal Redirect)";
 CM_ SG_ 1576 SDM102_Launch_Ctrl_On "Returns true, if (SDM102_Launch_Ctrl_Only_Pre or SDM102_Launch_Ctrl_And_Autoupshifting_Pre)";
@@ -135,7 +136,7 @@ CM_ BO_ 1022 "Map Position, TC Stage, Launch Control, Auto-upshifting";
 CM_ SG_ 1022 mappos "position of map switch";
 CM_ SG_ 1022 tcstage "traction control stage";
 CM_ SG_ 1022 B_launch "condition launch control active";
-CM_ SG_ 1022 GCM_Autoupshifting_On "Returns true, if (GCM_Mode == 1)";
+CM_ SG_ 1022 GCM_Autoupshifting_Enabled "Returns true, if (GCM_Mode == 1)";
 CM_ BO_ 1690 "Previous Lap Time, Current Lap Time";
 CM_ SG_ 1690 Laptrigger_laptimeold_dls "previous lap time";
 CM_ SG_ 1690 Laptrigger_laptime_dls "running lap time";
@@ -155,4 +156,6 @@ CM_ SG_ 938 speed "car speed";
 CM_ BO_ 592 "Target RPMs from 1 to 4";
 CM_ BO_ 594 "Target RPM + speed for 5";
 CM_ BO_ 593 "Target speeds from 1 to 4";
+CM_ BO_ 1020 "Auto-upshifting Enable";
+CM_ SG_ 1020 SDM102_Autoupshifting_On "Returns true, if (SDM102_Launch_Ctrl_And_Autoupshifting_Pre or SDM102_Autoupshifting_Only_Pre_1 or SDM102_Autoupshifting_Only_Pre_2)";
 

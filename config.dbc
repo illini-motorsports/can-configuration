@@ -113,10 +113,12 @@ BO_ 1020 ECU_Gear_Control_2: 8 MS6_Logger_CAN_Bus_1
 BO_ 1967 IZZE_Brake_IR_Programming: 8 MS6_Logger_CAN_Bus_2
 
 BO_ 515 GCM_Autoupshifting: 8 Vector__XXX
+ SG_ GCM_Wheel_Speed_Delay_Adjustment : 56|8@1+ (0.01,0) [0|0] "" Vector__XXX
+ SG_ GCM_RPM_Delay_Adjustment : 48|8@1+ (1,0) [0|0] "" Vector__XXX
  SG_ GCM_AU_Target_Speed : 40|8@1+ (1,0) [0|0] "" Vector__XXX
  SG_ GCM_Speed : 32|8@1+ (1,0) [0|0] "" Vector__XXX
- SG_ GCM_AU_Target_RPM : 16|16@1- (1,0) [0|0] "" Vector__XXX
- SG_ GCM_RPM : 0|16@1- (1,0) [0|0] "" Vector__XXX
+ SG_ GCM_AU_Target_RPM : 16|16@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ GCM_RPM : 0|16@1+ (1,0) [0|0] "" Vector__XXX
 
 BO_ 1552 GCM_MS6_Gearcut: 8 GCM
  SG_ GCM_Upshift_MS6 : 1|1@1+ (1,0) [0|0] "" Vector__XXX

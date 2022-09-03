@@ -197,59 +197,59 @@ BO_ 1710 SDM102_Knobs: 8 PLEX
  SG_ SDM102_Launch_Ctrl_AU : 16|16@1- (1,0) [0|0] "" Vector__XXX
  SG_ SDM102_ECU_Map : 0|16@1- (1,0) [0|0] "" Vector__XXX
 
-BO_ 1234 IZZE_Brake_IR_4CE_Status: 8 IZZE_Brake_IR_4CE
- SG_ IZZE_Brake_IR_4CE_Internal_Temp : 7|16@0+ (0.1,-100) [0|65535] "C" Vector__XXX
+BO_ 1229 IZZE_Brake_IR_4C9_Status: 8 IZZE_Brake_IR_4CE
+ SG_ IZZE_Brake_IR_4C9_Internal_Temp : 7|16@0+ (0.1,-100) [0|65535] "C" Vector__XXX
 
-BO_ 1233 IZZE_Brake_IR_4CE_Ch13to16: 8 IZZE_Brake_IR_4CE
- SG_ IZZE_Brake_IR_4CE_Channel_16 : 55|16@0+ (0.1,-100) [0|65535] "C" Vector__XXX
- SG_ IZZE_Brake_IR_4CE_Channel_15 : 39|16@0+ (0.1,-100) [0|65535] "C" Vector__XXX
- SG_ IZZE_Brake_IR_4CE_Channel_14 : 23|16@0+ (0.1,-100) [0|65535] "C" Vector__XXX
- SG_ IZZE_Brake_IR_4CE_Channel_13 : 7|16@0+ (0.1,-100) [0|65535] "C" Vector__XXX
+BO_ 1228 IZZE_Brake_IR_4C9_Ch13to16: 8 IZZE_Brake_IR_4CE
+ SG_ IZZE_Brake_IR_4C9_Channel_16 : 55|16@0+ (0.1,-100) [0|65535] "C" Vector__XXX
+ SG_ IZZE_Brake_IR_4C9_Channel_15 : 39|16@0+ (0.1,-100) [0|65535] "C" Vector__XXX
+ SG_ IZZE_Brake_IR_4C9_Channel_14 : 23|16@0+ (0.1,-100) [0|65535] "C" Vector__XXX
+ SG_ IZZE_Brake_IR_4C9_Channel_13 : 7|16@0+ (0.1,-100) [0|65535] "C" Vector__XXX
 
-BO_ 1232 IZZE_Brake_IR_4CE_Ch9to12: 8 IZZE_Brake_IR_4CE
- SG_ IZZE_Brake_IR_4CE_Channel_9 : 55|16@0+ (0.1,-100) [0|65535] "C" Vector__XXX
- SG_ IZZE_Brake_IR_4CE_Channel_12 : 39|16@0+ (0.1,-100) [0|65535] "C" Vector__XXX
- SG_ IZZE_Brake_IR_4CE_Channel_11 : 23|16@0+ (0.1,-100) [0|65535] "C" Vector__XXX
- SG_ IZZE_Brake_IR_4CE_Channel_10 : 7|16@0+ (0.1,-100) [0|65535] "C" Vector__XXX
+BO_ 1227 IZZE_Brake_IR_4C9_Ch9to12: 8 IZZE_Brake_IR_4CE
+ SG_ IZZE_Brake_IR_4C9_Channel_9 : 55|16@0+ (0.1,-100) [0|65535] "C" Vector__XXX
+ SG_ IZZE_Brake_IR_4C9_Channel_12 : 39|16@0+ (0.1,-100) [0|65535] "C" Vector__XXX
+ SG_ IZZE_Brake_IR_4C9_Channel_11 : 23|16@0+ (0.1,-100) [0|65535] "C" Vector__XXX
+ SG_ IZZE_Brake_IR_4C9_Channel_10 : 7|16@0+ (0.1,-100) [0|65535] "C" Vector__XXX
 
-BO_ 1231 IZZE_Brake_IR_4CE_Ch5to8: 8 IZZE_Brake_IR_4CE
- SG_ IZZE_Brake_IR_4CE_Channel_8 : 55|16@0+ (0.1,-100) [0|65535] "C" Vector__XXX
- SG_ IZZE_Brake_IR_4CE_Channel_7 : 39|16@0+ (0.1,-100) [0|65535] "C" Vector__XXX
- SG_ IZZE_Brake_IR_4CE_Channel_6 : 23|16@0+ (0.1,-100) [0|65535] "C" Vector__XXX
- SG_ IZZE_Brake_IR_4CE_Channel_5 : 7|16@0+ (0.1,-100) [0|65535] "C" Vector__XXX
+BO_ 1226 IZZE_Brake_IR_4C9_Ch5to8: 8 IZZE_Brake_IR_4CE
+ SG_ IZZE_Brake_IR_4C9_Channel_8 : 55|16@0+ (0.1,-100) [0|65535] "C" Vector__XXX
+ SG_ IZZE_Brake_IR_4C9_Channel_7 : 39|16@0+ (0.1,-100) [0|65535] "C" Vector__XXX
+ SG_ IZZE_Brake_IR_4C9_Channel_6 : 23|16@0+ (0.1,-100) [0|65535] "C" Vector__XXX
+ SG_ IZZE_Brake_IR_4C9_Channel_5 : 7|16@0+ (0.1,-100) [0|65535] "C" Vector__XXX
 
-BO_ 1230 IZZE_Brake_IR_4CE_Ch1to4: 8 IZZE_Brake_IR_4CE
- SG_ IZZE_Brake_IR_4CE_Channel_4 : 55|16@0+ (0.1,-100) [0|65535] "C" Vector__XXX
- SG_ IZZE_Brake_IR_4CE_Channel_3 : 39|16@0+ (0.1,-100) [0|65535] "C" Vector__XXX
- SG_ IZZE_Brake_IR_4CE_Channel_2 : 23|16@0+ (0.1,-100) [0|65535] "C" Vector__XXX
- SG_ IZZE_Brake_IR_4CE_Channel_1 : 7|16@0+ (0.1,-100) [0|65535] "C" Vector__XXX
+BO_ 1225 IZZE_Brake_IR_4C9_Ch1to4: 8 IZZE_Brake_IR_4CE
+ SG_ IZZE_Brake_IR_4C9_Channel_4 : 55|16@0+ (0.1,-100) [0|65535] "C" Vector__XXX
+ SG_ IZZE_Brake_IR_4C9_Channel_3 : 39|16@0+ (0.1,-100) [0|65535] "C" Vector__XXX
+ SG_ IZZE_Brake_IR_4C9_Channel_2 : 23|16@0+ (0.1,-100) [0|65535] "C" Vector__XXX
+ SG_ IZZE_Brake_IR_4C9_Channel_1 : 7|16@0+ (0.1,-100) [0|65535] "C" Vector__XXX
 
-BO_ 1239 IZZE_Brake_IR_4D3_Status: 8 IZZE_Brake_IR_4D3
- SG_ IZZE_Brake_IR_4D3_Internal_Temp : 7|16@0+ (0.1,-100) [0|65535] "C" Vector__XXX
+BO_ 1956 IZZE_Brake_IR_7A0_Status: 8 IZZE_Brake_IR_4CE
+ SG_ IZZE_Brake_IR_7A0_Internal_Temp : 7|16@0+ (0.1,-100) [0|65535] "C" Vector__XXX
 
-BO_ 1238 IZZE_Brake_IR_4D3_Ch13to16: 8 IZZE_Brake_IR_4D3
- SG_ IZZE_Brake_IR_4D3_Channel_16 : 55|16@0+ (0.1,-100) [0|65535] "C" Vector__XXX
- SG_ IZZE_Brake_IR_4D3_Channel_15 : 39|16@0+ (0.1,-100) [0|65535] "C" Vector__XXX
- SG_ IZZE_Brake_IR_4D3_Channel_14 : 23|16@0+ (0.1,-100) [0|65535] "C" Vector__XXX
- SG_ IZZE_Brake_IR_4D3_Channel_13 : 7|16@0+ (0.1,-100) [0|65535] "C" Vector__XXX
+BO_ 1955 IZZE_Brake_IR_7A0_Ch13to16: 8 IZZE_Brake_IR_4CE
+ SG_ IZZE_Brake_IR_7A0_Channel_16 : 55|16@0+ (0.1,-100) [0|65535] "C" Vector__XXX
+ SG_ IZZE_Brake_IR_7A0_Channel_15 : 39|16@0+ (0.1,-100) [0|65535] "C" Vector__XXX
+ SG_ IZZE_Brake_IR_7A0_Channel_14 : 23|16@0+ (0.1,-100) [0|65535] "C" Vector__XXX
+ SG_ IZZE_Brake_IR_7A0_Channel_13 : 7|16@0+ (0.1,-100) [0|65535] "C" Vector__XXX
 
-BO_ 1237 IZZE_Brake_IR_4D3_Ch9to12: 8 IZZE_Brake_IR_4D3
- SG_ IZZE_Brake_IR_4D3_Channel_9 : 55|16@0+ (0.1,-100) [0|65535] "C" Vector__XXX
- SG_ IZZE_Brake_IR_4D3_Channel_12 : 39|16@0+ (0.1,-100) [0|65535] "C" Vector__XXX
- SG_ IZZE_Brake_IR_4D3_Channel_11 : 23|16@0+ (0.1,-100) [0|65535] "C" Vector__XXX
- SG_ IZZE_Brake_IR_4D3_Channel_10 : 7|16@0+ (0.1,-100) [0|65535] "C" Vector__XXX
+BO_ 1954 IZZE_Brake_IR_7A0_Ch9to12: 8 IZZE_Brake_IR_4CE
+ SG_ IZZE_Brake_IR_7A0_Channel_9 : 55|16@0+ (0.1,-100) [0|65535] "C" Vector__XXX
+ SG_ IZZE_Brake_IR_7A0_Channel_12 : 39|16@0+ (0.1,-100) [0|65535] "C" Vector__XXX
+ SG_ IZZE_Brake_IR_7A0_Channel_11 : 23|16@0+ (0.1,-100) [0|65535] "C" Vector__XXX
+ SG_ IZZE_Brake_IR_7A0_Channel_10 : 7|16@0+ (0.1,-100) [0|65535] "C" Vector__XXX
 
-BO_ 1236 IZZE_Brake_IR_4D3_Ch5to8: 8 IZZE_Brake_IR_4D3
- SG_ IZZE_Brake_IR_4D3_Channel_8 : 55|16@0+ (0.1,-100) [0|65535] "C" Vector__XXX
- SG_ IZZE_Brake_IR_4D3_Channel_7 : 39|16@0+ (0.1,-100) [0|65535] "C" Vector__XXX
- SG_ IZZE_Brake_IR_4D3_Channel_6 : 23|16@0+ (0.1,-100) [0|65535] "C" Vector__XXX
- SG_ IZZE_Brake_IR_4D3_Channel_5 : 7|16@0+ (0.1,-100) [0|65535] "C" Vector__XXX
+BO_ 1953 IZZE_Brake_IR_7A0_Ch5to8: 8 IZZE_Brake_IR_4CE
+ SG_ IZZE_Brake_IR_7A0_Channel_8 : 55|16@0+ (0.1,-100) [0|65535] "C" Vector__XXX
+ SG_ IZZE_Brake_IR_7A0_Channel_7 : 39|16@0+ (0.1,-100) [0|65535] "C" Vector__XXX
+ SG_ IZZE_Brake_IR_7A0_Channel_6 : 23|16@0+ (0.1,-100) [0|65535] "C" Vector__XXX
+ SG_ IZZE_Brake_IR_7A0_Channel_5 : 7|16@0+ (0.1,-100) [0|65535] "C" Vector__XXX
 
-BO_ 1235 IZZE_Brake_IR_4D3_Ch1to4: 8 IZZE_Brake_IR_4D3
- SG_ IZZE_Brake_IR_4D3_Channel_4 : 55|16@0+ (0.1,-100) [0|65535] "C" Vector__XXX
- SG_ IZZE_Brake_IR_4D3_Channel_3 : 39|16@0+ (0.1,-100) [0|65535] "C" Vector__XXX
- SG_ IZZE_Brake_IR_4D3_Channel_2 : 23|16@0+ (0.1,-100) [0|65535] "C" Vector__XXX
- SG_ IZZE_Brake_IR_4D3_Channel_1 : 7|16@0+ (0.1,-100) [0|65535] "C" Vector__XXX
+BO_ 1952 IZZE_Brake_IR_7A0_Ch1to4: 8 IZZE_Brake_IR_4CE
+ SG_ IZZE_Brake_IR_7A0_Channel_4 : 55|16@0+ (0.1,-100) [0|65535] "C" Vector__XXX
+ SG_ IZZE_Brake_IR_7A0_Channel_3 : 39|16@0+ (0.1,-100) [0|65535] "C" Vector__XXX
+ SG_ IZZE_Brake_IR_7A0_Channel_2 : 23|16@0+ (0.1,-100) [0|65535] "C" Vector__XXX
+ SG_ IZZE_Brake_IR_7A0_Channel_1 : 7|16@0+ (0.1,-100) [0|65535] "C" Vector__XXX
 
 BO_ 1250 IZZE_SG_4E2: 8 IZZE_SG_4E2
  SG_ IZZE_SG_4E2_External_Temperature : 55|16@0- (0.1,0) [0|0] "C" Vector__XXX
@@ -387,16 +387,16 @@ CM_ BO_ 512 "Uptime, Temperatures";
 CM_ BO_ 380 "Z accel";
 CM_ BO_ 376 "Roll rate, X accel";
 CM_ BO_ 372 "Yaw rate, Y accel";
-CM_ BO_ 1234 "Brake IR channels 13-16";
-CM_ BO_ 1233 "Brake IR channels 13-16";
-CM_ BO_ 1232 "Brake IR channels 9-12";
-CM_ BO_ 1231 "Brake IR channels 5-8";
-CM_ BO_ 1230 "Brake IR channels 1-4";
-CM_ BO_ 1239 "Brake IR channels 13-16";
-CM_ BO_ 1238 "Brake IR channels 13-16";
-CM_ BO_ 1237 "Brake IR channels 9-12";
-CM_ BO_ 1236 "Brake IR channels 5-8";
-CM_ BO_ 1235 "Brake IR channels 1-4";
+CM_ BO_ 1229 "Brake IR channels 13-16";
+CM_ BO_ 1228 "Brake IR channels 13-16";
+CM_ BO_ 1227 "Brake IR channels 9-12";
+CM_ BO_ 1226 "Brake IR channels 5-8";
+CM_ BO_ 1225 "Brake IR channels 1-4";
+CM_ BO_ 1956 "Brake IR channels 13-16";
+CM_ BO_ 1955 "Brake IR channels 13-16";
+CM_ BO_ 1954 "Brake IR channels 9-12";
+CM_ BO_ 1953 "Brake IR channels 5-8";
+CM_ BO_ 1952 "Brake IR channels 1-4";
 CM_ BO_ 1250 "Rear left IZZE - raw voltage, calibrated output, temperatures";
 CM_ BO_ 1252 "Rear right IZZE - raw voltage, calibrated output, temperatures";
 CM_ BO_ 1253 "Front right IZZE - raw voltage, calibrated output, temperatures";

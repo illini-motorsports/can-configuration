@@ -18,10 +18,12 @@ import cantools, glob, os
 
 # Modify these variables to contain the input files you want to merge,
 # and the final output file.
-INPUT_FILES = ["./ECU_1.dbc", "./ECU_2.dbc", "./GCM.dbc", "./IMU.dbc", "./PDM.dbc", "./SDM_550.dbc", "./SDM_102.dbc"]
-INPUT_FILES += ["./IZZE_Brake_IR_4C9.dbc", "./IZZE_Brake_IR_7A0.dbc", "./IZZE_SG_4E2.dbc", "./IZZE_SG_4E4.dbc", "./IZZE_SG_4E5.dbc", "./IZZE_SG_4E6.dbc", "./IZZE_SG_4E7.dbc", "./IZZE_WL_SG_429.dbc", "./IZZE_WL_SG_42A.dbc", "./Kistler_S350.dbc"]
+# INPUT_FILES = ["./ECU_1.dbc", "./ECU_2.dbc", "./GCM.dbc", "./IMU.dbc", "./PDM.dbc", "./SDM_550.dbc", "./SDM_102.dbc"]
+
+# INPUT_FILES += ["./IZZE_Brake_IR_4C9.dbc", "./IZZE_Brake_IR_7A0.dbc", "./IZZE_SG_4E2.dbc", "./IZZE_SG_4E4.dbc", "./IZZE_SG_4E5.dbc", "./IZZE_SG_4E6.dbc", "./IZZE_SG_4E7.dbc", "./IZZE_WL_SG_429.dbc", "./IZZE_WL_SG_42A.dbc", "./Kistler_S350.dbc"]
 OUTPUT_FILE = "..\config.dbc"
 
+INPUT_FILES = [file for file in os.listdir() if file.endswith(".dbc") and len(file) > 4]
 
 # Sanity checks
 if len(INPUT_FILES) <= 1 or len(OUTPUT_FILE) < 4:

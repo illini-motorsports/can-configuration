@@ -2,7 +2,7 @@ import cantools
 
 
 CONFIG_FILE = "config.dbc"
-MKDWN_FILE = "README2.md"
+MKDWN_FILE = "README.md"
 
 HEADER_MSG = """\
 This folder contains the CAN configuration (DBC) files for the race vehicle. These files define the CAN messages across our bus, including IDs, signals, etc.

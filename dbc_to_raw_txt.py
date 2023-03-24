@@ -24,7 +24,7 @@ out_file.write(HEADER_MSG)
 for message in dbc.messages:
     out_file.write(f"## {message._name}\n\n")
     out_file.write(f"### ID: 0x{message._frame_id:x} -- Length: {message._length} Bytes -- Extended: {'Yes' if message._is_extended_frame else 'No'}\n\n")
-    out_file.write(f"| Name | Start Byte | Length | Byte Order | Signed | Initial | Scale | Minimum | Maximum | Unit |\n")
+    out_file.write(f"| Name | Start Bit | Length | Byte Order | Signed | Initial | Scale | Minimum | Maximum | Unit |\n")
     out_file.write(f"| ---- | ---------- | ------ | ---------- | ------ | ------- | ----- | ------- | ------- | ---- |\n")
     for s in message.signals:
         out_file.write(f"| {s.name} | {s.start} | {s.length} | {s.byte_order} | {'Yes' if s.is_signed else 'No'} | {s.initial} |"\

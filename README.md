@@ -9,7 +9,7 @@ Original author: Aditya Mansharamani (aditya.mansha at gmail)
 
 ### ID: 0x300 -- Length: 8 Bytes -- Extended: No
 
-| Name | Start Byte | Length | Byte Order | Signed | Initial | Scale | Minimum | Maximum | Unit |
+| Name | Start Bit | Length | Byte Order | Signed | Initial | Scale | Minimum | Maximum | Unit |
 | ---- | ---------- | ------ | ---------- | ------ | ------- | ----- | ------- | ------- | ---- |
 | nmot | 7 | 16 | big_endian | Yes | None |1 | 0 | 20000 | rpm |
 | ath | 23 | 16 | big_endian | Yes | None |0.1 | 0 | 110 | % |
@@ -19,7 +19,7 @@ Original author: Aditya Mansharamani (aditya.mansha at gmail)
 
 ### ID: 0x302 -- Length: 8 Bytes -- Extended: No
 
-| Name | Start Byte | Length | Byte Order | Signed | Initial | Scale | Minimum | Maximum | Unit |
+| Name | Start Bit | Length | Byte Order | Signed | Initial | Scale | Minimum | Maximum | Unit |
 | ---- | ---------- | ------ | ---------- | ------ | ------- | ----- | ------- | ------- | ---- |
 | pamb | 0 | 16 | little_endian | No | None |0.1 | 0 | 2000 | mbar |
 | poil | 23 | 16 | big_endian | Yes | None |0.001 | 0 | 10 | bar |
@@ -29,7 +29,7 @@ Original author: Aditya Mansharamani (aditya.mansha at gmail)
 
 ### ID: 0x301 -- Length: 8 Bytes -- Extended: No
 
-| Name | Start Byte | Length | Byte Order | Signed | Initial | Scale | Minimum | Maximum | Unit |
+| Name | Start Bit | Length | Byte Order | Signed | Initial | Scale | Minimum | Maximum | Unit |
 | ---- | ---------- | ------ | ---------- | ------ | ------- | ----- | ------- | ------- | ---- |
 | tmot | 0 | 8 | little_endian | No | None |1 | 40 | 120 | °C |
 | toil | 15 | 8 | big_endian | No | None |1 | 60 | 150 | °C |
@@ -40,7 +40,7 @@ Original author: Aditya Mansharamani (aditya.mansha at gmail)
 
 ### ID: 0x20 -- Length: 8 Bytes -- Extended: No
 
-| Name | Start Byte | Length | Byte Order | Signed | Initial | Scale | Minimum | Maximum | Unit |
+| Name | Start Bit | Length | Byte Order | Signed | Initial | Scale | Minimum | Maximum | Unit |
 | ---- | ---------- | ------ | ---------- | ------ | ------- | ----- | ------- | ------- | ---- |
 | Engine_Cranking | 0 | 8 | little_endian | No | None |1 | 0 | 1 | None |
 | Engine_Running | 8 | 8 | little_endian | No | None |1 | 0 | 1 | None |
@@ -53,7 +53,7 @@ Original author: Aditya Mansharamani (aditya.mansha at gmail)
 
 ### ID: 0x3fb -- Length: 8 Bytes -- Extended: No
 
-| Name | Start Byte | Length | Byte Order | Signed | Initial | Scale | Minimum | Maximum | Unit |
+| Name | Start Bit | Length | Byte Order | Signed | Initial | Scale | Minimum | Maximum | Unit |
 | ---- | ---------- | ------ | ---------- | ------ | ------- | ----- | ------- | ------- | ---- |
 | speed | 0 | 16 | little_endian | No | None |0.01 | 0 | 400 | km/h |
 | nmot | 16 | 16 | little_endian | Yes | None |1 | 0 | 20000 | rpm |
@@ -61,7 +61,7 @@ Original author: Aditya Mansharamani (aditya.mansha at gmail)
 
 ### ID: 0x620 -- Length: 8 Bytes -- Extended: No
 
-| Name | Start Byte | Length | Byte Order | Signed | Initial | Scale | Minimum | Maximum | Unit |
+| Name | Start Bit | Length | Byte Order | Signed | Initial | Scale | Minimum | Maximum | Unit |
 | ---- | ---------- | ------ | ---------- | ------ | ------- | ----- | ------- | ------- | ---- |
 | SDM102_ECU_Map | 8 | 8 | little_endian | No | None |1 | None | None | None |
 | SDM102_Tract_Ctrl | 40 | 8 | little_endian | No | None |1 | None | None | None |
@@ -69,14 +69,14 @@ Original author: Aditya Mansharamani (aditya.mansha at gmail)
 
 ### ID: 0x628 -- Length: 8 Bytes -- Extended: No
 
-| Name | Start Byte | Length | Byte Order | Signed | Initial | Scale | Minimum | Maximum | Unit |
+| Name | Start Bit | Length | Byte Order | Signed | Initial | Scale | Minimum | Maximum | Unit |
 | ---- | ---------- | ------ | ---------- | ------ | ------- | ----- | ------- | ------- | ---- |
 | SDM102_Launch_Ctrl_On | 3 | 1 | little_endian | No | None |1 | 0 | 1 | None |
 ## ECU_Switches
 
 ### ID: 0x3fe -- Length: 8 Bytes -- Extended: No
 
-| Name | Start Byte | Length | Byte Order | Signed | Initial | Scale | Minimum | Maximum | Unit |
+| Name | Start Bit | Length | Byte Order | Signed | Initial | Scale | Minimum | Maximum | Unit |
 | ---- | ---------- | ------ | ---------- | ------ | ------- | ----- | ------- | ------- | ---- |
 | mappos | 0 | 8 | little_endian | No | None |1 | 0 | 15 | None |
 | tcstage | 8 | 8 | little_endian | No | None |1 | 0 | 12 | None |
@@ -86,7 +86,7 @@ Original author: Aditya Mansharamani (aditya.mansha at gmail)
 
 ### ID: 0x69a -- Length: 8 Bytes -- Extended: No
 
-| Name | Start Byte | Length | Byte Order | Signed | Initial | Scale | Minimum | Maximum | Unit |
+| Name | Start Bit | Length | Byte Order | Signed | Initial | Scale | Minimum | Maximum | Unit |
 | ---- | ---------- | ------ | ---------- | ------ | ------- | ----- | ------- | ------- | ---- |
 | Laptrigger_laptimeold_dls | 0 | 32 | little_endian | No | None |0.01 | 0 | 500 | s |
 | Laptrigger_laptime_dls | 32 | 32 | little_endian | No | None |0.01 | 0 | 500 | s |
@@ -94,7 +94,7 @@ Original author: Aditya Mansharamani (aditya.mansha at gmail)
 
 ### ID: 0x69b -- Length: 8 Bytes -- Extended: No
 
-| Name | Start Byte | Length | Byte Order | Signed | Initial | Scale | Minimum | Maximum | Unit |
+| Name | Start Bit | Length | Byte Order | Signed | Initial | Scale | Minimum | Maximum | Unit |
 | ---- | ---------- | ------ | ---------- | ------ | ------- | ----- | ------- | ------- | ---- |
 | Laptrigger_lapdiff_dls | 0 | 16 | little_endian | Yes | None |0.01 | -20 | 20 | s |
 | Laptrigger_lapdiffb_dls | 16 | 16 | little_endian | Yes | None |0.01 | -20 | 20 | s |
@@ -103,7 +103,7 @@ Original author: Aditya Mansharamani (aditya.mansha at gmail)
 
 ### ID: 0x69c -- Length: 8 Bytes -- Extended: No
 
-| Name | Start Byte | Length | Byte Order | Signed | Initial | Scale | Minimum | Maximum | Unit |
+| Name | Start Bit | Length | Byte Order | Signed | Initial | Scale | Minimum | Maximum | Unit |
 | ---- | ---------- | ------ | ---------- | ------ | ------- | ----- | ------- | ------- | ---- |
 | lapctr | 0 | 8 | little_endian | No | None |1 | 0 | 255 | None |
 | outctr | 8 | 8 | little_endian | No | None |1 | 0 | 255 | None |
@@ -111,7 +111,7 @@ Original author: Aditya Mansharamani (aditya.mansha at gmail)
 
 ### ID: 0x3aa -- Length: 8 Bytes -- Extended: No
 
-| Name | Start Byte | Length | Byte Order | Signed | Initial | Scale | Minimum | Maximum | Unit |
+| Name | Start Bit | Length | Byte Order | Signed | Initial | Scale | Minimum | Maximum | Unit |
 | ---- | ---------- | ------ | ---------- | ------ | ------- | ----- | ------- | ------- | ---- |
 | vwheel_fl | 0 | 8 | little_endian | No | None |1 | 0 | 400 | km/h |
 | vwheel_fr | 8 | 8 | little_endian | No | None |1 | 0 | 400 | km/h |
@@ -122,38 +122,38 @@ Original author: Aditya Mansharamani (aditya.mansha at gmail)
 
 ### ID: 0x250 -- Length: 8 Bytes -- Extended: No
 
-| Name | Start Byte | Length | Byte Order | Signed | Initial | Scale | Minimum | Maximum | Unit |
+| Name | Start Bit | Length | Byte Order | Signed | Initial | Scale | Minimum | Maximum | Unit |
 | ---- | ---------- | ------ | ---------- | ------ | ------- | ----- | ------- | ------- | ---- |
 ## ECU_Autoupshifting_Targets_3
 
 ### ID: 0x252 -- Length: 8 Bytes -- Extended: No
 
-| Name | Start Byte | Length | Byte Order | Signed | Initial | Scale | Minimum | Maximum | Unit |
+| Name | Start Bit | Length | Byte Order | Signed | Initial | Scale | Minimum | Maximum | Unit |
 | ---- | ---------- | ------ | ---------- | ------ | ------- | ----- | ------- | ------- | ---- |
 ## ECU_Autoupshifting_Targets_2
 
 ### ID: 0x251 -- Length: 8 Bytes -- Extended: No
 
-| Name | Start Byte | Length | Byte Order | Signed | Initial | Scale | Minimum | Maximum | Unit |
+| Name | Start Bit | Length | Byte Order | Signed | Initial | Scale | Minimum | Maximum | Unit |
 | ---- | ---------- | ------ | ---------- | ------ | ------- | ----- | ------- | ------- | ---- |
 ## ECU_Gear_Control_2
 
 ### ID: 0x3fc -- Length: 8 Bytes -- Extended: No
 
-| Name | Start Byte | Length | Byte Order | Signed | Initial | Scale | Minimum | Maximum | Unit |
+| Name | Start Bit | Length | Byte Order | Signed | Initial | Scale | Minimum | Maximum | Unit |
 | ---- | ---------- | ------ | ---------- | ------ | ------- | ----- | ------- | ------- | ---- |
 | SDM102_Autoupshifting_On | 0 | 8 | little_endian | No | None |1 | 0 | 1 | None |
 ## IZZE_Brake_IR_Programming
 
 ### ID: 0x7af -- Length: 8 Bytes -- Extended: No
 
-| Name | Start Byte | Length | Byte Order | Signed | Initial | Scale | Minimum | Maximum | Unit |
+| Name | Start Bit | Length | Byte Order | Signed | Initial | Scale | Minimum | Maximum | Unit |
 | ---- | ---------- | ------ | ---------- | ------ | ------- | ----- | ------- | ------- | ---- |
 ## GCM_Autoupshifting
 
 ### ID: 0x203 -- Length: 8 Bytes -- Extended: No
 
-| Name | Start Byte | Length | Byte Order | Signed | Initial | Scale | Minimum | Maximum | Unit |
+| Name | Start Bit | Length | Byte Order | Signed | Initial | Scale | Minimum | Maximum | Unit |
 | ---- | ---------- | ------ | ---------- | ------ | ------- | ----- | ------- | ------- | ---- |
 | GCM_RPM | 0 | 16 | little_endian | No | None |1 | None | None | None |
 | GCM_AU_Target_RPM | 16 | 16 | little_endian | No | None |1 | None | None | None |
@@ -165,7 +165,7 @@ Original author: Aditya Mansharamani (aditya.mansha at gmail)
 
 ### ID: 0x610 -- Length: 8 Bytes -- Extended: No
 
-| Name | Start Byte | Length | Byte Order | Signed | Initial | Scale | Minimum | Maximum | Unit |
+| Name | Start Bit | Length | Byte Order | Signed | Initial | Scale | Minimum | Maximum | Unit |
 | ---- | ---------- | ------ | ---------- | ------ | ------- | ----- | ------- | ------- | ---- |
 | GCM_Downshift_MS6 | 0 | 1 | little_endian | No | None |1 | None | None | None |
 | GCM_Upshift_MS6 | 1 | 1 | little_endian | No | None |1 | None | None | None |
@@ -173,7 +173,7 @@ Original author: Aditya Mansharamani (aditya.mansha at gmail)
 
 ### ID: 0x202 -- Length: 4 Bytes -- Extended: No
 
-| Name | Start Byte | Length | Byte Order | Signed | Initial | Scale | Minimum | Maximum | Unit |
+| Name | Start Bit | Length | Byte Order | Signed | Initial | Scale | Minimum | Maximum | Unit |
 | ---- | ---------- | ------ | ---------- | ------ | ------- | ----- | ------- | ------- | ---- |
 | GCM_Switch_Up | 0 | 1 | little_endian | No | None |1 | None | None | None |
 | GCM_Switch_Down | 1 | 1 | little_endian | No | None |1 | None | None | None |
@@ -185,7 +185,7 @@ Original author: Aditya Mansharamani (aditya.mansha at gmail)
 
 ### ID: 0x201 -- Length: 6 Bytes -- Extended: No
 
-| Name | Start Byte | Length | Byte Order | Signed | Initial | Scale | Minimum | Maximum | Unit |
+| Name | Start Bit | Length | Byte Order | Signed | Initial | Scale | Minimum | Maximum | Unit |
 | ---- | ---------- | ------ | ---------- | ------ | ------- | ----- | ------- | ------- | ---- |
 | GCM_Gear | 0 | 8 | little_endian | No | None |1 | None | None | None |
 | GCM_Mode | 8 | 8 | little_endian | No | None |1 | None | None | None |
@@ -195,7 +195,7 @@ Original author: Aditya Mansharamani (aditya.mansha at gmail)
 
 ### ID: 0xf -- Length: 4 Bytes -- Extended: No
 
-| Name | Start Byte | Length | Byte Order | Signed | Initial | Scale | Minimum | Maximum | Unit |
+| Name | Start Bit | Length | Byte Order | Signed | Initial | Scale | Minimum | Maximum | Unit |
 | ---- | ---------- | ------ | ---------- | ------ | ------- | ----- | ------- | ------- | ---- |
 | GCM_ERR_Origin_Node | 0 | 16 | little_endian | No | None |1 | None | None | None |
 | GCM_ERR_Code | 16 | 16 | little_endian | No | None |1 | None | None | None |
@@ -203,7 +203,7 @@ Original author: Aditya Mansharamani (aditya.mansha at gmail)
 
 ### ID: 0x200 -- Length: 6 Bytes -- Extended: No
 
-| Name | Start Byte | Length | Byte Order | Signed | Initial | Scale | Minimum | Maximum | Unit |
+| Name | Start Bit | Length | Byte Order | Signed | Initial | Scale | Minimum | Maximum | Unit |
 | ---- | ---------- | ------ | ---------- | ------ | ------- | ----- | ------- | ------- | ---- |
 | GCM_Uptime | 0 | 16 | little_endian | No | None |1 | None | None | s |
 | GCM_PCB_Temp | 16 | 16 | little_endian | Yes | None |0.005 | None | None | C |
@@ -212,14 +212,14 @@ Original author: Aditya Mansharamani (aditya.mansha at gmail)
 
 ### ID: 0x17c -- Length: 8 Bytes -- Extended: No
 
-| Name | Start Byte | Length | Byte Order | Signed | Initial | Scale | Minimum | Maximum | Unit |
+| Name | Start Bit | Length | Byte Order | Signed | Initial | Scale | Minimum | Maximum | Unit |
 | ---- | ---------- | ------ | ---------- | ------ | ------- | ----- | ------- | ------- | ---- |
 | IMU_Z_Accel | 32 | 16 | little_endian | No | None |0.0001274 | None | None | g |
 ## IMU_X_Roll
 
 ### ID: 0x178 -- Length: 8 Bytes -- Extended: No
 
-| Name | Start Byte | Length | Byte Order | Signed | Initial | Scale | Minimum | Maximum | Unit |
+| Name | Start Bit | Length | Byte Order | Signed | Initial | Scale | Minimum | Maximum | Unit |
 | ---- | ---------- | ------ | ---------- | ------ | ------- | ----- | ------- | ------- | ---- |
 | IMU_Roll_Rate | 0 | 16 | little_endian | No | None |0.005 | None | None | deg/s/s |
 | IMU_X_Accel | 32 | 16 | little_endian | No | None |0.0001274 | None | None | g |
@@ -227,7 +227,7 @@ Original author: Aditya Mansharamani (aditya.mansha at gmail)
 
 ### ID: 0x174 -- Length: 8 Bytes -- Extended: No
 
-| Name | Start Byte | Length | Byte Order | Signed | Initial | Scale | Minimum | Maximum | Unit |
+| Name | Start Bit | Length | Byte Order | Signed | Initial | Scale | Minimum | Maximum | Unit |
 | ---- | ---------- | ------ | ---------- | ------ | ------- | ----- | ------- | ------- | ---- |
 | IMU_Yaw_Rate | 0 | 16 | little_endian | No | None |0.005 | None | None | deg/s |
 | IMU_Y_Accel | 32 | 16 | little_endian | No | None |0.0001274 | None | None | g |
@@ -235,7 +235,7 @@ Original author: Aditya Mansharamani (aditya.mansha at gmail)
 
 ### ID: 0x402 -- Length: 8 Bytes -- Extended: No
 
-| Name | Start Byte | Length | Byte Order | Signed | Initial | Scale | Minimum | Maximum | Unit |
+| Name | Start Bit | Length | Byte Order | Signed | Initial | Scale | Minimum | Maximum | Unit |
 | ---- | ---------- | ------ | ---------- | ------ | ------- | ----- | ------- | ------- | ---- |
 | PDM_Ignition_Current | 0 | 8 | little_endian | No | None |1 | 0 | 255 | None |
 | PDM_CAN_Current | 8 | 8 | little_endian | No | None |1 | 0 | 255 | None |
@@ -245,7 +245,7 @@ Original author: Aditya Mansharamani (aditya.mansha at gmail)
 
 ### ID: 0x401 -- Length: 8 Bytes -- Extended: No
 
-| Name | Start Byte | Length | Byte Order | Signed | Initial | Scale | Minimum | Maximum | Unit |
+| Name | Start Bit | Length | Byte Order | Signed | Initial | Scale | Minimum | Maximum | Unit |
 | ---- | ---------- | ------ | ---------- | ------ | ------- | ----- | ------- | ------- | ---- |
 | PDM_F_BSPD_Error | 0 | 8 | little_endian | No | None |1 | None | None | None |
 | PDM_F_BSPD_Enable | 8 | 8 | little_endian | No | None |1 | None | None | None |
@@ -259,7 +259,7 @@ Original author: Aditya Mansharamani (aditya.mansha at gmail)
 
 ### ID: 0x400 -- Length: 8 Bytes -- Extended: No
 
-| Name | Start Byte | Length | Byte Order | Signed | Initial | Scale | Minimum | Maximum | Unit |
+| Name | Start Bit | Length | Byte Order | Signed | Initial | Scale | Minimum | Maximum | Unit |
 | ---- | ---------- | ------ | ---------- | ------ | ------- | ----- | ------- | ------- | ---- |
 | PDM_Total_Current | 0 | 8 | little_endian | No | None |1 | 0 | 255 | None |
 | PDM_Fan_Active | 8 | 8 | little_endian | No | None |1 | None | None | None |
@@ -270,14 +270,14 @@ Original author: Aditya Mansharamani (aditya.mansha at gmail)
 
 ### ID: 0x691 -- Length: 4 Bytes -- Extended: No
 
-| Name | Start Byte | Length | Byte Order | Signed | Initial | Scale | Minimum | Maximum | Unit |
+| Name | Start Bit | Length | Byte Order | Signed | Initial | Scale | Minimum | Maximum | Unit |
 | ---- | ---------- | ------ | ---------- | ------ | ------- | ----- | ------- | ------- | ---- |
 | SDM550_GPS_Heading | 7 | 32 | big_endian | Yes | None |0.01 | None | None | deg |
 ## SDM550_GPS_LatLong
 
 ### ID: 0x690 -- Length: 8 Bytes -- Extended: No
 
-| Name | Start Byte | Length | Byte Order | Signed | Initial | Scale | Minimum | Maximum | Unit |
+| Name | Start Bit | Length | Byte Order | Signed | Initial | Scale | Minimum | Maximum | Unit |
 | ---- | ---------- | ------ | ---------- | ------ | ------- | ----- | ------- | ------- | ---- |
 | SDM550_GPS_Lat | 7 | 32 | big_endian | Yes | None |1e-07 | None | None | deg |
 | SDM550_GPS_Long | 39 | 32 | big_endian | Yes | None |1e-07 | None | None | deg |
@@ -285,14 +285,14 @@ Original author: Aditya Mansharamani (aditya.mansha at gmail)
 
 ### ID: 0x5 -- Length: 2 Bytes -- Extended: No
 
-| Name | Start Byte | Length | Byte Order | Signed | Initial | Scale | Minimum | Maximum | Unit |
+| Name | Start Bit | Length | Byte Order | Signed | Initial | Scale | Minimum | Maximum | Unit |
 | ---- | ---------- | ------ | ---------- | ------ | ------- | ----- | ------- | ------- | ---- |
 | SDM550_Lap_Trigger | 0 | 16 | little_endian | Yes | None |1 | None | None | None |
 ## SDM102_Knobs
 
 ### ID: 0x6ae -- Length: 8 Bytes -- Extended: No
 
-| Name | Start Byte | Length | Byte Order | Signed | Initial | Scale | Minimum | Maximum | Unit |
+| Name | Start Bit | Length | Byte Order | Signed | Initial | Scale | Minimum | Maximum | Unit |
 | ---- | ---------- | ------ | ---------- | ------ | ------- | ----- | ------- | ------- | ---- |
 | SDM102_ECU_Map | 0 | 16 | little_endian | Yes | None |1 | None | None | None |
 | SDM102_Launch_Ctrl_AU | 16 | 16 | little_endian | Yes | None |1 | None | None | None |
@@ -302,14 +302,14 @@ Original author: Aditya Mansharamani (aditya.mansha at gmail)
 
 ### ID: 0x4cd -- Length: 8 Bytes -- Extended: No
 
-| Name | Start Byte | Length | Byte Order | Signed | Initial | Scale | Minimum | Maximum | Unit |
+| Name | Start Bit | Length | Byte Order | Signed | Initial | Scale | Minimum | Maximum | Unit |
 | ---- | ---------- | ------ | ---------- | ------ | ------- | ----- | ------- | ------- | ---- |
 | IZZE_Brake_IR_4C9_Internal_Temp | 7 | 16 | big_endian | No | None |0.1 | 0 | 65535 | C |
 ## IZZE_Brake_IR_4C9_Ch13to16
 
 ### ID: 0x4cc -- Length: 8 Bytes -- Extended: No
 
-| Name | Start Byte | Length | Byte Order | Signed | Initial | Scale | Minimum | Maximum | Unit |
+| Name | Start Bit | Length | Byte Order | Signed | Initial | Scale | Minimum | Maximum | Unit |
 | ---- | ---------- | ------ | ---------- | ------ | ------- | ----- | ------- | ------- | ---- |
 | IZZE_Brake_IR_4C9_Channel_13 | 7 | 16 | big_endian | No | None |0.1 | 0 | 65535 | C |
 | IZZE_Brake_IR_4C9_Channel_14 | 23 | 16 | big_endian | No | None |0.1 | 0 | 65535 | C |
@@ -319,7 +319,7 @@ Original author: Aditya Mansharamani (aditya.mansha at gmail)
 
 ### ID: 0x4cb -- Length: 8 Bytes -- Extended: No
 
-| Name | Start Byte | Length | Byte Order | Signed | Initial | Scale | Minimum | Maximum | Unit |
+| Name | Start Bit | Length | Byte Order | Signed | Initial | Scale | Minimum | Maximum | Unit |
 | ---- | ---------- | ------ | ---------- | ------ | ------- | ----- | ------- | ------- | ---- |
 | IZZE_Brake_IR_4C9_Channel_10 | 7 | 16 | big_endian | No | None |0.1 | 0 | 65535 | C |
 | IZZE_Brake_IR_4C9_Channel_11 | 23 | 16 | big_endian | No | None |0.1 | 0 | 65535 | C |
@@ -329,7 +329,7 @@ Original author: Aditya Mansharamani (aditya.mansha at gmail)
 
 ### ID: 0x4ca -- Length: 8 Bytes -- Extended: No
 
-| Name | Start Byte | Length | Byte Order | Signed | Initial | Scale | Minimum | Maximum | Unit |
+| Name | Start Bit | Length | Byte Order | Signed | Initial | Scale | Minimum | Maximum | Unit |
 | ---- | ---------- | ------ | ---------- | ------ | ------- | ----- | ------- | ------- | ---- |
 | IZZE_Brake_IR_4C9_Channel_5 | 7 | 16 | big_endian | No | None |0.1 | 0 | 65535 | C |
 | IZZE_Brake_IR_4C9_Channel_6 | 23 | 16 | big_endian | No | None |0.1 | 0 | 65535 | C |
@@ -339,7 +339,7 @@ Original author: Aditya Mansharamani (aditya.mansha at gmail)
 
 ### ID: 0x4c9 -- Length: 8 Bytes -- Extended: No
 
-| Name | Start Byte | Length | Byte Order | Signed | Initial | Scale | Minimum | Maximum | Unit |
+| Name | Start Bit | Length | Byte Order | Signed | Initial | Scale | Minimum | Maximum | Unit |
 | ---- | ---------- | ------ | ---------- | ------ | ------- | ----- | ------- | ------- | ---- |
 | IZZE_Brake_IR_4C9_Channel_1 | 7 | 16 | big_endian | No | None |0.1 | 0 | 65535 | C |
 | IZZE_Brake_IR_4C9_Channel_2 | 23 | 16 | big_endian | No | None |0.1 | 0 | 65535 | C |
@@ -349,14 +349,14 @@ Original author: Aditya Mansharamani (aditya.mansha at gmail)
 
 ### ID: 0x7a4 -- Length: 8 Bytes -- Extended: No
 
-| Name | Start Byte | Length | Byte Order | Signed | Initial | Scale | Minimum | Maximum | Unit |
+| Name | Start Bit | Length | Byte Order | Signed | Initial | Scale | Minimum | Maximum | Unit |
 | ---- | ---------- | ------ | ---------- | ------ | ------- | ----- | ------- | ------- | ---- |
 | IZZE_Brake_IR_7A0_Internal_Temp | 7 | 16 | big_endian | No | None |0.1 | 0 | 65535 | C |
 ## IZZE_Brake_IR_7A0_Ch13to16
 
 ### ID: 0x7a3 -- Length: 8 Bytes -- Extended: No
 
-| Name | Start Byte | Length | Byte Order | Signed | Initial | Scale | Minimum | Maximum | Unit |
+| Name | Start Bit | Length | Byte Order | Signed | Initial | Scale | Minimum | Maximum | Unit |
 | ---- | ---------- | ------ | ---------- | ------ | ------- | ----- | ------- | ------- | ---- |
 | IZZE_Brake_IR_7A0_Channel_13 | 7 | 16 | big_endian | No | None |0.1 | 0 | 65535 | C |
 | IZZE_Brake_IR_7A0_Channel_14 | 23 | 16 | big_endian | No | None |0.1 | 0 | 65535 | C |
@@ -366,7 +366,7 @@ Original author: Aditya Mansharamani (aditya.mansha at gmail)
 
 ### ID: 0x7a2 -- Length: 8 Bytes -- Extended: No
 
-| Name | Start Byte | Length | Byte Order | Signed | Initial | Scale | Minimum | Maximum | Unit |
+| Name | Start Bit | Length | Byte Order | Signed | Initial | Scale | Minimum | Maximum | Unit |
 | ---- | ---------- | ------ | ---------- | ------ | ------- | ----- | ------- | ------- | ---- |
 | IZZE_Brake_IR_7A0_Channel_10 | 7 | 16 | big_endian | No | None |0.1 | 0 | 65535 | C |
 | IZZE_Brake_IR_7A0_Channel_11 | 23 | 16 | big_endian | No | None |0.1 | 0 | 65535 | C |
@@ -376,7 +376,7 @@ Original author: Aditya Mansharamani (aditya.mansha at gmail)
 
 ### ID: 0x7a1 -- Length: 8 Bytes -- Extended: No
 
-| Name | Start Byte | Length | Byte Order | Signed | Initial | Scale | Minimum | Maximum | Unit |
+| Name | Start Bit | Length | Byte Order | Signed | Initial | Scale | Minimum | Maximum | Unit |
 | ---- | ---------- | ------ | ---------- | ------ | ------- | ----- | ------- | ------- | ---- |
 | IZZE_Brake_IR_7A0_Channel_5 | 7 | 16 | big_endian | No | None |0.1 | 0 | 65535 | C |
 | IZZE_Brake_IR_7A0_Channel_6 | 23 | 16 | big_endian | No | None |0.1 | 0 | 65535 | C |
@@ -386,7 +386,7 @@ Original author: Aditya Mansharamani (aditya.mansha at gmail)
 
 ### ID: 0x7a0 -- Length: 8 Bytes -- Extended: No
 
-| Name | Start Byte | Length | Byte Order | Signed | Initial | Scale | Minimum | Maximum | Unit |
+| Name | Start Bit | Length | Byte Order | Signed | Initial | Scale | Minimum | Maximum | Unit |
 | ---- | ---------- | ------ | ---------- | ------ | ------- | ----- | ------- | ------- | ---- |
 | IZZE_Brake_IR_7A0_Channel_1 | 7 | 16 | big_endian | No | None |0.1 | 0 | 65535 | C |
 | IZZE_Brake_IR_7A0_Channel_2 | 23 | 16 | big_endian | No | None |0.1 | 0 | 65535 | C |
@@ -396,7 +396,7 @@ Original author: Aditya Mansharamani (aditya.mansha at gmail)
 
 ### ID: 0x4e2 -- Length: 8 Bytes -- Extended: No
 
-| Name | Start Byte | Length | Byte Order | Signed | Initial | Scale | Minimum | Maximum | Unit |
+| Name | Start Bit | Length | Byte Order | Signed | Initial | Scale | Minimum | Maximum | Unit |
 | ---- | ---------- | ------ | ---------- | ------ | ------- | ----- | ------- | ------- | ---- |
 | IZZE_SG_4E2_Differential_Voltage | 7 | 16 | big_endian | Yes | None |1 | None | None | µV |
 | IZZE_SG_4E2_Calibrated_Output | 23 | 16 | big_endian | Yes | None |0.1 | None | None | F |
@@ -406,7 +406,7 @@ Original author: Aditya Mansharamani (aditya.mansha at gmail)
 
 ### ID: 0x4e4 -- Length: 8 Bytes -- Extended: No
 
-| Name | Start Byte | Length | Byte Order | Signed | Initial | Scale | Minimum | Maximum | Unit |
+| Name | Start Bit | Length | Byte Order | Signed | Initial | Scale | Minimum | Maximum | Unit |
 | ---- | ---------- | ------ | ---------- | ------ | ------- | ----- | ------- | ------- | ---- |
 | IZZE_SG_4E4_Differential_Voltage | 7 | 16 | big_endian | Yes | None |1 | None | None | µV |
 | IZZE_SG_4E4_Calibrated_Output | 23 | 16 | big_endian | Yes | None |0.1 | None | None | F |
@@ -416,7 +416,7 @@ Original author: Aditya Mansharamani (aditya.mansha at gmail)
 
 ### ID: 0x4e5 -- Length: 8 Bytes -- Extended: No
 
-| Name | Start Byte | Length | Byte Order | Signed | Initial | Scale | Minimum | Maximum | Unit |
+| Name | Start Bit | Length | Byte Order | Signed | Initial | Scale | Minimum | Maximum | Unit |
 | ---- | ---------- | ------ | ---------- | ------ | ------- | ----- | ------- | ------- | ---- |
 | IZZE_SG_4E5_Differential_Voltage | 7 | 16 | big_endian | Yes | None |1 | None | None | µV |
 | IZZE_SG_4E5_Calibrated_Output | 23 | 16 | big_endian | Yes | None |0.1 | None | None | F |
@@ -426,7 +426,7 @@ Original author: Aditya Mansharamani (aditya.mansha at gmail)
 
 ### ID: 0x4e6 -- Length: 8 Bytes -- Extended: No
 
-| Name | Start Byte | Length | Byte Order | Signed | Initial | Scale | Minimum | Maximum | Unit |
+| Name | Start Bit | Length | Byte Order | Signed | Initial | Scale | Minimum | Maximum | Unit |
 | ---- | ---------- | ------ | ---------- | ------ | ------- | ----- | ------- | ------- | ---- |
 | IZZE_SG_4E6_Differential_Voltage | 7 | 16 | big_endian | Yes | None |1 | None | None | ï¿½V |
 | IZZE_SG_4E6_Calibrated_Output | 23 | 16 | big_endian | Yes | None |0.1 | None | None | F |
@@ -436,7 +436,7 @@ Original author: Aditya Mansharamani (aditya.mansha at gmail)
 
 ### ID: 0x4e7 -- Length: 8 Bytes -- Extended: No
 
-| Name | Start Byte | Length | Byte Order | Signed | Initial | Scale | Minimum | Maximum | Unit |
+| Name | Start Bit | Length | Byte Order | Signed | Initial | Scale | Minimum | Maximum | Unit |
 | ---- | ---------- | ------ | ---------- | ------ | ------- | ----- | ------- | ------- | ---- |
 | IZZE_SG_4E7_Differential_Voltage | 7 | 16 | big_endian | Yes | None |1 | None | None | µV |
 | IZZE_SG_4E7_Calibrated_Output | 23 | 16 | big_endian | Yes | None |0.1 | None | None | F |
@@ -446,7 +446,7 @@ Original author: Aditya Mansharamani (aditya.mansha at gmail)
 
 ### ID: 0x429 -- Length: 8 Bytes -- Extended: No
 
-| Name | Start Byte | Length | Byte Order | Signed | Initial | Scale | Minimum | Maximum | Unit |
+| Name | Start Bit | Length | Byte Order | Signed | Initial | Scale | Minimum | Maximum | Unit |
 | ---- | ---------- | ------ | ---------- | ------ | ------- | ----- | ------- | ------- | ---- |
 | IZZE_WLSG_429_Out | 7 | 16 | big_endian | Yes | None |-1 | None | None | uV |
 | IZZE_WLSG_429_VBAT | 23 | 16 | big_endian | Yes | None |0.001 | None | None | V |
@@ -456,7 +456,7 @@ Original author: Aditya Mansharamani (aditya.mansha at gmail)
 
 ### ID: 0x42a -- Length: 8 Bytes -- Extended: No
 
-| Name | Start Byte | Length | Byte Order | Signed | Initial | Scale | Minimum | Maximum | Unit |
+| Name | Start Bit | Length | Byte Order | Signed | Initial | Scale | Minimum | Maximum | Unit |
 | ---- | ---------- | ------ | ---------- | ------ | ------- | ----- | ------- | ------- | ---- |
 | IZZE_WLSG_42A_Out | 7 | 16 | big_endian | Yes | None |1 | None | None | uV |
 | IZZE_WLSG_42A_VBAT | 23 | 16 | big_endian | Yes | None |0.001 | None | None | V |
@@ -466,7 +466,7 @@ Original author: Aditya Mansharamani (aditya.mansha at gmail)
 
 ### ID: 0x7fc -- Length: 8 Bytes -- Extended: No
 
-| Name | Start Byte | Length | Byte Order | Signed | Initial | Scale | Minimum | Maximum | Unit |
+| Name | Start Bit | Length | Byte Order | Signed | Initial | Scale | Minimum | Maximum | Unit |
 | ---- | ---------- | ------ | ---------- | ------ | ------- | ----- | ------- | ------- | ---- |
 | Kistler_S350_SerialNo | 7 | 32 | big_endian | No | None |1 | 0 | 4294970000 | None |
 | Kistler_S350_TempSens | 39 | 8 | big_endian | Yes | None |1 | -128 | 127 | °C |
@@ -485,7 +485,7 @@ Original author: Aditya Mansharamani (aditya.mansha at gmail)
 
 ### ID: 0x7fb -- Length: 6 Bytes -- Extended: No
 
-| Name | Start Byte | Length | Byte Order | Signed | Initial | Scale | Minimum | Maximum | Unit |
+| Name | Start Bit | Length | Byte Order | Signed | Initial | Scale | Minimum | Maximum | Unit |
 | ---- | ---------- | ------ | ---------- | ------ | ------- | ----- | ------- | ------- | ---- |
 | Kistler_S350_VelX | 7 | 16 | big_endian | No | None |0.036 | 0 | 400 | km/h |
 | Kistler_S350_VelY | 23 | 16 | big_endian | Yes | None |0.036 | -100 | 100 | km/h |
@@ -494,7 +494,7 @@ Original author: Aditya Mansharamani (aditya.mansha at gmail)
 
 ### ID: 0x7fa -- Length: 8 Bytes -- Extended: No
 
-| Name | Start Byte | Length | Byte Order | Signed | Initial | Scale | Minimum | Maximum | Unit |
+| Name | Start Bit | Length | Byte Order | Signed | Initial | Scale | Minimum | Maximum | Unit |
 | ---- | ---------- | ------ | ---------- | ------ | ------- | ----- | ------- | ------- | ---- |
 | Kistler_S350_Timestamp | 7 | 16 | big_endian | No | None |1 | 0 | 65535 | None |
 | Kistler_S350_Vel | 23 | 16 | big_endian | No | None |0.036 | 0 | 400 | km/h |
